@@ -1,0 +1,26 @@
+.tag{
+  padding-left:10px;padding-top:10px;
+}
+
+.titulo-nota{
+   padding-left:10px;
+   padding-top:10px;
+   padding-right:10px;
+   font-size:1rem;
+   margin-bottom:5px;
+}
+
+.descripcion-nota{
+  padding-left:10px;
+  padding-top:0px;
+  padding-right:10px;
+}
+
+.card-nota{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: flex-start;
+   align-items: stretch;
+   align-content: stretch;
+}
