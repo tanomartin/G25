@@ -26,7 +26,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;padding:80px;padding-bottom:20px;">
-      <?php the_category('','nota',''); ?>
+     <?php $child_category = post_child_category(get_the_ID()); ?>
+     <?php if ( $child_category ) {         
+    		  echo "<a href='".get_category_link($child_category->term_id)."'>".$child_category->cat_name."</a>"; 
+    	   } ?>
       <?php echo get_the_date('M d, Y'); ?>
       <hr>
       <h1 style="color:#ee4a6d;" class="text-left"><?php the_title();?></h1>
