@@ -19,7 +19,9 @@
 <section style="background-color:#f0f0f0;padding-top:80px;padding-bottom:80px;">
 	<div class="container">
 		<div class="row">	
-	<?php   $wp_query->query('showposts=2'.'&category_name=destacado');
+	<?php   //VER ESTO 
+        	$args = array('showposts' => 2, 'category_name' => "destacado");
+        	$wp_query->query($args);
             if (have_posts()) {  
                 while ($wp_query->have_posts()) : $wp_query->the_post();  ?>
                 			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
@@ -45,7 +47,9 @@
         $temp = $wp_query;
         $wp_query= null;
         $wp_query = new WP_Query();
-        $wp_query->query('showposts=2'.'&category_name=nota'.'&paged='.$paged);
+        //VER ESTO 
+        $args = array('showposts' => 2, 'category_name' => "nota",'paged' => $paged);
+        $wp_query->query($args);
          while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
     			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
     				<div class="card card-nota">
