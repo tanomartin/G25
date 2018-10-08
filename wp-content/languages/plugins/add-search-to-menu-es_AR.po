@@ -1,0 +1,202 @@
+# Translation of Plugins - Add Search To Menu - Stable (latest release) in Spanish (Argentina)
+# This file is distributed under the same license as the Plugins - Add Search To Menu - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-04-07 16:41:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es_AR\n"
+"Project-Id-Version: Plugins - Add Search To Menu - Stable (latest release)\n"
+
+#: admin/class-astm-admin.php:263
+msgid "Use this option to hide search form using CSS code and display it in site header on mobile devices."
+msgstr "Usá esta opción para ocultar el formulario de búsqueda con código CSS y mostrarlo en el encabezado del sitio en dispositivos móviles."
+
+#: admin/class-astm-admin.php:262
+msgid "This site uses Cache"
+msgstr "Este sitio usa caché"
+
+#: admin/class-astm-admin.php:273
+msgid "Display Search Form Close Icon"
+msgstr "Mostrar el ícono de cerrar en el formulario de búsqueda"
+
+#: admin/class-astm-admin.php:259
+msgid "It doesn not work with caching as this functionality uses WordPress wp_is_mobile function."
+msgstr "No funciona con almacenamiento en caché ya que esta funcionalidad usa la función wp_is_mobile de WordPress."
+
+#: admin/class-astm-admin.php:136
+msgid "Close Icon: "
+msgstr "Ícono de Cerrar"
+
+#: admin/class-astm-admin.php:283
+msgid "Add custom css code if any to style search form."
+msgstr "Agregá código css personalizado para modificar estilo del formulario de búsqueda."
+
+#: admin/class-astm-admin.php:258
+msgid "Display Search Form in Header on Mobile Devices"
+msgstr "Mostrar formulario de búsqueda en el encabezado de dispositivos móviles"
+
+#: admin/class-astm-admin.php:248
+msgid "Add only Google CSE search form code in the above text box that will replace default search form."
+msgstr "Agregar solo el código de formulario de búsqueda de Google CSE en el cuadro de texto anterior que reemplazará el formulario de búsqueda predeterminado."
+
+#: admin/class-astm-admin.php:238
+msgid "Add classes seperated by space."
+msgstr "Agregar clases separadas por un espacio."
+
+#: admin/class-astm-admin.php:189
+msgid "No post types registered on your site."
+msgstr "No hay tipos de publicaciones registrados en tu sitio."
+
+#: admin/class-astm-admin.php:137
+msgid "Custom CSS : "
+msgstr "CSS personalizado:"
+
+#: admin/class-astm-admin.php:135
+msgid "Mobile Display : "
+msgstr "Pantalla de dispositivos móviles:"
+
+#: admin/class-astm-admin.php:134
+msgid "Google CSE : "
+msgstr "Google CSE: "
+
+#: admin/class-astm-admin.php:131
+msgid "Search Form Style : "
+msgstr "Estilo del formulario de búsqueda:"
+
+#: admin/class-astm-admin.php:130
+msgid "Search Post Types : "
+msgstr "Buscar tipos de publicación:"
+
+#. Author URI of the plugin/theme
+msgid "http://freewptp.com"
+msgstr "http://freewptp.com"
+
+#. Author of the plugin/theme
+msgid "Vinod Dalvi"
+msgstr "Vinod Dalvi"
+
+#. Description of the plugin/theme
+msgid "The plugin displays search form in the navigation bar which can be configured from the admin area."
+msgstr "El plugin muestra el formulario de búsqueda en la barra de navegación que se puede configurar desde el área de administración."
+
+#. Plugin URI of the plugin/theme
+msgid "http://freewptp.com/plugins/add-search-to-menu/"
+msgstr "http://freewptp.com/plugins/add-search-to-menu/"
+
+#: admin/class-astm-admin.php:309
+msgid "If checked, you have to add following plugin file code into your theme JavaScript file."
+msgstr "Si lo marcás, tenés agregar el siguiente código de archivo de plugin en el archivo JavaScript de tu tema."
+
+#: admin/class-astm-admin.php:305
+msgid "If checked, you have to add following plugin file code into your theme CSS file."
+msgstr "Se lo marcás, tenés que agregar el siguiente código de archivo del plugin en el archivo CSS de tu tema."
+
+#: admin/class-astm-admin.php:293
+msgid "Plugin JavaScript File"
+msgstr "Archivo JavaScript del plugin"
+
+#: admin/class-astm-admin.php:292
+msgid "Plugin CSS File"
+msgstr "Archivo CSS del plugin"
+
+#: admin/class-astm-admin.php:228
+msgid "If title field is not set then instead of title the search icon displays in navigation menu."
+msgstr "Si el campo de título no está establecido, en el menú de navegación va a aparecer el ícono de búsqueda en lugar de título."
+
+#: admin/class-astm-admin.php:203
+msgid "Full Width"
+msgstr "Ancho completo"
+
+#: admin/class-astm-admin.php:202
+msgid "Sliding"
+msgstr "Deslizante"
+
+#: admin/class-astm-admin.php:201
+msgid "Dropdown"
+msgstr "Desplegable"
+
+#: admin/class-astm-admin.php:200
+msgid "Default"
+msgstr "Predeterminado"
+
+#: admin/class-astm-admin.php:166
+msgid "No navigation menu registered on your site."
+msgstr "No hay ningún menú de navegación registrado en tu sitio."
+
+#: admin/class-astm-admin.php:147
+msgid "Configure the Add Search To Menu plugin settings here."
+msgstr "Configurá aquí los ajustes del plugin Add Search To Menu."
+
+#: admin/class-astm-admin.php:138
+msgid "Do not load plugin files : "
+msgstr "No cargar los archivos del plugin:"
+
+#: admin/class-astm-admin.php:133
+msgid "Search Menu Classes : "
+msgstr "Buscar clases del menú:"
+
+#: admin/class-astm-admin.php:132
+msgid "Search Menu Title : "
+msgstr "Buscar título del menú:"
+
+#: admin/class-astm-admin.php:129
+msgid "Add Search to Menu : "
+msgstr "Agregar búsqueda al menú:"
+
+#: admin/partials/admin-page.php:26
+msgid "Access Plugin Documentation on"
+msgstr "Acceder a la documentación del plugin en"
+
+#: admin/partials/admin-page.php:23
+msgid "Contact us page"
+msgstr "Página de contacto"
+
+#: admin/partials/admin-page.php:23
+msgid "or"
+msgstr "o"
+
+#: admin/partials/admin-page.php:23
+msgid "Plugin support forum"
+msgstr "Foro de asistencia del plugin"
+
+#: admin/partials/admin-page.php:23
+msgid "contact us on"
+msgstr "contactanos en "
+
+#: admin/partials/admin-page.php:23
+msgid "Need Help or Have Suggestions?"
+msgstr "¿Necesitás ayuda o tenés sugerencias?"
+
+#: admin/partials/admin-page.php:20
+msgid "Give us a rating"
+msgstr "Danos tu valoración"
+
+#: admin/partials/admin-page.php:20
+msgid "Like Add Search To Menu?"
+msgstr "¿Te gusta Add Search To Menu?"
+
+#. #-#-#-#-#  add-search-to-menu-code.pot (Add Search To Menu 3.4)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: admin/class-astm-admin.php:113
+msgid "Add Search To Menu"
+msgstr "Add Search To Menu"
+
+#: admin/class-astm-admin.php:113 admin/class-astm-admin.php:127
+msgid "Add Search To Menu Settings"
+msgstr "Ajustes de Add Search To Menu"
+
+#: admin/class-astm-admin.php:94
+msgid "To configure <em>Add Search To Menu plugin</em> please visit its <a href=\"%1$s\">configuration page</a> and to get plugin support contact us on <a href=\"%2$s\" target=\"_blank\">plugin support forum</a> or <a href=\"%3$s\" target=\"_blank\">contact us page</a>."
+msgstr "Para configurara <em>el plugin Add Search To Menu</em> visitá su <a href=\"%1$s\">página de configuración</a> y para obtener asistencia contactános a través del <a href=\"%2$s\" target=\"_blank\">foro de asistencia del plugin</a> o <a href=\"%3$s\" target=\"_blank\">nuestra página de contacto</a>."
+
+#: admin/class-astm-admin.php:75
+msgid "Settings"
+msgstr "Ajustes"
+
+#: admin/class-astm-admin.php:74
+msgid "Get Support"
+msgstr "Obtener asistencia"
