@@ -44,7 +44,7 @@ function post_child_category($id = null)
         return false;
     $categories = get_the_category($id);
     if (count($categories) > 0) {
-        return $categories[count($categories) - 1];
+        return $categories[count($categories)-2];
     } else {
         return false;
     }

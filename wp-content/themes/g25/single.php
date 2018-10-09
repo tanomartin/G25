@@ -40,26 +40,36 @@
     </div>
 
   </div>
-
+<?php 
+		$facebook = get_post_meta($post->ID, 'facebook', true) ;
+		$twitter = get_post_meta($post->ID, 'twitter', true) ;
+		$whastapp =  get_post_meta($post->ID, 'whastapp', true) ;
+	?>
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
       <hr>
       <div class="row">
+      <?php if ($facebook) { ?>
         <div class="col-lg-4">
           <div style="background-color:#629ae6;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Facebook</p>
           </div>
         </div>
+     <?php } ?>
+      <?php if ($twitter) { ?>
         <div class="col-lg-4">
           <div style="background-color:#55acee;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Twitter</p>
           </div>
         </div>
+       <?php } ?>
+        <?php if ($whastapp) { ?>
         <div class="col-lg-4">
           <div style="background-color:#25d366;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Whatsapp</p>
           </div>
         </div>
+        <?php } ?>
       </div>
     </div>
   </div>
