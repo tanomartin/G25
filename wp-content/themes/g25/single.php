@@ -44,29 +44,38 @@
 		$facebook = get_post_meta($post->ID, 'facebook', true) ;
 		$twitter = get_post_meta($post->ID, 'twitter', true) ;
 		$whatsapp =  get_post_meta($post->ID, 'whatsapp', true) ;
+		
+		$shortURL = get_permalink();
+		$shortTitle = get_the_title();
+		
+		
 	?>
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
       <hr>
       <div class="row">
-      <?php if ($facebook) { ?>
-        <div class="col-lg-4">
+      <?php if ($facebook) {
+               $facebookURL = 'https://www.facebook.com/sharer.php?u='.$shortURL.'&t=Compartir urls en Face';?>
+        <div class="col-lg-4" onclick="window.open('<?php echo $facebookURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;'>
           <div style="background-color:#629ae6;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Facebook</p>
           </div>
         </div>
      <?php } ?>
-      <?php if ($twitter) { ?>
-        <div class="col-lg-4">
+      <?php if ($twitter) {
+          $twitterURL = 'https://twitter.com/intent/tweet?text='.$shortTitle.'&amp;url='.$shortURL;?>
+        <div class="col-lg-4" onclick="window.open('<?php echo $twitterURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;' >
           <div style="background-color:#55acee;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Twitter</p>
           </div>
         </div>
        <?php } ?>
-        <?php if ($whatsapp) { ?>
-        <div class="col-lg-4">
+        <?php if ($whatsapp) { 
+            $whatsappURL = 'whatsapp://send?text='.$shortURL.' - '.$shortURL;?>
+        <div class="col-lg-4" onclick="window.open('<?php echo $whatsappURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;' >
           <div style="background-color:#25d366;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Whatsapp</p>
+            
           </div>
         </div>
         <?php } ?>
