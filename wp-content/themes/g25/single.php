@@ -43,7 +43,7 @@
 <?php 
 		$facebook = get_post_meta($post->ID, 'facebook', true) ;
 		$twitter = get_post_meta($post->ID, 'twitter', true) ;
-		$whastapp =  get_post_meta($post->ID, 'whastapp', true) ;
+		$whatsapp =  get_post_meta($post->ID, 'whatsapp', true) ;
 	?>
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
@@ -63,7 +63,7 @@
           </div>
         </div>
        <?php } ?>
-        <?php if ($whastapp) { ?>
+        <?php if ($whatsapp) { ?>
         <div class="col-lg-4">
           <div style="background-color:#25d366;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Whatsapp</p>
