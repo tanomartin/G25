@@ -23,7 +23,7 @@ Template Name: Category Page
 <section style="background-color:#f0f0f0;padding-top:80px;padding-bottom:80px;">
 	<div class="container">
 		<div class="row">	
-		<?php  while ($wp_query->have_posts()) : $wp_query->the_post(); ?> 
+		<?php  if (have_posts()) : while (have_posts()) : the_post(); ?> 
 			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 				<div class="card card-nota">
 				    <div class="imagen">
@@ -42,7 +42,7 @@ Template Name: Category Page
 				   	</div>
 				 </div>
 			</div>
-		 <?php endwhile; ?> 
+		 <?php endwhile; endif; ?> 
 		</div>
 		<div class="row">	
 			<?php previous_posts_link('&laquo; Anterior') ?>

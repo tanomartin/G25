@@ -19,8 +19,9 @@
 			<div class="row">	
 	<?php   $args = array('showposts' => 2, 'category_name' => 'destacado+nota', 'orderby' => 'date', 'order' => 'DESC');
 	        $wp_query->query($args);
+	        $count = $wp_query->post_count;
 	        $arrayDestacados = array();
-	        if (have_posts()) {  
+	        if (have_posts() && $count >= 2) {  
 	            while ($wp_query->have_posts()) : $wp_query->the_post(); 
 	               	$arrayDestacados[$post->ID] = $post->ID; ?>
 	                <div class="col-lg-6" style="position:relative;margin-bottom:20px;">
@@ -49,7 +50,8 @@
 	        if (sizeof($arrayDestacados) > 0) { $showposts = 4; } else { $showposts = 6; }
 	        $args = array('showposts' => $showposts, 'post__not_in' => $arrayDestacados, 'category_name' => 'nota', 'paged' => $paged,  'orderby' => 'date', 'order' => 'DESC');
 	        $wp_query->query($args);
-	        while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+	        if (have_posts()) {
+	       		while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 	    			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 	    				<div class="card card-nota">
 	    				    <div class="imagen">
@@ -68,7 +70,8 @@
 	    				   	</div>
 	    				 </div>
 	    			</div>
-	  <?php endwhile; ?> 
+	  		<?php endwhile; ?> 
+	  	<?php } ?>
 			</div>
 			<div class="row">	
 	        	<?php previous_posts_link('&laquo; Anterior') ?>
