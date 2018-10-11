@@ -9,6 +9,10 @@ function theme_setup()
     add_theme_support('post-thumbnails');
 }
 
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'G25' ),
+));
+
 function theme_get_the_title()
 {
     if (is_home()) {
