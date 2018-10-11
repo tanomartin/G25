@@ -71,7 +71,7 @@
         </div>
        <?php } ?>
         <?php if ($whatsapp) { 
-            $whatsappURL = 'whatsapp://send?text='.$shortURL.' - '.$shortURL;?>
+            $whatsappURL = 'https://api.whatsapp.com/send?text='.$shortURL;?>
         <div class="col-lg-4" onclick="window.open('<?php echo $whatsappURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;' >
           <div style="background-color:#25d366;padding:10px;">
             <p style="margin-bottom:0px;">Compartir en Whatsapp</p>

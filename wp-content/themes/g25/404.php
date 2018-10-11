@@ -1,3 +1,1 @@
-<?php
-echo  "ERROR 404"
-?>
+404.php
