@@ -49,4 +49,34 @@ function post_child_category($id = null)
         return false;
     }
 }
+
+add_action('init', 'cpt_comunidad', 1);
+function cpt_comunidad() {
+	$labels = array(
+			'name' => _x('Comunidad', 'post type general name'),
+			'singular_name' => _x('Comunidad', 'post type singular name'),
+			'add_new' => _x('A&ntilde;adir Nuevo', 'Comunidad'),
+			'add_new_item' => __('A&ntilde;adir Nuevo'),
+			'edit_item' => __('Editar'),
+			'new_item' => __('Nuevo'),
+			'view_item' => __('Ver'),
+			'search_items' => __('Buscar'),
+			'not_found' => __('No se han encontrado ningun resultado'),
+			'not_found_in_trash' => __('No se han encontrado ningun resultado en la papelera')
+	);
+	$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'hierarchical' => false,
+			'menu_position' => 2,
+			'has_archive' => true,
+			'query_var' => true,
+			'supports' => array('title','editor','thumbnail'),
+			//'supports' => array('title'),
+			'rewrite' => array('slug' => 'comunidad'),
+	);
+
+	register_post_type( 'comunidad', $args );
+}
+
 ?>
