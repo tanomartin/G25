@@ -60,9 +60,8 @@
 		aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-<?php
-    echo do_shortcode('[ivory-search id="28" title="nota"]');
-    wp_nav_menu(array(
+
+<?php  /*   wp_nav_menu(array(
         'menu' => 'primary',
         'theme_location' => 'primary',
         'depth' => 2,
@@ -72,7 +71,7 @@
         'menu_class' => 'nav navbar-nav',
         'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
         'walker' => new wp_bootstrap_navwalker()
-    ));
+    )); */
 ?>
 	<div class="collapse navbar-collapse" id="navbarColor03">
 
@@ -92,6 +91,8 @@
 	      </li>
 	       !-->
 		</ul>
+		<?php
+    echo do_shortcode('[ivory-search id="28" title="nota"]'); ?>
 		<button class="btn btn-secondary my-2 my-sm-0" type="submit">Contacto</button>
 	</div> 
 </nav>

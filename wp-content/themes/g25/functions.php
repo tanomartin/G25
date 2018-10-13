@@ -75,7 +75,7 @@ function cpt_comunidad() {
 			'menu_position' => 2,
 			'has_archive' => true,
 			'query_var' => true,
-			'supports' => array('title','editor','thumbnail'),
+			'supports' => array('title'),
 			//'supports' => array('title'),
 			'rewrite' => array('slug' => 'comunidad'),
 	);

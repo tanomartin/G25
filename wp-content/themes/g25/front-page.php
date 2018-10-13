@@ -17,13 +17,16 @@
 	<section style="background-color:#f0f0f0;padding-top:80px;padding-bottom:80px;">
 		<div class="container">
 			<div class="row">	
-	<?php   $args = array('showposts' => 2, 'category_name' => 'destacado+nota', 'orderby' => 'date', 'order' => 'DESC');
+	<?php   
+	       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	        $args = array('showposts' => 2, 'category_name' => 'destacado+nota', 'orderby' => 'date', 'order' => 'DESC');
 	        $wp_query->query($args);
 	        $count = $wp_query->post_count;
 	        $arrayDestacados = array();
-	        if (have_posts() && $count >= 2) {  
+	        if (have_posts()) {  
 	            while ($wp_query->have_posts()) : $wp_query->the_post(); 
-	               	$arrayDestacados[$post->ID] = $post->ID; ?>
+	               	$arrayDestacados[$post->ID] = $post->ID;
+	               	if ($paged == 1) {?>
 	                <div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 	                	<div class="card card-nota" style="background-color: aqua;">
 	                		<div class="imagen">
@@ -42,12 +45,13 @@
 	                		</div>
 	                	</div>
 	               </div>
-	     <?php endwhile; ?> 
-	  <?php } 
+	         <?php } ?>
+	     <?php endwhile; 
+	        }
 	  		$temp = $wp_query;
 	        $wp_query= null;
 	        $wp_query = new WP_Query();
-	        if (sizeof($arrayDestacados) > 0) { $showposts = 4; } else { $showposts = 6; }
+	        if (sizeof($arrayDestacados) > 0) { $showposts = 6 - $count; }
 	        $args = array('showposts' => $showposts, 'post__not_in' => $arrayDestacados, 'category_name' => 'nota', 'paged' => $paged,  'orderby' => 'date', 'order' => 'DESC');
 	        $wp_query->query($args);
 	        if (have_posts()) {
