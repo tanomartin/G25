@@ -61,18 +61,18 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-<?php  /*   wp_nav_menu(array(
-        'menu' => 'primary',
-        'theme_location' => 'primary',
-        'depth' => 2,
-        'container' => 'div',
-        'container_class' => 'collapse navbar-collapse',
-        'container_id' => 'bs-example-navbar-collapse-1',
-        'menu_class' => 'nav navbar-nav',
-        'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-        'walker' => new wp_bootstrap_navwalker()
-    )); */
-?>
+<?php	echo do_shortcode('[ivory-search id="28" title="nota"]');
+		wp_nav_menu(array(
+	        'menu' => 'primary',
+	        'theme_location' => 'primary',
+	        'depth' => 2,
+	        'container' => 'div',
+	        'container_class' => 'collapse navbar-collapse',
+	        'container_id' => 'bs-example-navbar-collapse-1',
+	        'menu_class' => 'nav navbar-nav',
+	        'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+	        'walker' => new wp_bootstrap_navwalker()
+	    )); ?>
 	<div class="collapse navbar-collapse" id="navbarColor03">
 
 		<ul class="navbar-nav mr-auto">
@@ -91,8 +91,6 @@
 	      </li>
 	       !-->
 		</ul>
-		<?php
-    echo do_shortcode('[ivory-search id="28" title="nota"]'); ?>
-		<button class="btn btn-secondary my-2 my-sm-0" type="submit">Contacto</button>
+		<button onclick="location.href='contacto'" class="btn btn-secondary my-2 my-sm-0" type="button">Contacto</button>
 	</div> 
 </nav>
