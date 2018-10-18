@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Notas
+*/
+?>
 <?php get_header(); ?>
 <body>
     <!-- Masthead -->

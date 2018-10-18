@@ -1,11 +1,10 @@
 <?php
 /*
-Template Name: Comunidad
+Template Name: Agenda
 */
 ?>
 <?php get_header(); ?>
 
-<?php query_posts('post_type=comunidad&posts_per_page=5' ); // Seleccionamos el post type "portfolio" y cogemos los 5 últimos ?>
 <?php if ( have_posts() ) : // Si existen resultados ?>
   <?php while (have_posts()) : the_post(); // Mientra haya resultados, repite lo siguiente: ?>
                 <?php // En este ejemplo tendríamos el  ?>

@@ -75,6 +75,7 @@
 	?>
 		<div class="collapse navbar-collapse" id="navbarColor03">
 
+<<<<<<< HEAD
 			<ul class="navbar-nav mr-auto">
 				<!--
 		      <li class="nav-item active">
@@ -97,3 +98,38 @@
 		</div> 
 	</div>
 </nav>
+=======
+<?php	echo do_shortcode('[ivory-search id="28" title="nota"]');
+		wp_nav_menu(array(
+	        'menu' => 'primary',
+	        'theme_location' => 'primary',
+	        'depth' => 2,
+	        'container' => 'div',
+	        'container_class' => 'collapse navbar-collapse',
+	        'container_id' => 'bs-example-navbar-collapse-1',
+	        'menu_class' => 'nav navbar-nav',
+	        'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+	        'walker' => new wp_bootstrap_navwalker()
+	    )); ?>
+	<div class="collapse navbar-collapse" id="navbarColor03">
+
+		<ul class="navbar-nav mr-auto">
+			<!--
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Features</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Pricing</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">About</a>
+	      </li>
+	       !-->
+		</ul>
+		<button onclick="location.href='contacto'" class="btn btn-secondary my-2 my-sm-0" type="button">Contacto</button>
+	</div> 
+</nav>
+>>>>>>> origin/master
