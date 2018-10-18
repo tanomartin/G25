@@ -10,7 +10,7 @@ function theme_setup()
 }
 
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'G25' ),
+    'primary' => esc_html__( 'Primary Menu', 'G25' ),
 ));
 
 function theme_get_the_title()
@@ -72,15 +72,54 @@ function cpt_comunidad() {
 			'labels' => $labels,
 			'public' => true,
 			'hierarchical' => false,
-			'menu_position' => 2,
+			'menu_position' => 4,
 			'has_archive' => true,
 			'query_var' => true,
 			'supports' => array('title'),
-			//'supports' => array('title'),
 			'rewrite' => array('slug' => 'comunidad'),
 	);
-
 	register_post_type( 'comunidad', $args );
 }
 
+
+/*add_action('init', 'cpt_agenda', 1);
+function cpt_agenda() {
+	$labels = array(
+			'name' => _x('Agenda', 'post type general name'),
+			'singular_name' => _x('Evento', 'post type singular name'),
+			'add_new' => _x('A&ntilde;adir Nuevo Evento', 'Evento'),
+			'add_new_item' => __('A&ntilde;adir Nuevo Evento'),
+			'edit_item' => __('Editar'),
+			'new_item' => __('Nuevo'),
+			'view_item' => __('Ver'),
+			'search_items' => __('Buscar'),
+			'not_found' => __('No se han encontrado ningun resultado'),
+			'not_found_in_trash' => __('No se han encontrado ningun resultado en la papelera')
+	);
+	$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'hierarchical' => false,
+			'menu_position' => 3,
+			'has_archive' => false,
+			'query_var' => true,
+			'supports' => array('title','editor','thumbnail'),
+			'rewrite' => array('slug' => 'agenda'),
+	);
+
+	register_post_type( 'agenda', $args );
+}
+
+add_action( 'init', 'crear_agenda_taxonomy' );
+function crear_agenda_taxonomy() {
+	register_taxonomy(
+			'geografico',
+			'agenda',
+			array(
+					'label' => __( 'Geografico' ),
+					'rewrite' => array( 'slug' => 'geografico' ),
+					'hierarchical' => true,
+			)
+	);
+}*/
 ?>
