@@ -34,7 +34,7 @@ Template Name: Home
           <div style="min-height:160px;position:relative;padding-top:20px;">
             <p  class="text-home">Queremos incentivar y potenciara los grandes talentos del país para darles un lugar de desarollo</p>
             <div style="width:100%;text-align:left;">
-             <a href="comunidad"><button class="btn btn-home btn-acompananos" style="position:absolute;bottom:0px;">ACOMPAÑANOS</button></a>        
+             <a href="comunidad-g25"><button class="btn btn-home btn-acompananos" style="position:absolute;bottom:0px;">ACOMPAÑANOS</button></a>        
             </div>
         </div>
         </div>
