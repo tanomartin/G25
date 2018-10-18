@@ -20,7 +20,7 @@ Template Name: Home
           <div style="min-height:160px;position:relative;padding-top:20px;">
              <p class="text-home">Un equipo formado por talento y honestidad</p>
              <div style="width:100%;text-align:left;">
-             <a href="#"><button class="btn btn-home btn-conocenos" style="position:absolute;bottom:0px;">CONOCENOS</button></a>
+             <a href="quienes-somos"><button class="btn btn-home btn-conocenos" style="position:absolute;bottom:0px;">CONOCENOS</button></a>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@ Template Name: Home
           <div style="min-height:160px;position:relative;padding-top:20px;">
             <p  class="text-home">Queremos incentivar y potenciara los grandes talentos del país para darles un lugar de desarollo</p>
             <div style="width:100%;text-align:left;">
-             <a href="#"><button class="btn btn-home btn-acompananos" style="position:absolute;bottom:0px;">ACOMPAÑANOS</button></a>        
+             <a href="comunidad"><button class="btn btn-home btn-acompananos" style="position:absolute;bottom:0px;">ACOMPAÑANOS</button></a>        
             </div>
         </div>
         </div>
@@ -48,7 +48,7 @@ Template Name: Home
           <div style="min-height:160px;position:relative;padding-top:20px;">
             <p  class="text-home">Conocé a las personas que trabajaron junto a nosotros y cómo se desarrollaron</p>
             <div style="width:100%;text-align:left;">
-             <a href="#"><button class="btn btn-home btn-descubrilos" style="position:absolute;bottom:0px;">DESCUBRILOS</button></a>           
+             <a href="red-federal"><button class="btn btn-home btn-descubrilos" style="position:absolute;bottom:0px;">DESCUBRILOS</button></a>           
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ Template Name: Home
           <div style="min-height:160px;position:relative;padding-top:20px;">
             <p  class="text-home">Descubrí las jóvenes promesas que se están capacitando en nuestor ámbito</p>
             <div style="width:100%;text-align:left;">
-             <a href="#"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
+             <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
             </div>
          </div>
 
