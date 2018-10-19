@@ -4,14 +4,28 @@ define('SITE_URL', home_url());
 
 add_action('after_setup_theme', 'theme_setup');
 
+require_once get_template_directory() . '/resourse/class-wp-bootstrap-navwalker.php';
+
 function theme_setup()
 {
     add_theme_support('post-thumbnails');
 }
 
 register_nav_menus( array(
-    'primary' => esc_html__( 'Primary Menu', 'G25' ),
+    'primary' => __( 'Primary Menu', 'G25' ),
 ));
+
+add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
+function add_first_nav_item($items, $args)
+{
+	if ($args->menu->name == 'MenuPrincipal') {
+		$items = '<li>'.do_shortcode('[ivory-search id="28" title="nota"]').'</li>'.$items;
+		return $items;
+	} else {
+		return $items;
+	}
+}
+
 
 function theme_get_the_title()
 {
@@ -24,6 +38,7 @@ function theme_get_the_title()
     }
     echo $title;
 }
+
 
 function theme_get_the_description()
 {
