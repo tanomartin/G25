@@ -96,45 +96,16 @@ function cpt_comunidad() {
 	register_post_type( 'comunidad', $args );
 }
 
-
-/*add_action('init', 'cpt_agenda', 1);
-function cpt_agenda() {
-	$labels = array(
-			'name' => _x('Agenda', 'post type general name'),
-			'singular_name' => _x('Evento', 'post type singular name'),
-			'add_new' => _x('A&ntilde;adir Nuevo Evento', 'Evento'),
-			'add_new_item' => __('A&ntilde;adir Nuevo Evento'),
-			'edit_item' => __('Editar'),
-			'new_item' => __('Nuevo'),
-			'view_item' => __('Ver'),
-			'search_items' => __('Buscar'),
-			'not_found' => __('No se han encontrado ningun resultado'),
-			'not_found_in_trash' => __('No se han encontrado ningun resultado en la papelera')
-	);
-	$args = array(
-			'labels' => $labels,
-			'public' => true,
-			'hierarchical' => false,
-			'menu_position' => 3,
-			'has_archive' => false,
-			'query_var' => true,
-			'supports' => array('title','editor','thumbnail'),
-			'rewrite' => array('slug' => 'agenda'),
-	);
-
-	register_post_type( 'agenda', $args );
+function c25_javascript_detection() {
+	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
+add_action( 'wp_head', 'c25_javascript_detection', 0 );
 
-add_action( 'init', 'crear_agenda_taxonomy' );
-function crear_agenda_taxonomy() {
-	register_taxonomy(
-			'geografico',
-			'agenda',
-			array(
-					'label' => __( 'Geografico' ),
-					'rewrite' => array( 'slug' => 'geografico' ),
-					'hierarchical' => true,
-			)
-	);
-}*/
+function c25_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
+	}
+}
+add_action( 'wp_head', 'c25_pingback_header' );
+
 ?>

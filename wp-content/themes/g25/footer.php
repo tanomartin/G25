@@ -43,7 +43,3 @@
         </div>
       </div>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo THEME_URL ?>/resourse/jquery/jquery.min.js"></script>
-    <script src="<?php echo THEME_URL ?>/resourse/bootstrap/js/bootstrap.bundle.min.js"></script>
