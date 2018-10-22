@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 <link href="<?php echo THEME_URL ?>/css/landing-page.css" rel="stylesheet">
 <link href="<?php echo THEME_URL ?>/css/style.css" rel="stylesheet">
-<!-- Bootstrap core JavaScript -->
 <script src="<?php echo THEME_URL ?>/resourse/jquery/jquery.min.js"></script>
 <script src="<?php echo THEME_URL ?>/resourse/bootstrap/js/bootstrap.bundle.min.js"></script>
 <?php wp_head(); ?>
