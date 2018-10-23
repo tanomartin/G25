@@ -22,12 +22,17 @@ do_action( 'tribe_events_before_template' );
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left mx-auto">
-            <h1 class="mb-5">Red Federal</h1>
-            <h4>Enterate lo que pasasen todo el país</h4>
+            <h1 class="mb-5">Agenda Federal</h1>
+            <h4><?php tribe_get_template_part( 'list/title-bar' ); ?></h4>
+            <?php if (isset($_POST['tribe-bar-search'])) {
+            		if ($_POST['tribe-bar-search'] != "") { ?>
+            	 		<h4>Palabra de Busqueda - <?php echo $_POST['tribe-bar-search'] ?></h4>
+            <?php 	}
+            	  }?>
           </div>
         </div>
       </div>
-    </header>
+</header>
 
 <!-- Tribe Bar -->
 <?php tribe_get_template_part( 'modules/bar' ); ?>

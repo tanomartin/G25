@@ -26,7 +26,7 @@ $more = false;
 		<?php do_action( 'tribe_events_inside_before_loop' ); ?>
 
 		<!-- Month / Year Headers -->
-		<?php tribe_events_list_the_date_headers(); ?>
+		<?php //tribe_events_list_the_date_headers(); ?>
 
 		<!-- Event  -->
 		<?php
@@ -37,20 +37,16 @@ $more = false;
 		?>
 		<div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>" <?php echo $post_parent; ?>>
 			<?php
-			$event_type = tribe( 'tec.featured_events' )->is_featured( $post->ID ) ? 'featured' : 'event';
-
-			/**
-			 * Filters the event type used when selecting a template to render
-			 *
-			 * @param $event_type
-			 */
-			$event_type = apply_filters( 'tribe_events_list_view_event_type', $event_type );
-
-			tribe_get_template_part( 'list/single', $event_type );
+				$event_type = tribe( 'tec.featured_events' )->is_featured( $post->ID ) ? 'featured' : 'event';
+				$event_type = apply_filters( 'tribe_events_list_view_event_type', $event_type );
+				tribe_get_template_part( 'list/single', $event_type );
 			?>
+			<p class="tag">
+	        <?php	$args = wp_parse_args( $args, $defaults );
+		        	$categories = tribe_get_event_taxonomy( $post_id, $args );
+		        	echo strip_tags($categories,'<a>'); ?>
+			</p>
 		</div>
-
-
 		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
 	<?php endwhile; ?>
 
