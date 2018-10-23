@@ -34,6 +34,7 @@ do_action( 'tribe_events_before_template' );
       </div>
 </header>
 
+<div style="width: 75%;  margin: 0 auto; padding-top:80px;padding-bottom:80px;">
 <!-- Tribe Bar -->
 <?php tribe_get_template_part( 'modules/bar' ); ?>
 
@@ -41,7 +42,7 @@ do_action( 'tribe_events_before_template' );
 <?php tribe_get_template_part( 'list/content' ); ?>
 
 	<div class="tribe-clear"></div>
-
+</div>
 <?php
 do_action( 'tribe_events_after_template' );
 ?>
