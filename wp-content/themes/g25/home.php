@@ -3,7 +3,17 @@
 Template Name: Home
 */
 ?>
-<?php get_header(); ?>
+<?php 
+get_header(); 
+
+//Tomo los eventos con tag destacado
+$events = tribe_get_events( array(
+	'eventDisplay'   => 'list',
+	'posts_per_page' => 2,
+	'tag'        	 => 'destacado'
+));
+?>
+
 <body>
     <!-- Masthead -->
 
@@ -52,7 +62,27 @@ Template Name: Home
             </div>
           </div>
         </div>
+   <?php if (sizeof($events) > 0) { ?>
         <div class="col-lg-3">
+          <div style="min-height:200px;position:relative">
+            <h2 class="title-home">Agenda Federal Destacada</h2>
+            <?php if (sizeof($events) > 0) { 
+            		foreach ($events as $evento) {
+						echo $evento->post_title; echo "<br>";
+            		 }
+				  } ?>
+            <div style="position:absolute;bottom:0px;">
+             <div class="dash" style="background-color:#B46BD1"></div>
+            </div>
+          </div>
+          <div style="min-height:160px;position:relative;padding-top:20px;">
+            <p  class="text-home">Descubrí las jóvenes promesas que se están capacitando en nuestor ámbito</p>
+            <div style="width:100%;text-align:left;">
+             <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
+            </div>
+         </div>
+   <?php } else { ?>
+   			<div class="col-lg-3">
           <div style="min-height:200px;position:relative">
             <h2 class="title-home">Agenda Federal</h2>
             <div style="position:absolute;bottom:0px;">
@@ -65,6 +95,7 @@ Template Name: Home
              <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
             </div>
          </div>
+   <?php } ?>
 
         </div>
       </div>

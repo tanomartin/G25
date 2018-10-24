@@ -13,7 +13,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="author">
 		<!-- Schedule & Recurrence Details -->
 		<div class="tribe-event-schedule-details">
-			<?php echo tribe_get_start_date()." - ".tribe_get_end_date();?>
+			<?php if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }?>
+			<?php echo "<br><br>"?>
+			<?php echo "START - "; ?>
+			<?php echo tribe_get_start_date( null, false, 'M' ) ?> 
+			<?php echo tribe_get_start_date( null, false, 'j' ) ?>
+			<?php echo tribe_get_start_date( null, false, 'H:i' ) ?>
+			<?php echo "<br><br>"?>
+			<?php echo "END - "; ?>
+			<?php echo tribe_get_end_date( null, false, 'M' ) ?>
+			<?php echo tribe_get_end_date( null, false, 'j' ) ?>
+			<?php echo tribe_get_end_date( null, false, 'H:i' ) ?>
 		</div>
 	</div>
 </div><!-- .tribe-events-event-meta -->
