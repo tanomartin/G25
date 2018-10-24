@@ -29,14 +29,27 @@ function add_first_nav_item($items, $args)
 
 function theme_get_the_title()
 {
-    if (is_home()) {
-        $title = get_bloginfo('name');
-    } else if (is_category()) {
-        $title = single_cat_title() . ' | G25';
-    } else {
-        $title = get_the_title() . ' | G25';
-    }
-    echo $title;
+	$url = $_SERVER['REQUEST_URI'];
+	$pos = strpos($url, "/agenda/");
+	$pos1 = strpos($url, "/agenda?");
+	if ($pos !== false || $pos1 !== false) {
+		$title = "Agenda | G25";
+	} else { 
+	    if (is_home()) {
+	        $title = get_bloginfo('name');
+	    } else { 
+	    	if (is_category()) {
+	        	$title = single_cat_title() . ' | G25';
+	    	} else {
+	    		if (is_tag()) {
+	    			$title = single_tag_title() . ' | G25';
+	    		} else { 
+	        		$title = get_the_title() . ' | G25';
+	    		}
+	    	}
+	    }
+	}
+	echo $title;
 }
 
 

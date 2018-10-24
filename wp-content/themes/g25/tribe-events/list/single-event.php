@@ -4,29 +4,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <!-- Event Title -->
-<?php do_action( 'tribe_events_before_the_event_title' ) ?>
 <h3 class="tribe-events-list-event-title">
 	<?php the_title() ?>
 </h3>
-<?php do_action( 'tribe_events_after_the_event_title' ) ?>
 
 <!-- Event Meta -->
-<?php do_action( 'tribe_events_before_the_meta' ); ?>
 <div class="tribe-events-event-meta">
 	<div class="author">
 		<!-- Schedule & Recurrence Details -->
 		<div class="tribe-event-schedule-details">
-			<?php echo tribe_events_event_schedule_details() ?>
+			<?php echo tribe_get_start_date()." - ".tribe_get_end_date();?>
 		</div>
 	</div>
 </div><!-- .tribe-events-event-meta -->
-<?php do_action( 'tribe_events_after_the_meta' ) ?>
 
 <!-- Event Content -->
-<?php do_action( 'tribe_events_before_the_content' ); ?>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
-<?php do_action( 'tribe_events_after_the_content' ); ?>
-
 
 <!-- Modal -->
 <div class="modal fade" id="myModal<?php echo get_the_ID() ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -53,7 +46,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		        }
 		        if ( ! empty( $website ) ) {
 		        	 echo strip_tags($website); 
-		        }?>   
+		        }
+		?>   
 	  </div>
     </div>
   </div>

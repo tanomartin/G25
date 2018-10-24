@@ -16,19 +16,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 do_action( 'tribe_events_before_template' );
 ?>
-
 <header class="masthead-noticias text-white text-center">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left mx-auto">
             <h1 class="mb-5">Agenda Federal</h1>
-            <h4><?php tribe_get_template_part( 'list/title-bar' ); ?></h4>
+            <h4><?php tribe_get_template_part( 'list/title-bar' );?></h4>
             <?php if (isset($_POST['tribe-bar-search'])) {
             		if ($_POST['tribe-bar-search'] != "") { ?>
             	 		<h4>Palabra de Busqueda - <?php echo $_POST['tribe-bar-search'] ?></h4>
             <?php 	}
-            	  }?>
+            	  }
+            	  if (isset($_POST['tribe-bar-date'])) {
+            		if ($_POST['tribe-bar-date'] != "") { ?>
+            	 		<h4>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></h4>
+            <?php 	}
+            	  } ?>
           </div>
         </div>
       </div>
@@ -40,9 +44,6 @@ do_action( 'tribe_events_before_template' );
 
 <!-- Main Events Content -->
 <?php tribe_get_template_part( 'list/content' ); ?>
-
 	<div class="tribe-clear"></div>
 </div>
-<?php
-do_action( 'tribe_events_after_template' );
-?>
+<?php do_action( 'tribe_events_after_template' ); ?>
