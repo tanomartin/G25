@@ -14,22 +14,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- Schedule & Recurrence Details -->
 		<div class="tribe-event-schedule-details">
 			<?php if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }?>
-			<?php echo "<br><br>"?>
+			<?php echo "<br>"?>
 			<?php echo "START - "; ?>
 			<?php echo tribe_get_start_date( null, false, 'M' ) ?> 
 			<?php echo tribe_get_start_date( null, false, 'j' ) ?>
 			<?php echo tribe_get_start_date( null, false, 'H:i' ) ?>
-			<?php echo "<br><br>"?>
+			<?php echo "<br>"?>
 			<?php echo "END - "; ?>
 			<?php echo tribe_get_end_date( null, false, 'M' ) ?>
 			<?php echo tribe_get_end_date( null, false, 'j' ) ?>
 			<?php echo tribe_get_end_date( null, false, 'H:i' ) ?>
 		</div>
 	</div>
+	<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button></p>
+	<p class="tag">
+	  <?php	$args = wp_parse_args( $args, $defaults );
+		    $categories = tribe_get_event_taxonomy( $post_id, $args );
+		    echo strip_tags($categories,'<a>'); 
+	  ?>
+	</p>
 </div><!-- .tribe-events-event-meta -->
-
-<!-- Event Content -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal<?php echo get_the_ID() ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

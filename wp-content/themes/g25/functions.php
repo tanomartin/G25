@@ -109,21 +109,32 @@ function cpt_comunidad() {
 	register_post_type( 'comunidad', $args );
 }
 
+add_action( 'wp_head', 'c25_javascript_detection', 0 );
 function c25_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'c25_javascript_detection', 0 );
 
+add_action( 'wp_head', 'c25_pingback_header' );
 function c25_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
 	}
 }
-add_action( 'wp_head', 'c25_pingback_header' );
 
 add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
 	remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
+add_action('get_event_category', 'get_event_category');
+function get_event_category() {
+	$taxonomy = "tribe_events_cat";
+	$tax_terms = get_terms($taxonomy, array('hide_empty' => false));
+	$result = array();
+	foreach($tax_terms as $category) {
+		$result[$category->term_id] = array('link' => get_category_link($category->term_id), 'name' => $category->name, 'slug' => $category->slug);
+	}
+	return $result;
 }
 
 ?>

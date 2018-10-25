@@ -41,11 +41,6 @@ $more = false;
 				$event_type = apply_filters( 'tribe_events_list_view_event_type', $event_type );
 				tribe_get_template_part( 'list/single', $event_type );
 			?>
-			<p class="tag">
-	        <?php	$args = wp_parse_args( $args, $defaults );
-		        	$categories = tribe_get_event_taxonomy( $post_id, $args );
-		        	echo strip_tags($categories,'<a>'); ?>
-			</p>
 		</div>
 		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
 	<?php endwhile; ?>
