@@ -18,12 +18,16 @@ register_nav_menus( array(
 add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
 function add_first_nav_item($items, $args)
 {
-	if ($args->menu->name == 'MenuPrincipal') {
+	$items = '<li>'.do_shortcode('[ivory-search id="28" title="nota"]').'</li>'.$items;
+	return $items;
+	
+	/*ESTE CODIGO PONE EL BUSCADOR SOLO EN MenuPrincipalCompleto
+	if ($args->menu->name == 'MenuPrincipalCompleto') {
 		$items = '<li>'.do_shortcode('[ivory-search id="28" title="nota"]').'</li>'.$items;
 		return $items;
 	} else {
 		return $items;
-	}
+	}*/
 }
 
 
