@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 do_action( 'tribe_events_before_template' );
+get_header();
 ?>
 <header class="masthead-noticias text-white text-center">
    <div class="container">
@@ -44,4 +45,5 @@ do_action( 'tribe_events_before_template' );
 	<?php tribe_get_template_part( 'list/content' ); ?>
 	<div class="tribe-clear"></div>
 </div>
-<?php do_action( 'tribe_events_after_template' ); ?>
+<?php do_action( 'tribe_events_after_template' ); 
+get_footer(); ?>
