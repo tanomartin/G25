@@ -24,6 +24,16 @@ Template Name: Comunidad
         <?php the_post_thumbnail( 'medium' ); // La imagen destacada ?>
         <div class="caption">
           <h2 class="description"><?php the_title(); // El título ?></h2>
+          <p><?php echo get_post_meta($post->ID, 'cargo', true) ; ?></p> 
+    <?php $facebook = get_post_meta($post->ID, 'facebook', true) ;
+          $twitter = get_post_meta($post->ID, 'twitter', true) ;
+          $instagram = get_post_meta($post->ID, 'instagram', true) ;
+          $linkedin = get_post_meta($post->ID, 'linkedin', true) ;
+          $web = get_post_meta($post->ID, 'web', true) ; ?>
+    <?php if ($facebook != "") { ?>
+          	<a href="<?php echo $facebook['url']?>" target="_blank"><i class="fab fa-facebook fa-2x fa-fw"></i></a>	
+    <?php } ?>
+          
         </div>
     </div>
   <?php endwhile; ?>
