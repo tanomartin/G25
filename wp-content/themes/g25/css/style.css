@@ -95,6 +95,93 @@
 
 
 
+header.masthead-quienes-somos {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/header/header-quienes-somos-blur.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+header.masthead-comunidad {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/header/header-comunidad-blur.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+header.masthead-redfederal {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/header/header-redfederal-blur.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+header.masthead-agenda {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/header/header-agenda-blur.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+}
+
+.contenedor-header{
+  width:100%;
+  height:auto;
+
+  margin-top:20px;
+  min-height:300px;
+  position:relative;
+}
+
+.quienes-somos{
+  background: url("../img/header/quienes-somos.jpg") no-repeat center center;
+  background-size:cover;
+}
+.comunidad{
+  background: url("../img/header/comunidad.jpg") no-repeat center center;
+  background-size:cover;
+
+}
+.redfederal{
+  background: url("../img/header/redfederal.jpg") no-repeat center center;
+  background-size:cover;
+
+}
+
+.agenda{
+  background: url("../img/header/agenda.jpg") no-repeat center center;
+  background-size:cover;
+
+}
+
+.navbar{
+  -webkit-box-shadow:  none!important; 
+  box-shadow: none!important;
+  padding:0px;
+  padding-top:15px;
+}
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+}
+.contenedor-header h1 {
+  font-family:'Gotham Rounded';
+  font-size:30px;
+  width:380px;
+}
+
+.contenedor-header h4 {
+  font-family:'Gotham Rounded';
+  font-size:12px;
+  padding-top:40px;
+}
 .tag{
   padding-left:10px;padding-top:10px;
 }
@@ -141,6 +228,7 @@
   font-size:20px;
   padding-top:100px;
   color:#7a7a7a;
+  width:160px;
 }
 
 .dash{

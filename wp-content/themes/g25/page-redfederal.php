@@ -3,20 +3,24 @@
 Template Name: Red Federal
 */
 ?>
-<?php get_header(); ?>
-<body>
+
+<body style="position:relative;">
     <!-- Masthead -->
-    <header class="masthead-noticias text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
+
+<header class="masthead-redfederal text-white text center">
+    <div class="container">
+	<?php get_header(); ?>
+      <div class="contenedor-header redfederal">
         <div class="row">
-          <div class="col-lg-12 text-left mx-auto">
+          <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Red Federal</h1>
-            <h4>Enterate lo que pasasen todo el país</h4>
+            <div class="dash" style="background-color:#EE4A6D"></div>
+            <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÍS</h4>
           </div>
         </div>
       </div>
-    </header>
+   </div>
+</header>
 
 	<!-- seccion noticias -->
 	<section style="background-color:#f0f0f0;padding-top:80px;padding-bottom:80px;">

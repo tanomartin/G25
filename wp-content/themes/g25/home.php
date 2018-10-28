@@ -3,8 +3,7 @@
 Template Name: Home
 */
 ?>
-<?php 
-get_header(); 
+<?php
 
 //Tomo los eventos con tag destacado
 $events = tribe_get_events( array(
@@ -17,11 +16,13 @@ $events = tribe_get_events( array(
 <body>
     <!-- Masthead -->
 
-  <header class="masthead text-center">
-    <div class="container">
-       <div class="row" style="background-color:#fff">
+  <header class="masthead text-center" style="height:100vh;min-height:720px;"> <!-- aca chequear el height por el gris !-->
+
+    <div class="container" style="background-color:#fff;"> <!-- aca chequear el height por el blanco !-->
+      <?php get_header(); ?>
+       <div class="row" >
         <div class="col-lg-3">
-          <div style="min-height:200px;position:relative">
+          <div style="min-height:250px;position:relative">
             <h2 class="title-home">Somos un puente entre lo privado y lo público</h2>
             <div style="position:absolute;bottom:0px;">
              <div class="dash" style="background-color:#FCB813"></div>
@@ -35,7 +36,7 @@ $events = tribe_get_events( array(
           </div>
         </div>
         <div class="col-lg-3">
-          <div style="min-height:200px;position:relative">
+          <div style="min-height:250px;position:relative">
             <h2 class="title-home">Comunidad G25</h2>
             <div style="position:absolute;bottom:0px;">
              <div class="dash" style="background-color:#00B8F1"></div>
@@ -49,7 +50,7 @@ $events = tribe_get_events( array(
         </div>
         </div>
         <div class="col-lg-3">
-          <div style="min-height:200px;position:relative">
+          <div style="min-height:250px;position:relative">
             <h2 class="title-home">Red Federal</h2>
             <div style="position:absolute;bottom:0px;">
              <div class="dash" style="background-color:#EE4A6D"></div>
@@ -64,7 +65,7 @@ $events = tribe_get_events( array(
         </div>
    <?php if (sizeof($events) > 0) { ?>
         <div class="col-lg-3">
-          <div style="min-height:200px;position:relative">
+          <div style="min-height:250px;position:relative">
             <h2 class="title-home">Agenda Federal Destacada</h2>
             <?php if (sizeof($events) > 0) { 
             		foreach ($events as $evento) {
@@ -83,7 +84,7 @@ $events = tribe_get_events( array(
          </div>
    <?php } else { ?>
    			<div class="col-lg-3">
-          <div style="min-height:200px;position:relative">
+          <div style="min-height:250px;position:relative">
             <h2 class="title-home">Agenda Federal</h2>
             <div style="position:absolute;bottom:0px;">
              <div class="dash" style="background-color:#B46BD1"></div>
@@ -100,6 +101,8 @@ $events = tribe_get_events( array(
         </div>
       </div>
     </div>
+    <?php get_footer(); ?>
+
   </header>
 
 
@@ -107,6 +110,6 @@ $events = tribe_get_events( array(
 
 
 
-<?php get_footer(); ?>
+
 </body>
 </html>    

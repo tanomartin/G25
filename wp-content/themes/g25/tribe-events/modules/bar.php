@@ -28,7 +28,7 @@ $current_url = tribe_events_get_current_filter_url();
 <div id="tribe-events-bar">
 	<h2 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search and Views Navigation', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h2>
 	
-	<div style="margin-bottom: 15px; background-color: #f5f5f5">
+	<div style="margin-bottom: 15px; background-color: #f5f5f5"> <!-- buscador por zona !-->
 		<div style="padding: 15px">
 			<label class="label-tribe-bar-search" for="tribe-bar-search">EVENTOS POR ZONA</label>
 			<?php $cateEventos = get_event_category(); 
@@ -54,7 +54,7 @@ $current_url = tribe_events_get_current_filter_url();
 		</div>
 	</div>
 	
-	<form id="tribe-bar-form" class="tribe-clearfix" name="tribe-bar-form" method="post" action="<?php echo esc_attr( $current_url ); ?>" autocomplete="off">
+	<form id="tribe-bar-form" class="tribe-clearfix" name="tribe-bar-form" method="post" action="<?php echo esc_attr( $current_url ); ?>" autocomplete="off"> <!-- buscador x fecha y por palabra clave !-->
 
 		<!-- Mobile Filters Toggle -->
 

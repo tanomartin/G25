@@ -17,8 +17,12 @@
 <?php wp_head(); ?>
 </head>
 
-<nav class="navbar navbar-expand-md navbar-light bg-light navbar-gray" role="navigation">
-  <div class="container nav-color">
+
+
+
+
+
+<nav class="navbar navbar-expand-md navbar-light" role="navigation">
 	<a class="navbar-brand" href="<?php echo SITE_URL;?>"> 
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -58,5 +62,4 @@
 				'walker'            => new WP_Bootstrap_Navwalker(),
 			) );
 			?>
-	</div>
 </nav>

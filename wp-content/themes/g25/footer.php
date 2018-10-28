@@ -1,27 +1,16 @@
- <footer class="footer bg-light">
+ <footer class="footer" style="position:absolute;bottom:0px;width:100%;">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <div class="col-lg-6 text-center text-lg-left my-auto">
             <ul class="list-inline mb-2">
               <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="como-nos-financiamos">Cómo nos financiamos</a>
               </li>
             </ul>
             <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
           </div>
-          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+
+          <div class="col-lg-6  text-center text-lg-right my-auto">
             <ul class="list-inline mb-0">
               <li class="list-inline-item mr-3">
                 <a href="#">
@@ -41,5 +30,12 @@
             </ul>
           </div>
         </div>
+
       </div>
+
+
+          <img src="<?php echo THEME_URL ?>/img/footer-color.jpg" style="width:100%;height:auto;padding-top:20px;">
+
+
+
     </footer>

@@ -3,19 +3,24 @@
 Template Name: Comunidad
 */
 ?>
-<?php get_header(); ?>
 
-<header class="masthead-noticias text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
+<body>
+<header class="masthead-comunidad text-white text center">
+    <div class="container">
+      <?php get_header(); ?>
+      <div class="contenedor-header comunidad">
         <div class="row">
-          <div class="col-lg-12 text-left mx-auto">
-            <h1 class="mb-5">COMUNIDAD</h1>
-            <h4>Miembros de la Comunidad</h4>
+          <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
+            <h1 class="mb-5">Comunidad G25</h1>
+            <div class="dash" style="background-color:#00B9F2"></div>
+            <h4 style="padding-top:40px;">FUNDADORES - CONSEJO DE ADMINISTRACIÓN - CONSEJO CONSULTIVO - DIRECTORIO EJECUTIVO</h4>
           </div>
         </div>
       </div>
+   </div>
 </header>
+
+<!--QUIENES SOMOS.php!-->
 
 <?php query_posts('post_type=comunidad' ); // Seleccionamos el post type "portfolio" y cogemos los 5 últimos ?>
 <?php if ( have_posts() ) : // Si existen resultados ?>
@@ -40,3 +45,6 @@ Template Name: Comunidad
 <?php endif; ?>
 
 <?php get_footer(); ?>
+
+</body>
+</html>

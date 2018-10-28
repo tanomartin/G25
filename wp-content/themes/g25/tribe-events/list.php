@@ -15,26 +15,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 do_action( 'tribe_events_before_template' );
-get_header();
+
 ?>
-<header class="masthead-noticias text-white text-center">
-   <div class="container">
+
+
+
+<header class="masthead-agenda text-white text center">
+    <div class="container">
+      <?php get_header(); ?>
+      <div class="contenedor-header agenda">
         <div class="row">
-          <div class="col-lg-12 text-left mx-auto">
+          <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Agenda Federal</h1>
+            <div class="dash" style="background-color:#00B9F2"></div>
             <h4><?php tribe_get_template_part( 'list/title-bar' );?></h4>
-            <?php if (isset($_POST['tribe-bar-search'])) {
-            		if ($_POST['tribe-bar-search'] != "") { ?>
-            	 		<h4>Palabra de Busqueda - <?php echo $_POST['tribe-bar-search'] ?></h4>
-            <?php 	}
-            	  }
-            	  if (isset($_POST['tribe-bar-date'])) {
-            		if ($_POST['tribe-bar-date'] != "") { ?>
-            	 		<h4>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></h4>
-            <?php 	}
-            	  } ?>
+          <?php if (isset($_POST['tribe-bar-search'])) {
+                if ($_POST['tribe-bar-search'] != "") { ?>
+                  <h4>Palabra de Busqueda - <?php echo $_POST['tribe-bar-search'] ?></h4>
+            <?php   }
+                }
+                if (isset($_POST['tribe-bar-date'])) {
+                if ($_POST['tribe-bar-date'] != "") { ?>
+                  <h4>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></h4>
+            <?php   }
+                } ?>
           </div>
         </div>
+      </div>
    </div>
 </header>
 
