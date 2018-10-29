@@ -14,10 +14,7 @@ $events = tribe_get_events( array(
 ?>
 
 <body>
-    <!-- Masthead -->
-
   <header class="masthead text-center" style="height:100vh;min-height:720px;"> <!-- aca chequear el height por el gris !-->
-
     <div class="container" style="background-color:#fff;"> <!-- aca chequear el height por el blanco !-->
       <?php get_header(); ?>
        <div class="row" >
@@ -82,8 +79,9 @@ $events = tribe_get_events( array(
              <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
             </div>
          </div>
+        </div>
    <?php } else { ?>
-   			<div class="col-lg-3">
+   		<div class="col-lg-3">
           <div style="min-height:250px;position:relative">
             <h2 class="title-home">Agenda Federal</h2>
             <div style="position:absolute;bottom:0px;">
@@ -96,20 +94,11 @@ $events = tribe_get_events( array(
              <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
             </div>
          </div>
-   <?php } ?>
-
         </div>
-      </div>
+   <?php } ?>
+        </div>
     </div>
     <?php get_footer(); ?>
-
   </header>
-
-
-
-
-
-
-
 </body>
 </html>    
