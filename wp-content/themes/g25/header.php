@@ -17,11 +17,6 @@
 <?php wp_head(); ?>
 </head>
 
-
-
-
-
-
 <nav class="navbar navbar-expand-md navbar-light" role="navigation">
 	<a class="navbar-brand" href="<?php echo SITE_URL;?>"> 
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +48,7 @@
 	</button>
 	<?php	wp_nav_menu( array(
 				'theme_location'    => 'primary',
-				'depth'             => 2,
+				'depth'             => 1,
 				'container'         => 'div',
 				'container_class'   => 'collapse navbar-collapse',
 				'container_id'      => 'bs-example-navbar-collapse-1',
@@ -61,5 +56,5 @@
 				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 				'walker'            => new WP_Bootstrap_Navwalker(),
 			) );
-			?>
+	?>
 </nav>

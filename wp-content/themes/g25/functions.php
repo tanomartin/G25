@@ -13,21 +13,20 @@ function theme_setup()
 
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'G25' ),
+	'footer' => __( 'Footer', 'G25' ),
 ));
 
 add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
 function add_first_nav_item($items, $args)
 {
-	$items = '<li>'.do_shortcode('[ivory-search id="28" title="nota"]').'</li>'.$items;
-	return $items;
-	
-	/*ESTE CODIGO PONE EL BUSCADOR SOLO EN MenuPrincipalCompleto
-	if ($args->menu->name == 'MenuPrincipalCompleto') {
+	$nameMenu = $args->menu->name;
+	$pos = strpos($nameMenu, "Footer");
+	if ($pos === false) {
 		$items = '<li>'.do_shortcode('[ivory-search id="28" title="nota"]').'</li>'.$items;
 		return $items;
 	} else {
 		return $items;
-	}*/
+	}
 }
 
 
