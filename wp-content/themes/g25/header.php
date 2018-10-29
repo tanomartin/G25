@@ -19,11 +19,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light" role="navigation">
 	<a class="navbar-brand" href="<?php echo SITE_URL;?>"> 
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-			xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			viewBox="0 0 176.1 79.6"
-			style="enable-background: new 0 0 176.1 79.6; width: 100px;"
-			xml:space="preserve">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 176.1 79.6" style="enable-background: new 0 0 176.1 79.6; width: 100px;" xml:space="preserve">
 			<g>
 				<path style="fill:#F5B11A;"
 						d="M4.1,40.6v-0.2c0-18.6,14.5-33.9,34.3-33.9c9.9,0,16.5,2.2,22.4,6.4c1.4,1,3,3,3,5.8
@@ -46,15 +42,14 @@
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-	<?php	wp_nav_menu( array(
+	<?php	wp_nav_menu(array(
 				'theme_location'    => 'primary',
 				'depth'             => 1,
 				'container'         => 'div',
 				'container_class'   => 'collapse navbar-collapse',
 				'container_id'      => 'bs-example-navbar-collapse-1',
-				'menu_class'        => 'nav navbar-nav',
+				'menu_class'        => 'navbar-nav ml-auto',
 				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 				'walker'            => new WP_Bootstrap_Navwalker(),
-			) );
-	?>
+			)); ?>
 </nav>

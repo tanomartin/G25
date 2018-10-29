@@ -15,7 +15,7 @@ Template Name: Red Federal
           <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Red Federal</h1>
             <div class="dash" style="background-color:#EE4A6D"></div>
-            <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÍS</h4>
+            <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÃ�S</h4>
           </div>
         </div>
       </div>
@@ -26,8 +26,7 @@ Template Name: Red Federal
 	<section style="background-color:#f0f0f0;padding-top:80px;padding-bottom:80px;">
 		<div class="container">
 			<div class="row">	
-	<?php   
-	       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	<?php   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	        $args = array('showposts' => 2, 'category_name' => 'destacado+nota', 'orderby' => 'date', 'order' => 'DESC');
 	        $wp_query->query($args);
 	        $count = $wp_query->post_count;
