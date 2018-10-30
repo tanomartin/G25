@@ -31,12 +31,12 @@ do_action( 'tribe_events_before_template' );
             <h4><?php tribe_get_template_part( 'list/title-bar' );?></h4>
           <?php if (isset($_POST['tribe-bar-search'])) {
                 if ($_POST['tribe-bar-search'] != "") { ?>
-                  <h4>Palabra de Busqueda - <?php echo $_POST['tribe-bar-search'] ?></h4>
+                  <p>Palabra de Busqueda - <?php echo $_POST['tribe-bar-search'] ?></p>
             <?php   }
                 }
                 if (isset($_POST['tribe-bar-date'])) {
                 if ($_POST['tribe-bar-date'] != "") { ?>
-                  <h4>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></h4>
+                  <p>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></p>
             <?php   }
                 } ?>
           </div>

@@ -1,4 +1,4 @@
-<footer class="footer" style="position:absolute;bottom:0px;width:100%;">
+<footer class="footer" style="bottom:0px;width:100%;">
 	<div class="container">
     	<div class="row">
        		<div class="col-lg-6 text-center text-lg-left my-auto">
