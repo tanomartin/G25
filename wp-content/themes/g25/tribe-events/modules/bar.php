@@ -9,60 +9,35 @@ $current_url = tribe_events_get_current_filter_url();
 	
 	<form id="tribe-bar-form" class="tribe-clearfix" name="tribe-bar-form" method="post" onsubmit="redireccionar(this)" action="#" autocomplete="off"> <!-- buscador x fecha y por palabra clave !-->
 		
-		<div style="margin-bottom: 15px; background-color: #f5f5f5">
-			<div style="padding: 15px">
-				<label class="label-tribe-bar-search" for="tribe-bar-search">EVENTOS POR ZONA</label>
-				<?php $cateEventos = get_event_category(); 
-					  $url = $_SERVER['REQUEST_URI'];?>
-				<div class="row">
-					<div class="col-md-7">
-						<select class="form-control" id="categoriasEventos">
-							<option value="0">Seleccione Geografico</option>
-						<?php foreach($cateEventos as $cat) {
-								$slug = $cat['slug'];
-								$pos = strpos($url, $slug);
-								if ($pos !== false) { $selected = 'selected="selected"'; } else { $selected = ''; }?>
-								<option <?php echo $selected ?> value="<?php echo $slug ?>"><?php echo $cat['name']; ?></option>
-						<?php } ?>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- Mobile Filters Toggle -->
-
 		<div id="tribe-bar-collapse-toggle" <?php if ( count( $views ) == 1 ) { ?> class="tribe-bar-collapse-toggle-full-width"<?php } ?>>
 			<?php printf( esc_html__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?><span class="tribe-bar-toggle-arrow"></span>
 		</div>
 
-		<!-- Views -->
-		<?php if ( count( $views ) > 1 ) { ?>
-			<div id="tribe-bar-views">
-				<div class="tribe-bar-views-inner tribe-clearfix">
-					<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Views Navigation', 'the-events-calendar' ), tribe_get_event_label_singular() ); ?></h3>
-					<label><?php esc_html_e( 'View As', 'the-events-calendar' ); ?></label>
-					<select
-						class="tribe-bar-views-select tribe-no-param"
-						name="tribe-bar-view"
-						aria-label="<?php printf( esc_attr__( 'View %s As', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
-					>
-						<?php foreach ( $views as $view ) : ?>
-							<option
-								<?php echo tribe_is_view( $view['displaying'] ) ? 'selected' : 'tribe-inactive' ?>
-								value="<?php echo esc_attr( $view['url'] ); ?>"
-								data-view="<?php echo esc_attr( $view['displaying'] ); ?>"
-							>
-								<?php echo $view['anchor']; ?>
-							</option>
-						<?php endforeach; ?>
-					</select>
-				</div>
-				<!-- .tribe-bar-views-inner -->
-			</div><!-- .tribe-bar-views -->
-		<?php } // if ( count( $views ) > 1 ) ?>
-
-		<?php if ( ! empty( $filters ) ) { ?>
+		<!-- Views -->	
+		<?php if (!empty( $filters )) { ?>		
 			<div class="tribe-bar-filters">
+				<div class="tribe-bar-filters-inner tribe-clearfix">
+					<div style="padding: 15px">
+						<label class="label-tribe-bar-search" for="tribe-bar-search">EVENTOS ZONA</label>
+						<?php $cateEventos = get_event_category(); 
+							  $url = $_SERVER['REQUEST_URI'];?>
+						<div class="row">
+							<div class="col-md-7">
+								<select class="form-control tribe-select-form" id="categoriasEventos" >
+									<option value="0">Seleccione Geografico</option>
+								<?php foreach($cateEventos as $cat) {
+										$slug = $cat['slug'];
+										$pos = strpos($url, $slug);
+										if ($pos !== false) { $selected = 'selected="selected"'; } else { $selected = ''; }?>
+										<option <?php echo $selected ?> value="<?php echo $slug ?>"><?php echo $cat['name']; ?></option>
+								<?php } ?>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 				<div class="tribe-bar-filters-inner tribe-clearfix">
 					<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h3>
 					<?php foreach ( $filters as $filter ) : ?>
@@ -80,18 +55,25 @@ $current_url = tribe_events_get_current_filter_url();
 							value="<?php printf( esc_attr__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
 						/>
 					</div>
-					<!-- .tribe-bar-submit -->
 				</div>
-				<!-- .tribe-bar-filters-inner -->
-			</div><!-- .tribe-bar-filters -->
-		<?php } // if ( !empty( $filters ) ) ?>
-
+			</div>
+		<?php } ?>
 	</form>
-	<!-- #tribe-bar-form -->
-
-</div><!-- #tribe-events-bar -->
+</div>
 <?php do_action( 'tribe_events_bar_after_template' ); ?>
 
+<style>
+.tribe-select-form {
+	background: 0;
+	border: none;
+	border-bottom: 1px dashed #b9b9b9;
+	border-radius: 0;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1;
+	width: 100%
+}
+</style>
 <script type="text/javascript">
 function redireccionar(formulario) {
 	var cod = document.getElementById("categoriasEventos").value;
