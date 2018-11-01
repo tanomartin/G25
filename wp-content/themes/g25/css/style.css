@@ -271,3 +271,33 @@ footer.footer {
 .btn-agenda{
   border: 1px solid #B46BD1 !important;
 }
+
+.text-quienes-somos{
+  font-family: 'Gotham Rounded';
+  font-weight:100;
+  padding-top:20px;
+  color:#5D5D5D;
+}
+
+.card h3{
+  font-family: 'Gotham Rounded';
+  color:#5D5D5D;
+}
+
+article .card h5{
+  font-family: 'Gotham Rounded';
+  color:#5D5D5D;
+  font-weight:100;
+}
+
+.card h5 button{
+  color:#5D5D5D;
+  font-weight:100;
+}
+
+.card .btn-link:hover, .btn-link:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #5D5D5D;
+    text-decoration: underline;
+}
