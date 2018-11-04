@@ -97,7 +97,9 @@ function cpt_comunidad() {
 			'view_item' => __('Ver'),
 			'search_items' => __('Buscar'),
 			'not_found' => __('No se han encontrado ningun resultado'),
-			'not_found_in_trash' => __('No se han encontrado ningun resultado en la papelera')
+			'not_found_in_trash' => __('No se han encontrado ningun resultado en la papelera'),
+			'featured_image'     => 'Imagen Comunidad',
+    		'set_featured_image' => 'Agregar Imagen Comunidad'
 	);
 	$args = array(
 			'labels' => $labels,
@@ -106,7 +108,7 @@ function cpt_comunidad() {
 			'menu_position' => 4,
 			'has_archive' => true,
 			'query_var' => true,
-			'supports' => array('title'),
+			'supports' => array('title','thumbnail'),
 			'rewrite' => array('slug' => 'comunidad'),
 	);
 	register_post_type( 'comunidad', $args );

@@ -45,7 +45,7 @@ do_action( 'tribe_events_before_template' );
    </div>
 </header>
 
-<div style="width: 75%;  margin: 0 auto; padding-top:80px;padding-bottom:80px;">
+<div style="width: 75%;  margin: 0 auto; padding-top:40px;padding-bottom:80px;">
 	<!-- Tribe Bar -->
 	<?php tribe_get_template_part( 'modules/bar' ); ?>
 	<!-- Main Events Content -->
