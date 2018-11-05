@@ -49,7 +49,7 @@ $wp_query->query($args); ?>
 <?php } ?>
 
       
-        <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full img-comunidad', 'title' => 'Feature image']); ?>
+        <?php the_post_thumbnail('medium', ['class' => 'img-responsive responsive--full img-comunidad', 'title' => 'Feature image']); ?>
 
         <div class="caption">
 
