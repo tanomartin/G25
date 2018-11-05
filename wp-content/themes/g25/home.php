@@ -14,8 +14,8 @@ $events = tribe_get_events( array(
 ?>
 
 <body>
-  <header class="masthead text-center" style="height:100vh;min-height:720px;"> <!-- aca chequear el height por el gris !-->
-    <div class="container" style="background-color:#fff;"> <!-- aca chequear el height por el blanco !-->
+  <header class="masthead text-center" style="min-height:100vh;position:relative;"> <!-- aca chequear el height por el gris !-->
+    <div class="container" style="background-color:#fff;padding-bottom:50px;"> <!-- aca chequear el height por el blanco !-->
       <?php get_header(); ?>
        <div class="row" >
         <div class="col-lg-3">
@@ -96,9 +96,16 @@ $events = tribe_get_events( array(
          </div>
         </div>
    <?php } ?>
+
+
         </div>
     </div>
-    <?php get_footer(); ?>
+    <div style="position:absolute;bottom:0px;width:100%;">
+      <?php get_footer(); ?>
+    </div>
   </header>
+
+
+
 </body>
 </html>    

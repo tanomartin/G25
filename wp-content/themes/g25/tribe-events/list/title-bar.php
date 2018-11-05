@@ -16,7 +16,7 @@
 
 	<!-- List Title -->
 	<?php do_action( 'tribe_events_before_the_title' ); ?>
-	<?php echo strip_tags(tribe_get_events_title()); ?>
+	<span style="text-transform:uppercase"><?php echo strip_tags(tribe_get_events_title()); ?></span>
 	<?php do_action( 'tribe_events_after_the_title' ); ?>
 
 </div>

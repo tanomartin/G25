@@ -16,7 +16,7 @@ $current_url = tribe_events_get_current_filter_url();
 
 		<!-- Views -->	
 		<?php if (!empty( $filters )) { ?>		
-			<div class="tribe-bar-filters">
+			<div class="tribe-bar-filters" style="background-color:#fff">
 				<div class="tribe-bar-filters-inner tribe-clearfix">
 					<div class="row" style="margin: 0px">
 						<div class="tribe-bar-date-filter col-md-3">

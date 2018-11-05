@@ -19,13 +19,13 @@
 </header>
 
 
-<section style="background: #F0F0F0;padding-bottom:60px;padding-top:50px;">
+<section style="background: #F0F0F0;padding-top:50px;position:relative;">
 
 <!--
 <div style="width:150px;height:20px;background-color:red;position:absolute;left:0px;z-index:-10;top:0px">
 </div>
 !-->
-   <div class="container">
+   <div class="container" style="padding-bottom:100px;">
       <div class="flexin" style=" display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: stretch;align-content: stretch;">
          <article style="width:50%;">
             <div class="card" style="padding:30px;">

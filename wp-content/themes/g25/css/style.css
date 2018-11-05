@@ -140,6 +140,15 @@ header.masthead-agenda {
   position:relative;
 }
 
+/*
+.back-quienes-somos{
+  background-image: url("../img/backgrounds/background-quienes-somos.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center center;
+  padding-bottom:60px;
+  padding-top:50px;}
+*/
 .quienes-somos{
   background: url("../img/header/quienes-somos.jpg") no-repeat center center;
   background-size:cover;
@@ -168,9 +177,12 @@ header.masthead-agenda {
   padding-top:15px;
 }
 footer.footer {
-    padding-top: 4rem;
+    padding-top: 0rem;
     padding-bottom: 0rem;
+    background-color:transparent!important;
 }
+
+
 .contenedor-header h1 {
   font-family:'Gotham Rounded';
   font-size:30px;
@@ -186,7 +198,7 @@ footer.footer {
   padding-left:10px;padding-top:10px;
 }
 
-.titulo-nota{
+.titulo-nota, .titulo-nota-destacada{
    padding-left:10px;
    padding-top:10px;
    padding-right:10px;
@@ -194,7 +206,7 @@ footer.footer {
    margin-bottom:5px;
 }
 
-.descripcion-nota{
+.descripcion-nota, .descripcion-nota-destacada{
   padding-left:10px;
   padding-top:0px;
   padding-right:10px;
@@ -361,14 +373,134 @@ article .card h5{
 
 }
 
-.btn-agenda{
+.boton-agenda{
   background:#B46BD1!important;
+  width:150px!important;
+  margin-top:15px;
 }
 
 .tag{
   padding:0px!important;
+  padding-top:20px!important;
+
 }
 
+.tag a{
+  color:#5D5D5D!important;
+  text-decoration:!important;
+
+}
 .img-comunidad {
 width:100%;
+}
+
+.mes-agenda{
+  text-transform:uppercase!important;
+  font-family: 'Gotham Rounded'!important;
+  color:#B46BD1!important;
+  font-weight:100;
+}
+
+.dia-agenda{
+  text-transform:uppercase!important;
+  font-family: 'Gotham Rounded'!important;
+  color:#B46BD1!important;
+  font-weight:bold;
+  font-size:55px;
+}
+
+.tribe-events-loop .tribe-events-event-meta{
+  line-height:1!important;
+}
+
+.tribe-events-list .type-tribe_events{
+  border-bottom: none!important;
+  margin: 0;
+  padding: 1em 0!important;
+}
+
+#tribe-bar-form .tribe-bar-submit input[type=submit]{
+  background-color:#B46BD1!important;
+}
+
+/* RED FEDERAL */
+
+.tag-provincia{
+  background-color:#F0F0F0;
+  padding:5px!important;
+  font-family: 'Gotham Rounded';
+  display:inline-block;
+  margin-top:10px;
+  margin-left:10px;
+  border-radius:5px;
+}
+
+.tag-nota{
+  background-color:#F0F0F0;
+  padding:10px!important;
+  font-family: 'Gotham Rounded';
+  display:inline-block;
+  border-radius:5px;
+}
+
+.tag-nota a{
+  color:#5D5D5D!important;
+
+}
+
+.titulo-nota-destacada a{
+  font-family: 'Gotham Rounded';
+  font-weight:bold;
+  color:#fff!important;
+  line-height:18px;
+}
+
+.titulo-nota a{
+  font-family: 'Gotham Rounded';
+  font-weight:bold;
+  color:#5D5D5D!important;
+  line-height:18px;
+}
+
+.descripcion-nota-destacada a{
+  font-family: 'Gotham Rounded';
+  color:#fff!important;
+  font-weight:100;
+}
+
+.descripcion-nota a{
+  font-family: 'Gotham Rounded';
+  color:#5D5D5D!important;
+  font-weight:100;
+}
+
+.titulo-nota-interior{
+  color:#EE4A6D;
+  font-family: 'Gotham Rounded';
+  text-transform:uppercase;
+  font-weight:bold;
+  text-align:left;
+}
+.bajada-nota-interior{
+  text-align:left;
+  font-family: 'Gotham Rounded';
+  font-weight:'300';
+  font-size:18px;
+}
+
+.content-nota{
+   font-family: 'Gotham Rounded';
+  text-align:left;
+ font-size:14px;
+ font-weight:100;
+ line-height:26px;
+}
+
+.content-nota img{
+  width:100%;
+  height:auto;
+}
+
+.header-nota a{
+  float:left;
 }

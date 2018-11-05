@@ -27,7 +27,7 @@ do_action( 'tribe_events_before_template' );
         <div class="row">
           <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Agenda Federal</h1>
-            <div class="dash" style="background-color:#00B9F2"></div>
+            <div class="dash" style="background-color:#B46BD1"></div>
             <h4><?php tribe_get_template_part( 'list/title-bar' );?></h4>
           <?php if (isset($_POST['tribe-bar-search'])) {
                 if ($_POST['tribe-bar-search'] != "") { ?>
@@ -45,12 +45,14 @@ do_action( 'tribe_events_before_template' );
    </div>
 </header>
 
-<div style="width: 75%;  margin: 0 auto; padding-top:40px;padding-bottom:80px;">
-	<!-- Tribe Bar -->
-	<?php tribe_get_template_part( 'modules/bar' ); ?>
-	<!-- Main Events Content -->
-	<?php tribe_get_template_part( 'list/content' ); ?>
-	<div class="tribe-clear"></div>
-</div>
-<?php do_action( 'tribe_events_after_template' ); 
-get_footer(); ?>
+<section style="background:#f0f0f0;padding-top:0px;position:relative;">
+  <div style="width: 75%;  margin: 0 auto; padding-top:40px;padding-bottom:0px;">
+  	<!-- Tribe Bar -->
+  	<?php tribe_get_template_part( 'modules/bar' ); ?>
+  	<!-- Main Events Content -->
+  	<?php tribe_get_template_part( 'list/content' ); ?>
+  	<div class="tribe-clear"></div>
+  </div>
+<?php get_footer(); ?>
+<?php do_action( 'tribe_events_after_template'); ?>
+</section>

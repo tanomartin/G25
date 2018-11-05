@@ -8,13 +8,13 @@
           	<div class="col-lg-6  text-center text-lg-right my-auto">
             	<ul class="list-inline mb-0">
               		<li class="list-inline-item mr-3">
-                		<a href="#"><i class="fab fa-facebook fa-2x fa-fw"></i></a>
+                		<a href="https://www.facebook.com/G25Argentina/?ref=br_rs" target="_blank"><i class="fab fa-facebook-f fa-2x fa-fw" style="color:#F5B11A"></i></a>
               		</li>
               		<li class="list-inline-item mr-3">
-                		<a href="#"><i class="fab fa-twitter-square fa-2x fa-fw"></i></a>
+                		<a href="https://twitter.com/g25argentina?lang=es"  target="_blank"><i class="fab fa-twitter fa-2x fa-fw" style="color:#F5B11A"></i></a>
               		</li>
               		<li class="list-inline-item">
-                		<a href="#"><i class="fab fa-instagram fa-2x fa-fw"></i></a>
+                		<a href="#"  target="_blank"><i class="fab fa-instagram fa-2x fa-fw" style="color:#F5B11A"></i></a>
               		</li>
            	 	</ul>
           	</div>

@@ -13,7 +13,7 @@ Template Name: Comunidad
           <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Comunidad G25</h1>
             <div class="dash" style="background-color:#00B9F2"></div>
-            <h4 style="padding-top:40px;">FUNDADORES - CONSEJO DE ADMINISTRACIÓN - CONSEJO CONSULTIVO - DIRECTORIO EJECUTIVO</h4>
+            <h4 style="padding-top:40px;">FUNDADORES - CONSEJO DE ADMINISTRACION - CONSEJO CONSULTIVO - DIRECTORIO EJECUTIVO</h4>
           </div>
         </div>
       </div>
@@ -21,12 +21,12 @@ Template Name: Comunidad
 </header>
 
 <!--QUIENES SOMOS.php!-->
-
+<section style="background: #F0F0F0;padding-top:0px;position:relative;">
 <?php 
 $args = array('showposts' => -1, 'post_type' => 'comunidad');
 $wp_query->query($args); ?>
 
-  <div class="container">
+  <div class="container" style="padding-bottom:100px;">
   <div class="row">
 
 <?php if ( have_posts() ) : // Si existen resultados ?>
@@ -48,7 +48,9 @@ $wp_query->query($args); ?>
         </div>
 <?php } ?>
 
+      
         <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full img-comunidad', 'title' => 'Feature image']); ?>
+
         <div class="caption">
 
           <h2 class="description"><?php the_title(); // El título ?></h2>
@@ -76,7 +78,7 @@ $wp_query->query($args); ?>
     <?php } ?>
 
     <?php if ($web != "") { ?>
-            <hr style="padding-top:0px;margin-top:0px;">
+            <hr style="padding-top:0px;margin-top:15px;">
             <a href="<?php echo $web['url']?>" target="_blank"><p style="text-decoration:underline">Sitio Web</p></a> 
     <?php } ?>
 
@@ -90,9 +92,9 @@ $wp_query->query($args); ?>
 
   </div>
 </div>
-
-
 <?php get_footer(); ?>
+</section>
+
 
 </body>
 </html>

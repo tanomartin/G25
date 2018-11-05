@@ -3,43 +3,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 ?>
-
+<section style="background-color: #fff;padding:20px;">
 <div class="container">
 	<div class="row">
-		<div class="col-lg-3">
+		<div class="col-lg-2" >
 			<!-- Event Meta -->
 			<div class="tribe-events-event-meta">
 				<div class="author">
 					<!-- Schedule & Recurrence Details -->
 					<div class="tribe-event-schedule-details">
-						<?php if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }?>
+						<!--<?php if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }?>!-->
+						<!--<?php echo "<br>"?>!-->
+						<!--<?php echo "START - "; ?>!-->
+						<span class="mes-agenda"><?php echo tribe_get_start_date( null, false, 'M' ) ?></span>
 						<?php echo "<br>"?>
-						<?php echo "START - "; ?>
-						<?php echo tribe_get_start_date( null, false, 'M' ) ?> 
-						<?php echo tribe_get_start_date( null, false, 'j' ) ?>
-						<?php echo tribe_get_start_date( null, false, 'H:i' ) ?>
+						<span class="dia-agenda"><?php echo tribe_get_start_date( null, false, 'j' ) ?></span>
+						<!--<?php echo tribe_get_start_date( null, false, 'H:i' ) ?>!-->
 						<?php echo "<br>"?>
-						<?php echo "END - "; ?>
-						<?php echo tribe_get_end_date( null, false, 'M' ) ?>
-						<?php echo tribe_get_end_date( null, false, 'j' ) ?>
-						<?php echo tribe_get_end_date( null, false, 'H:i' ) ?>
+						<!--<?php echo "END - "; ?>!-->
+						<!--<?php echo tribe_get_end_date( null, false, 'M' ) ?>!-->
+						<!--<?php echo tribe_get_end_date( null, false, 'j' ) ?>!-->
+						<!--<?php echo tribe_get_end_date( null, false, 'H:i' ) ?>!-->
 					</div>
 				</div>
 			</div><!-- .tribe-events-event-meta -->
 		</div>
 
-		<div class="col-lg-9">
+
+
+		<div class="col-lg-10" style="border-left:1px solid #5D5D5D;padding-right:20px;">
 		<!-- Event Title -->
 			<h3 class="tribe-events-list-event-title">
 				<?php the_title() ?>
 			</h3>
 			<div style="float:right">
-			<button type="button" class="btn btn-primary btn-agenda"  data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
+			<button type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
 			</div>
 
 			<p class="tag">
-			<?php	$args = wp_parse_args( $args, $defaults );
-			$categories = tribe_get_event_taxonomy( $post_id, $args );
+			<i class="fas fa-user" style="color:#B46BD1"></i>
+			<?php	$args = wp_parse_args( $args, $defaults ); $categories = tribe_get_event_taxonomy( $post_id, $args );
 			echo strip_tags($categories,'<a>'); 
 			 ?>
 			</p>
@@ -47,6 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 </div><!--FIN CONTAINER!-->
 
+</section>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal<?php echo get_the_ID() ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -79,3 +83,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </div>
 </div>
+
+
+
