@@ -26,8 +26,8 @@
 </div>
 !-->
    <div class="container" style="padding-bottom:100px;">
-      <div class="flexin" style=" display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: stretch;align-content: stretch;">
-         <article style="width:50%;">
+      <div class="flexin">
+         <article class="quienes-somos-card">
             <div class="card" style="padding:30px;">
                <h3>VISIÓN</h3>
                <div class="dash" style="background-color:#FCB813;margin-top:20px;"></div>
@@ -40,16 +40,15 @@
                </p>
             </div>
          </article>
-         <article style="width:50%">
-            <div class="card" style="padding:30px;margin-left:50px;">
+         <article class="quienes-somos-card">
+            <div class="card valores">
                <h3>VALORES</h3>
                <div class="dash" style="background-color:#FCB813;margin-top:20px;margin-bottom:20px;"></div>
                <div class="accordion" id="accordionExample">
                   <div class="">
                      <div class="" id="headingOne">
                         <h5 class="mb-0">
-                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                           VOCACIÓN DE SERVICIO
+                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="width:100%;text-align:left;"><p style="display:inline-block;margin:0px;">VOCACIÓN DE SERVICIO </p><i style="float:right;"class="fas fa-sort-down"></i>
                            </button>
                         </h5>
                      </div>
@@ -63,8 +62,7 @@
                   <div class="">
                      <div class="" id="headingTwo">
                         <h5 class="mb-0">
-                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                           HUMILDAD
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="width:100%;text-align:left;"><p style="display:inline-block;margin:0px;">HUMILDAD</p><i style="float:right;"class="fas fa-sort-down"></i>
                            </button>
                         </h5>
                      </div>
@@ -78,8 +76,7 @@
                   <div class="">
                      <div class="" id="headingThree">
                         <h5 class="mb-0">
-                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                           HONESTIDAD
+                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="width:100%;text-align:left;"><p style="display:inline-block;margin:0px;">HONESTIDAD </p><i style="float:right;"class="fas fa-sort-down"></i>
                            </button>
                         </h5>
                      </div>
@@ -93,8 +90,7 @@
                   <div class="">
                      <div class="" id="headingFour">
                         <h5 class="mb-0">
-                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                           PROFESIONALISMO
+                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="width:100%;text-align:left;"><p style="display:inline-block;margin:0px;">PROFESIONALISMO </p><i style="float:right;"class="fas fa-sort-down"></i>
                            </button>
                         </h5>
                      </div>
@@ -108,8 +104,7 @@
                   <div class="">
                      <div class="" id="headingFive">
                         <h5 class="mb-0">
-                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                           COMPROMISO
+                           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="width:100%;text-align:left;"><p style="display:inline-block;margin:0px;">COMPROMISO </p><i style="float:right;"class="fas fa-sort-down"></i>
                            </button>
                         </h5>
                      </div>
@@ -123,8 +118,7 @@
                   <div class="">
                      <div class="" id="headingSix">
                         <h5 class="mb-0">
-                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                           IDONEIDAD
+                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" style="width:100%;text-align:left;"><p style="display:inline-block;margin:0px;">IDONEIDAD </p><i style="float:right;"class="fas fa-sort-down"></i>
                            </button>
                         </h5>
                      </div>

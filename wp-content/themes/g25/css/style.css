@@ -182,6 +182,10 @@ footer.footer {
     background-color:transparent!important;
 }
 
+footer .col-lg-6 a{
+  color:#d2d2d2;
+}
+
 
 .contenedor-header h1 {
   font-family:'Gotham Rounded';
@@ -221,6 +225,22 @@ footer.footer {
    align-content: stretch;
 }
 
+.quienes-somos-card{
+  width:50%;
+}
+
+.valores{
+  padding:30px;
+  margin-left:50px;
+}
+
+.flexin{
+  display: flex;flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
 
 .nav-color{
   background-color:#fff;
@@ -250,6 +270,10 @@ footer.footer {
   margin-top: 40px;
 }
 
+.line-divider{
+  display:block;
+}
+
 .text-home{
   font-family: 'Gotham Rounded';
   font-weight:100;
@@ -258,6 +282,10 @@ footer.footer {
   color:#747474;
   padding-top:20px;
   width:80%;
+}
+.contenedor-titulo{
+  min-height:250px;
+  position:relative;
 }
 
 .btn-home{
@@ -268,20 +296,52 @@ footer.footer {
   font-size:8px;
 }
 
+.position-absolute-cero{
+  position:absolute;
+  bottom:0px;
+}
+
+.box-text-btn{
+  min-height:160px;
+  position:relative;
+  padding-top:20px;
+}
+
+
 .btn-conocenos{
   border: 1px solid #FCB813 !important;
+}
+
+.btn-conocenos:hover{
+  background-color:#FCB813!important;
+  color:#fff;
 }
 
 .btn-acompananos{
   border: 1px solid #00B8F1 !important;
 }
 
+.btn-acompananos:hover{
+  background-color:#00B8F1!important;
+  color:#fff;
+}
+
 .btn-descubrilos{
   border: 1px solid #EE4A6D !important;
 }
 
+.btn-descubrilos:hover{
+  background-color:#EE4A6D!important;
+  color:#fff;
+}
+
 .btn-agenda{
   border: 1px solid #B46BD1 !important;
+}
+
+.btn-agenda:hover{
+  background-color:#B46BD1!important;
+  color:#fff;
 }
 
 .text-quienes-somos{
@@ -503,4 +563,68 @@ width:100%;
 
 .header-nota a{
   float:left;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width:767px){
+
+  .quienes-somos-card{
+    width:100%!important;
+  }
+
+  .flexin{
+    display:block;
+  }
+
+  .valores{
+    margin-left:0px;
+    margin-top:30px;
+  }  
+}
+
+@media screen and (max-width:540px){
+
+.box-text-btn{
+  display:none;
+}
+
+.title-home{
+  width:80%;
+  padding-top:35px;
+  display:inline-block;
+}
+
+.position-absolute-cero .dash{
+  display:none;
+} 
+
+
+  .contenedor-titulo{
+    min-height:100px;
+
+  }
+
+}
+
+@media screen and (min-width:540px){
+  .line-divider{
+    display:none;
+  }
+
+  .fa-angle-right{
+    display:none;
+  }
+
+}
+
+
+@media screen and (max-width:467px){
+
+  .contenedor-header h1{
+    width:100%;
+  }
+
+
 }
