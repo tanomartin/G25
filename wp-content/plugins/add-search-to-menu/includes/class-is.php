@@ -37,9 +37,7 @@ class IS_Loader {
 		if ( null !== $is_opt ) {
 			$this->opt = $is_opt;
 		} else {
-			$old_opt = (array)get_option( 'add_search_to_menu' );
-			$new_opt = (array)get_option( 'ivory_search' );
-			$this->opt = array_merge( $old_opt, $new_opt );
+			$this->opt = Ivory_Search::load_options();
 		}
 	}
 
@@ -113,6 +111,8 @@ class IS_Loader {
 		add_action( 'admin_menu', array( $admin, 'admin_menu' ) );
 		add_action( 'wp_ajax_nopriv_dismiss_notice', array( $admin, 'dismiss_notice' ) );
 		add_action( 'wp_ajax_dismiss_notice', array( $admin, 'dismiss_notice' ) );
+		add_action( 'wp_ajax_nopriv_display_posts', array( $admin, 'display_posts' ) );
+		add_action( 'wp_ajax_display_posts', array( $admin, 'display_posts' ) );
 		add_action( 'admin_enqueue_scripts', array( $admin, 'admin_enqueue_scripts' ) );
 		add_action( 'admin_init', array( $admin, 'admin_init' ) );
 		add_action( 'is_admin_notices', array( $admin, 'admin_updated_message' ) );

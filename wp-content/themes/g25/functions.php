@@ -91,7 +91,7 @@ function cpt_comunidad() {
 			'name' => _x('Comunidad', 'post type general name'),
 			'singular_name' => _x('Comunidad', 'post type singular name'),
 			'add_new' => _x('A&ntilde;adir Nuevo', 'Comunidad'),
-			'add_new_item' => __('A&ntilde;adir Nuevo'),
+			'add_new_item' => __('A&ntilde;adir Nuevo (50 Caracteres)*'),
 			'edit_item' => __('Editar'),
 			'new_item' => __('Nuevo'),
 			'view_item' => __('Ver'),
@@ -112,6 +112,30 @@ function cpt_comunidad() {
 			'rewrite' => array('slug' => 'comunidad'),
 	);
 	register_post_type( 'comunidad', $args );
+}
+
+add_filter('enter_title_here', 'my_title_place_holder' , 20 , 2 );
+function my_title_place_holder($title , $post){
+	if( $post->post_type == 'comunidad' ){
+		$my_title = "Ingrese Nombre y Apellido";
+		return $my_title;
+	}
+	return $title;
+}
+
+
+add_filter( 'the_title', 'max_title_length', 0, 2);
+function max_title_length($title, $post) {
+	if( $post->post_type == 'comunidad' ) {
+		$max = 20;
+		if( strlen( $title ) > $max ) {
+			return substr( $title, 0, $max ). " &hellip;";
+		} else {
+			return $title;
+		}
+	} else {
+		return $title;
+	}
 }
 
 add_action( 'wp_head', 'c25_javascript_detection', 0 );

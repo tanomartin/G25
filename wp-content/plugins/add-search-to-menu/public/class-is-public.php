@@ -35,8 +35,7 @@ class IS_Public
         if ( null !== $is ) {
             $this->opt = $is->opt;
         } else {
-            $old_opt = (array) get_option( 'add_search_to_menu' );
-            $this->opt = array_merge( $old_opt, (array) $new_opt );
+            $this->opt = Ivory_Search::load_options();
         }
     
     }
@@ -489,7 +488,8 @@ class IS_Public
                                                 case 'post_type':
                                                     
                                                     if ( !isset( $q['post_type'] ) || NULL == $q['post_type'] ) {
-                                                        $query->set( $inc_key, array_values( $inc_val ) );
+                                                        $pt_val = array_values( $inc_val );
+                                                        $query->set( $inc_key, $pt_val );
                                                     } else {
                                                         $query->set( $inc_key, $q['post_type'] );
                                                     }

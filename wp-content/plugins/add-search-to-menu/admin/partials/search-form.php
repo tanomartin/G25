@@ -44,9 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		} else {
 			$disabled = ' disabled="disabled"';
 		}
+
+		$tab = isset( $_GET['tab'] ) ? $_GET['tab'] : 'includes';
 	?>
 
-	<form method="post" action="<?php echo esc_url( add_query_arg( array( 'post' => $post_id ), menu_page_url( 'ivory-search', false ) ) ); ?>" id="is-admin-form-element"<?php do_action( 'is_post_edit_form_tag' ); ?>>
+	<form method="post" action="<?php echo esc_url( add_query_arg( array( 'post' => $post_id, 'tab' => $tab ), menu_page_url( 'ivory-search', false ) ) ); ?>" id="is-admin-form-element"<?php do_action( 'is_post_edit_form_tag' ); ?>>
 		<?php
 			if ( current_user_can( 'is_edit_search_form', $post_id ) ) {
 				wp_nonce_field( 'is-save-search-form_' . $post_id );
@@ -55,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<input type="hidden" id="post_ID" name="post_ID" value="<?php echo (int) $post_id; ?>" />
 		<input type="hidden" id="is_locale" name="is_locale" value="<?php echo esc_attr( $post->locale() ); ?>" />
 		<input type="hidden" id="hiddenaction" name="action" value="save" />
-		<input type="hidden" id="active-tab" name="active-tab" value="<?php echo isset( $_GET['active-tab'] ) ? (int) $_GET['active-tab'] : '0'; ?>" />
+		<input type="hidden" id="tab" name="tab" value="<?php echo $tab; ?>" />
 
 		<div id="poststuff">
 		<div id="search-body" class="metabox-holder columns-2">
@@ -112,9 +114,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 							'title' => __( 'Excludes', 'ivory-search' ),
 							'callback' => 'excludes_panel',
 						),
-						'settings' => array(
+						'options' => array(
 							'title' => __( 'Options', 'ivory-search' ),
-							'callback' => 'settings_panel',
+							'callback' => 'options_panel',
 						),
 					);
 				}

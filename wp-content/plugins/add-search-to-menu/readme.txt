@@ -3,9 +3,9 @@ Contributors: ivorysearch, vinod dalvi
 Donate link: https://ivorysearch.com/pricing/
 Tags: search, search menu, woocommerce search, search plugin, search shortcode, search widget, exclude from search, custom search, search by post type, search by category, relevant search, search forms
 Requires at least: 3.9
-Tested up to: 4.9
+Tested up to: 5.0
 Requires PHP: 5.2.4
-Stable tag: 4.1.3
+Stable tag: 4.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -176,6 +176,11 @@ Yes we do. We try our best to help free users with customisation requests and we
 10. Displays full width search form in the menu.
 
 == Changelog ==
+
+= 4.1.4 =
+* Searches in WooCommerce products variation.
+* Fixed - Firefox browser dropdown select issue
+* Optimized plugin admin options.
 
 = 4.1.3 =
 * Developed option to search specific posts, pages or custom post types.
