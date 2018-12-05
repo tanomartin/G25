@@ -43,7 +43,10 @@ $wp_query->query($args); ?>
       <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "")){ ?>
               <div style="position:absolute;right:5;top:170px;font-size:35px;">
                 <a data-toggle="collapse" href="#social<?php echo $post->ID ?>" role="button" aria-expanded="false" aria-controls="add">
-                  <i class="fas fa-plus-circle add-comunidad"></i>
+                 <div class="icoCollapse max">
+                   <div></div>
+                   <div></div>
+                  </div>
                 </a>
               </div>
       <?php } ?>
@@ -57,7 +60,7 @@ $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medi
 list($url, $width, $height, $is_intermediate) = $thumbnail;
 ?>
 
-<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center"></div>
+<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
 
 
         <div class="caption">
@@ -100,6 +103,15 @@ list($url, $width, $height, $is_intermediate) = $thumbnail;
 <?php get_footer(); ?>
 </section>
 
+<script type="text/javascript">
+$(".icoCollapse").on("click", function(){
+  if($(this).hasClass("max")){
+    $(this).removeClass("max").addClass("min");
+  }else{
+    $(this).removeClass("min").addClass("max");
+  }
+})
+</script>
 
 </body>
 </html>

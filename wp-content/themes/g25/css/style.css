@@ -415,6 +415,46 @@ article .card h5{
   border-radius:50%
 }
 
+/* button animation */
+.icoCollapse {
+    width: 35px;
+    height: 35px;
+    background-color: #00B8F1;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+}
+.icoCollapse div{
+  position: relative;
+  transition: 0.3s;
+  background-color: #fff;
+}
+.max div:nth-child(1){
+  margin: 43% 0 0 auto;
+  width: 100%;
+  height: 14%;
+
+}
+.max div:nth-child(2){
+  margin: -57% auto auto auto;
+  width: 14%;
+  height: 100%;
+
+}
+.min div:nth-child(1){
+  margin: 43% 0 0 auto;
+  width: 100%;
+  height: 14%;
+}
+.min div:nth-child(2){
+  margin: -57% auto 0 auto;
+  width: 14%;
+  height: 100%;
+  -webkit-transform: rotate(90deg);
+}
+/* fin button animation */
+
 .rrss-comunidad{
   width:100%;
   text-align:left;
