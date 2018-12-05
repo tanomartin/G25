@@ -36,7 +36,8 @@ $wp_query->query($args); ?>
             $instagram = get_post_meta($post->ID, 'instagram', true) ;
             $linkedin = get_post_meta($post->ID, 'linkedin', true) ;
             $web = get_post_meta($post->ID, 'web', true) ; ?>
-  <div class="col-lg-3 col-md-4 col-xs-12" style="margin-top:20px;">
+
+  <div class="col-lg-3 col-md-4 col-xs-12" style="margin-top:20px;"> <!-- agregar  d-flex align-items-stretch para que las columnas tengan el mismo alto del mas largo !-->
 
     <div class="image-caption featured card">
 
@@ -94,7 +95,7 @@ list($url, $width, $height, $is_intermediate) = $thumbnail;
       </div>
 
     </div>  
-  </div>
+  </div> <!-- fin col !-->
   <?php endwhile; ?>
 <?php endif; ?>
 

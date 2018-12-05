@@ -403,10 +403,10 @@ article .card h5{
 
 }
 
-.col-lg-3 .image-caption .fab{
-  color:#00B8F1;
-  font-size:18px;
-
+.col-lg-3 .image-caption .fab {
+    color: #00B8F1;
+    font-size: 22px;
+    padding-right: 50px;
 }
 
 .add-comunidad{
@@ -607,6 +607,13 @@ width:100%;
 
 
 /* RESPONSIVE */
+
+@media screen and (max-width:1199px){
+  .col-lg-3 .image-caption .fab {
+
+    padding-right: 30px;
+  }
+}
 
 @media screen and (max-width:767px){
 
