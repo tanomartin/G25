@@ -91,7 +91,7 @@ function cpt_comunidad() {
 			'name' => _x('Comunidad', 'post type general name'),
 			'singular_name' => _x('Comunidad', 'post type singular name'),
 			'add_new' => _x('A&ntilde;adir Nuevo', 'Comunidad'),
-			'add_new_item' => __('A&ntilde;adir Nuevo (50 Caracteres)*'),
+			'add_new_item' => __('A&ntilde;adir Nuevo'),
 			'edit_item' => __('Editar'),
 			'new_item' => __('Nuevo'),
 			'view_item' => __('Ver'),
