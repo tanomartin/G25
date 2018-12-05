@@ -166,4 +166,17 @@ function get_event_category() {
 	return $result;
 }
 
+add_filter('manage_post_posts_columns', 'destacado_columns_head');
+function destacado_columns_head($defaults) {
+	$defaults['campo_a_mostrar'] = 'Destacado';
+	return $defaults;
+}
+
+add_action('manage_post_posts_custom_column', 'destacado_columns_content', 10, 2);
+function destacado_columns_content($column_name, $post_ID) {
+	$destacado = get_post_meta($post_ID, 'destacado', true) ;
+	if ($destacado) { echo "DESTACADO"; }
+}
+
+
 ?>

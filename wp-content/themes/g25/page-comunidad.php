@@ -50,20 +50,11 @@ $wp_query->query($args); ?>
                   </div>
                 </a>
               </div>
-      <?php } ?>
+      <?php }
+    		$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+			list($url, $width, $height, $is_intermediate) = $thumbnail; ?>
 
-      <!--<?php the_post_thumbnail('medium', ['class' => 'img-responsive responsive--full img-comunidad', 'title' => 'Feature image']); ?>!-->
-
-
-
-<?php
-$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
-list($url, $width, $height, $is_intermediate) = $thumbnail;
-?>
-
-<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
-
-
+		<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
         <div class="caption">
           <h2 class="description"><?php the_title(); // El título ?></h2>
           <p class="cargo"><?php echo get_post_meta($post->ID, 'cargo', true) ; ?></p> 
