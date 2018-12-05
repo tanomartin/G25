@@ -525,6 +525,12 @@ width:100%;
 
 /* RED FEDERAL */
 
+.contenedor-box{
+  width:50%;
+  height:auto;
+  float:right;
+}
+
 .tag-provincia{
   background-color:#F0F0F0;
   padding:5px!important;
@@ -533,6 +539,7 @@ width:100%;
   margin-top:10px;
   margin-left:10px;
   border-radius:5px;
+  font-size:10px;
 }
 
 .tag-nota{
@@ -551,7 +558,7 @@ width:100%;
 .titulo-nota-destacada a{
   font-family: 'Gotham Rounded';
   font-weight:bold;
-  color:#fff!important;
+  color:#5D5D5D!important;
   line-height:18px;
 }
 
@@ -564,7 +571,7 @@ width:100%;
 
 .descripcion-nota-destacada a{
   font-family: 'Gotham Rounded';
-  color:#fff!important;
+  color:#5D5D5D!important;
   font-weight:100;
 }
 
@@ -615,6 +622,13 @@ width:100%;
   }
 }
 
+@media screen and (max-width:997px){
+  .contenedor-box {
+    width: 60%;
+
+    }
+
+}
 @media screen and (max-width:767px){
 
   .quienes-somos-card{
@@ -672,6 +686,15 @@ width:100%;
   .contenedor-header h1{
     width:100%;
   }
+
+  .imagen{
+    display:none;
+  }
+
+  .contenedor-box{
+  width:95%;
+
+}
 
 
 }

@@ -23,7 +23,7 @@ Template Name: Red Federal
 </header>
 
 	<!-- seccion noticias -->
-	<section style="background-color:#f0f0f0;padding-top:80px;position:relative;">
+	<section style="background-color:#f0f0f0;padding-top:40px;position:relative;">
 		<div class="container" style="padding-bottom:100px;">
 			<div class="row">	
 	<?php   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -36,18 +36,20 @@ Template Name: Red Federal
 	               	$arrayDestacados[$post->ID] = $post->ID;
 	               	if ($paged == 1) {?>
 	                <div class="col-lg-6" style="position:relative;margin-bottom:20px;">
-	                	<div class="card card-nota" style="background-color: #EE4A6D;">
+	                	<div class="card card-nota">
 	                		<div class="imagen">
 	                			<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']); ?>
 	                		</div>
-	                		<div style="width:50%;height:auto;float:right">
+	                		<div class="contenedor-box">
 	                			<p class="tag tag-provincia">
-	                				<i class="fas fa-user" style="font-size: 10px;padding-right: 8px;"></i>
+	                				<i class="fas fa-map-marker-alt" style="font-size: 10px;padding-right: 8px;"></i>
+
 	                				<?php $child_category = post_child_category(get_the_ID()); ?>
 	    							<?php if ( $child_category ) {         
 	    									echo "<a href='".get_category_link($child_category->term_id)."'>".$child_category->cat_name."</a>"; 
 	    								   } ?>
 	    						</p>
+	    						<span style="color:#ffc107;float:right;position:relative;top:15px;"><i class="fas fa-star"></i></span>
 	                			<p class="titulo-nota-destacada"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></p>
 	                			<p class="descripcion-nota-destacada"><a href="<?php the_permalink();?>"><?php echo get_post_meta($post->ID, 'bajada', true); ?></a></p>
 	                			<!--<p class="tag"><?php the_tags( '', ', ', '' ); ?></p>!-->
@@ -70,9 +72,9 @@ Template Name: Red Federal
 	    				    <div class="imagen">
 	    				    	 <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']); ?>
 	    				    </div>
-	    				    <div style="width:50%;height:auto;float:right">
+	    				    <div class="contenedor-box">
 	    				     	<p class="tag tag-provincia">
-	    				     	<i class="fas fa-user" style="font-size: 10px;padding-right: 8px;"></i>
+	    				     	<i class="fas fa-map-marker-alt" style="font-size: 10px;padding-right: 8px;"></i>
 	        				     	<?php $child_category = post_child_category(get_the_ID()); ?>
 	    							<?php if ( $child_category ) {         
 	    									echo "<a href='".get_category_link($child_category->term_id)."'>".$child_category->cat_name."</a>"; 
