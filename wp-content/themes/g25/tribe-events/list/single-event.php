@@ -37,13 +37,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php the_title() ?>
 			</h3>
 			<div style="float:right">
-			<button type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
+				<button type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
 			</div>
-
 			<p class="tag">
-				<i class="fas fa-user" style="color:#B46BD1"></i>
-		<?php	$args = wp_parse_args( $args, $defaults ); $categories = tribe_get_event_taxonomy( $post_id, $args );
-				echo strip_tags($categories,'<a>');  ?>
+		<?php	$args = wp_parse_args( $args, $defaults ); 
+				$categories = tribe_get_event_taxonomy( $post_id, $args );
+				if ($categories) { ?>
+					<i class="fas fa-user" style="color:#B46BD1"></i>
+		<?php		echo strip_tags($categories,'<a>');  
+				}	?>
 			</p>
 		</div>
 	</div>
