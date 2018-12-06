@@ -42,12 +42,16 @@ function theme_get_the_title()
 	        $title = get_bloginfo('name');
 	    } else { 
 	    	if (is_category()) {
-	        	$title = single_cat_title() . ' | G25';
+	        	$title = single_cat_title() . ' | Categoria | G25';
 	    	} else {
 	    		if (is_tag()) {
-	    			$title = single_tag_title() . ' | G25';
-	    		} else { 
-	        		$title = get_the_title() . ' | G25';
+	    			$title = single_tag_title() . ' | Etiqueta | G25';
+	    		} else {
+	    			if (is_search()) {
+	    				$title = 'Buscador | G25';
+	    			} else { 
+	        			$title = get_the_title() . ' | G25';
+	    			}
 	    		}
 	    	}
 	    }

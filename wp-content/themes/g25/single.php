@@ -109,7 +109,7 @@
     <div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
       <hr>
 
-    <a href="<?php echo SITE_URL;?>"><p> volver a las noticias </p>  </a>   
+    <p> <a href="<?php echo SITE_URL."/red-federal";?>">volver a las noticias  </a>  </p>  
 
     </div>
   </div>
