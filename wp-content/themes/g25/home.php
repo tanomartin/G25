@@ -66,11 +66,8 @@ $events = tribe_get_events( array(
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
 						<h2 class="title-home">Red Federal</h2>
-
-						<a href="comunidad-g25"><i class="fas fa-angle-right"
+						<a href="comunidad-g25"><i class="fas fa-angle-right" 
 							style="float: right; font-size: 30px; line-height: 100px; color: #EE4A6D; padding-right: 15px;"></i></a>
-
-
 						<div class="position-absolute-cero">
 							<div class="dash" style="background-color: #EE4A6D"></div>
 						</div>
