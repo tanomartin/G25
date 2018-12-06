@@ -13,7 +13,7 @@ $events = tribe_get_events( array(
 <body>
 	<header class="masthead text-center" style="min-height: 100vh; position: relative;">
 		<!-- aca chequear el height por el gris !-->
-		<div class="container" style="background-color: #fff; padding-bottom: 50px;">
+		<div class="container padding-footer" style="background-color: #fff;">
       	<?php get_header(); ?>
        		<div class="row">
 				<div class="col-lg-3 col-md-6">
@@ -86,9 +86,9 @@ $events = tribe_get_events( array(
 					</div>
 				</div>
  		<?php if (sizeof($events) > 0) { ?>
-        		<div class="col-lg-3 col-md-6" style="background-color: #B46BD1;">
+        <div class="col-lg-3 col-md-6" style="background-color: #B46BD1;">
 					<div style="min-height: 250px; position: relative;">
-						<h2 class="title-home" style="color: #fff">Agenda Federal</h2>
+						<h2 class="title-home" style="color: #fff;width:100%;">Agenda Federal</h2>
 						<div style="color: #fff; text-align: left">
 							<div>
            				<?php foreach ($events as $evento) { ?>
@@ -105,7 +105,7 @@ $events = tribe_get_events( array(
 									<?php echo $evento->post_title;?>
 								</div>
 								<div style="text-align: left; color: #fff">
-									<p class="tag">
+									<p class="tag" style="padding: 0px!important;padding-top: 10px!important;padding-bottom: 20px!important;">
 										
 										<?php $args = wp_parse_args( $args, $defaults );
 										      $categories = tribe_get_event_taxonomy( $evento->ID, $args );
@@ -118,14 +118,17 @@ $events = tribe_get_events( array(
 					  <?php   } ?>
 							</div>
 						</div>
-						<div style="min-height: 160px; position: relative; padding-top: 20px;">
-							<div style="width: 100%; text-align: left;">
-								<a href="agenda">
-									<button class="btn btn-home btn-agenda" style="position: absolute; bottom: 0px; color: #fff; border: 1px solid #fff !important">VER TODOS</button> 
-								</a>
-							</div>
-						</div>
+
 					</div>
+
+            <div style="position: absolute; bottom:15px;">
+              <div style="width: 100%; text-align: left;">
+                <a href="agenda">
+                  <button class="btn btn-home btn-agenda" style="position: absolute; bottom: 0px; color: #fff; border: 1px solid #fff !important">VER TODOS</button> 
+                </a>
+              </div>
+            </div>
+
 				</div>
    		<?php } else { ?>
    				<div class="col-lg-3 col-md-6">

@@ -140,6 +140,9 @@ header.masthead-agenda {
   position:relative;
 }
 
+.padding-footer{
+  padding-bottom: 50px;
+}
 /*
 .back-quienes-somos{
   background-image: url("../img/backgrounds/background-quienes-somos.jpg");
@@ -628,6 +631,12 @@ width:100%;
 
     }
 
+}
+
+@media screen and (max-width:991px){
+  .padding-footer{
+  padding-bottom: 160px;
+  }
 }
 @media screen and (max-width:767px){
 
