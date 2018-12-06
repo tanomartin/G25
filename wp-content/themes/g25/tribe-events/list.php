@@ -14,11 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
 
-do_action( 'tribe_events_before_template' );
-
-?>
-
-
+//do_action( 'tribe_events_before_template' ); ?>
 
 <header class="masthead-agenda text-white text center">
     <div class="container">
@@ -47,12 +43,10 @@ do_action( 'tribe_events_before_template' );
 
 <section style="background:#f0f0f0;padding-top:0px;position:relative;">
   <div style="width: 75%;  margin: 0 auto; padding-top:40px;padding-bottom:0px;">
-  	<!-- Tribe Bar -->
-  	<?php tribe_get_template_part( 'modules/bar' ); ?>
-  	<!-- Main Events Content -->
-  	<?php tribe_get_template_part( 'list/content' ); ?>
+  	<?php tribe_get_template_part( 'modules/bar' ); 
+  		  tribe_get_template_part( 'list/content' ); ?>
   	<div class="tribe-clear"></div>
   </div>
-<?php get_footer(); ?>
-<?php do_action( 'tribe_events_after_template'); ?>
+<?php get_footer(); 
+	//do_action( 'tribe_events_after_template'); ?>
 </section>

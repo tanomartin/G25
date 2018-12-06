@@ -2,6 +2,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+
+//COSAS INTERESENTAES
+/****************
+ * if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }
+ * echo tribe_get_start_date( null, false, 'H:i' )
+ * echo tribe_get_end_date( null, false, 'M' )
+ * echo tribe_get_end_date( null, false, 'j' )
+ * echo tribe_get_end_date( null, false, 'H:i' )
+ */
+
 ?>
 <section style="background-color: #fff;padding:20px;">
 <div class="container">
@@ -12,24 +22,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="author">
 					<!-- Schedule & Recurrence Details -->
 					<div class="tribe-event-schedule-details">
-						<!--<?php if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }?>!-->
-						<!--<?php echo "<br>"?>!-->
-						<!--<?php echo "START - "; ?>!-->
 						<span class="mes-agenda"><?php echo tribe_get_start_date( null, false, 'M' ) ?></span>
-						<?php echo "<br>"?>
+						<br>
 						<span class="dia-agenda"><?php echo tribe_get_start_date( null, false, 'j' ) ?></span>
-						<!--<?php echo tribe_get_start_date( null, false, 'H:i' ) ?>!-->
-						<?php echo "<br>"?>
-						<!--<?php echo "END - "; ?>!-->
-						<!--<?php echo tribe_get_end_date( null, false, 'M' ) ?>!-->
-						<!--<?php echo tribe_get_end_date( null, false, 'j' ) ?>!-->
-						<!--<?php echo tribe_get_end_date( null, false, 'H:i' ) ?>!-->
+						<br>
 					</div>
 				</div>
 			</div><!-- .tribe-events-event-meta -->
 		</div>
-
-
 
 		<div class="col-lg-10" style="border-left:1px solid #5D5D5D;padding-right:20px;">
 		<!-- Event Title -->
@@ -41,10 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<p class="tag">
-			<i class="fas fa-user" style="color:#B46BD1"></i>
-			<?php	$args = wp_parse_args( $args, $defaults ); $categories = tribe_get_event_taxonomy( $post_id, $args );
-			echo strip_tags($categories,'<a>'); 
-			 ?>
+				<i class="fas fa-user" style="color:#B46BD1"></i>
+		<?php	$args = wp_parse_args( $args, $defaults ); $categories = tribe_get_event_taxonomy( $post_id, $args );
+				echo strip_tags($categories,'<a>');  ?>
 			</p>
 		</div>
 	</div>
@@ -83,6 +82,3 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </div>
 </div>
-
-
-
