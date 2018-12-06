@@ -15,35 +15,42 @@ Template Name: Tag Page
             <h1 class="mb-5">Red Federal</h1>
             <h3><?php echo $wp_query->found_posts; ?> <?php _e( 'Resultado encontrado para Etiqueta', 'locale' ); ?>: "<?php single_tag_title(); ?>" </h3>
             <div class="dash" style="background-color:#EE4A6D"></div>
-            <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÃ�S</h4>
+            <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÍS</h4>
           </div>
         </div>
       </div>
    </div>
 </header>
     
-<section style="background-color:#f0f0f0;padding-top:80px;padding-bottom:80px;">
-	<div class="container">
+<section style="background-color:#f0f0f0;padding-top:80px">
+	<div class="container" style="padding-bottom:100px;">
 		<div class="row">	
 		<?php if (have_posts()) : while (have_posts()) : the_post();?> 
 			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
-				<div class="card card-nota">
-				    <div class="imagen">
-				    	 <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']); ?>
-				    </div>
-				    <div style="width:50%;height:auto;float:right">
-				     	<p class="tag">
-                			<?php $child_category = post_child_category(get_the_ID()); ?>
-    						<?php if ( $child_category ) {         
-    						          echo "<a href='".get_category_link($child_category->term_id)."'>".$child_category->cat_name."</a>"; 
-    						      } ?>
-    					</p>
-				      	<p class="titulo-nota"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></p>
-				      	<p class="descripcion-nota"><a href="<?php the_permalink();?>"><?php echo get_post_meta($post->ID, 'bajada', true); ?></a></p>
-				   		<p class="tag"><?php the_tags( '', ', ', '' ); ?></p>
-				   	</div>
-				 </div>
-			</div>
+	    				<div class="card card-nota">
+	    				    <div class="imagen">
+	    				    	 <?php if ( has_post_thumbnail() ) {
+	                						the_post_thumbnail('medium', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);
+	           						  } else { ?>
+	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
+	            				 <?php } ?>
+	    				    </div>
+	    				    <div class="contenedor-box">
+	                				<?php $post_categories = get_the_category($post->ID); 
+	    								  if ( $post_categories ) {
+	    								  	foreach($post_categories as $cate) { ?>
+	    								  		<p class="tag tag-provincia">
+	    								  			<i class="fas fa-map-marker-alt" style="font-size: 10px;padding-right: 8px;"></i>
+	    											<a href='<?php echo get_category_link($cate->term_id) ?>'><?php echo $cate->cat_name ?></a> 
+	    										</p>
+	    							<?php	} 
+	    								  } ?>
+	    						
+	    				      	<p class="titulo-nota"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></p>
+	    				      	<p class="descripcion-nota"><a href="<?php the_permalink();?>"><?php echo get_post_meta($post->ID, 'bajada', true); ?></a></p>
+	    				   	</div>
+	    				 </div>
+	    			</div>
 		 <?php endwhile; endif;?> 
 		</div>
 		<div class="row">	
@@ -51,9 +58,7 @@ Template Name: Tag Page
 			<?php next_posts_link('Siguiente &raquo;') ?>
 		</div>
 	</div>
+	<?php get_footer(); ?>
 </section>
-
-<?php get_footer(); ?>
-  </body>
-
+ </body>
 </html>
