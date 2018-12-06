@@ -2,14 +2,11 @@
 /*
 Template Name: Home
 */
-?>
-<?php
-
 //Tomo los eventos con tag destacado
 $events = tribe_get_events( array(
 	'eventDisplay'   => 'list',
 	'posts_per_page' => 2,
-	'tag'        	 => 'destacado'
+	'tag'        	 => 'home'
 ));
 ?>
 
