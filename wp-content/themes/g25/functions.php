@@ -6,8 +6,7 @@ add_action('after_setup_theme', 'theme_setup');
 
 require_once get_template_directory() . '/resourse/class-wp-bootstrap-navwalker.php';
 
-function theme_setup()
-{
+function theme_setup() {
     add_theme_support('post-thumbnails');
 }
 
@@ -17,8 +16,7 @@ register_nav_menus( array(
 ));
 
 add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
-function add_first_nav_item($items, $args)
-{
+function add_first_nav_item($items, $args) {
 	$nameMenu = $args->menu->name;
 	$pos = strpos($nameMenu, "Footer");
 	if ($pos === false) {
@@ -30,8 +28,7 @@ function add_first_nav_item($items, $args)
 }
 
 
-function theme_get_the_title()
-{
+function theme_get_the_title() {
 	$url = $_SERVER['REQUEST_URI'];
 	$pos = strpos($url, "/agenda/");
 	$pos1 = strpos($url, "/agenda?");
@@ -60,13 +57,15 @@ function theme_get_the_title()
 }
 
 
-function theme_get_the_description()
-{
+function theme_get_the_description() {
     if (is_page() || is_single()) {
         if (has_excerpt()) {
             $description = get_the_excerpt();
         } else {
-            $description = explode(PHP_EOL, (explode('<!--more-->', get_page(get_the_ID())->post_content)[0]))[0];
+        	$content = get_page(get_the_ID())->post_content;
+        	$datosFirst = explode('<!--more-->',$content);
+        	$datosFinal = explode(PHP_EOL, $datosFirst[0]);
+            $description = $datosFinal[0];
         }
     } else if (is_category()) {
         $description = category_description();
@@ -77,8 +76,7 @@ function theme_get_the_description()
     echo strip_tags($description);
 }
 
-function post_child_category($id = null)
-{
+function post_child_category($id = null) {
     if ($id = null)
         return false;
     $categories = get_the_category($id);
@@ -119,14 +117,13 @@ function cpt_comunidad() {
 }
 
 add_filter('enter_title_here', 'my_title_place_holder' , 20 , 2 );
-function my_title_place_holder($title , $post){
+function my_title_place_holder($title , $post) {
 	if( $post->post_type == 'comunidad' ){
 		$my_title = "Ingrese Nombre y Apellido";
 		return $my_title;
 	}
 	return $title;
 }
-
 
 add_filter( 'the_title', 'max_title_length', 0, 2);
 function max_title_length($title, $post) {

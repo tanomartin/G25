@@ -30,7 +30,7 @@ Template Name: Category Page
 	    				<div class="card card-nota">
 	    				    <div class="imagen">
 	    				    	 <?php if ( has_post_thumbnail() ) {
-	                						the_post_thumbnail('medium', ['class' => 'img-responsive responsive--full', 'title' => 'Feature image']);
+	                						the_post_thumbnail('medium');
 	           						  } else { ?>
 	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
 	            				 <?php } ?>
