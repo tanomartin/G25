@@ -79,27 +79,51 @@ $events = tribe_get_events( array(
           </div>
         </div>
    <?php if (sizeof($events) > 0) { ?>
-        <div class="col-lg-3 col-md-6">
-          <div style="min-height:250px;position:relative">
-            <h2 class="title-home">Agenda Federal Destacada</h2>
+        <div class="col-lg-3 col-md-6" style="background-color:#B46BD1;">
+          <div style="min-height:250px;position:relative;">
+            <h2 class="title-home" style="color:#fff">Agenda Federal</h2>
+
+
+
+
+<div style="color:#fff;text-align:left">
+
+<div style="background-color:#fff;color:#5D5D5D;padding:10px;margin-bottom:10px;">
+  <div>
+<?php echo tribe_get_start_date( null, false, 'j' ) ?>
+<span style="padding-left:10px;"><?php if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }?></span>
+
+<span style="float:right;color:#5D5D5D;text-transform:uppercase;font-weight:bold;"><?php echo tribe_get_start_date( null, false, 'M' ) ?></span>
+  </div>
+
+</div>
+
             <?php if (sizeof($events) > 0) { 
             		foreach ($events as $evento) {
 						echo $evento->post_title; echo "<br>";
             		 }
 				  } ?>
+</div>
+<div style="text-align:left;color:#fff">
+      <p class="tag">
+      <i class="fas fa-user" style="color:#fff"></i>
+      <?php $args = wp_parse_args( $args, $defaults ); $categories = tribe_get_event_taxonomy( $post_id, $args );
+      echo strip_tags($categories," - "); 
+       ?>
+      </p>
+</div>
 
             <a href="red-federal"><i class="fas fa-angle-right" style="float: right;font-size: 30px;line-height: 100px;color:#B46BD1;padding-right:15px;"></i></a>
 
 
 
             <div class="position-absolute-cero">
-             <div class="dash" style="background-color:#B46BD1"></div>
             </div>
           </div>
           <div style="min-height:160px;position:relative;padding-top:20px;">
-            <p  class="text-home">Descubrí las jóvenes promesas que se están capacitando en nuestor ámbito</p>
+
             <div style="width:100%;text-align:left;">
-             <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;">VER TODOS</button> </a>           
+             <a href="agenda"><button class="btn btn-home btn-agenda" style="position:absolute;bottom:0px;color:#fff;border:1px solid #fff !important">VER TODOS</button> </a>           
             </div>
          </div>
         </div>
