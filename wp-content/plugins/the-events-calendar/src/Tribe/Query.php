@@ -942,8 +942,7 @@ if ( ! class_exists( 'Tribe__Events__Query' ) ) {
 		public static function getHideFromUpcomingEvents() {
 			global $wpdb;
 
-			/** @var Tribe__Cache $cache */
-			$cache     = tribe( 'cache' );
+			$cache     = new Tribe__Cache();
 			$cache_key = 'tribe-hide-from-upcoming-events';
 			$found     = $cache->get( $cache_key, 'save_post' );
 			if ( is_array( $found ) ) {
@@ -985,8 +984,7 @@ if ( ! class_exists( 'Tribe__Events__Query' ) ) {
 			$args = array_filter( $args, array( __CLASS__, 'filter_args' ) );
 			ksort( $args );
 
-			/** @var Tribe__Cache $cache */
-			$cache     = tribe( 'cache' );
+			$cache     = new Tribe__Cache();
 			$cache_key = 'daily_counts_and_ids_' . serialize( $args );
 			$found     = $cache->get( $cache_key, 'save_post' );
 			if ( $found ) {
@@ -1093,12 +1091,9 @@ if ( ! class_exists( 'Tribe__Events__Query' ) ) {
 				update_object_term_cache( $final_event_ids, Tribe__Events__Main::POSTTYPE );
 				update_postmeta_cache( $final_event_ids );
 			}
-
 			// return IDs per day and total counts per day
 			$return    = array( 'counts' => $counts, 'event_ids' => $event_ids );
-
-			/** @var Tribe__Cache $cache */
-			$cache     = tribe( 'cache' );
+			$cache     = new Tribe__Cache;
 			$cache_key = 'daily_counts_and_ids_' . serialize( $args );
 			$cache->set( $cache_key, $return, Tribe__Cache::NON_PERSISTENT, 'save_post' );
 
@@ -1140,8 +1135,7 @@ if ( ! class_exists( 'Tribe__Events__Query' ) ) {
 			$args = array_filter( $args, array( __CLASS__, 'filter_args' ) );
 			ksort( $args );
 
-			/** @var Tribe__Cache $cache */
-			$cache     = tribe( 'cache' );
+			$cache     = new Tribe__Cache();
 			$cache_key = 'get_events_' . get_current_user_id() . serialize( $args );
 
 			$result = $cache->get( $cache_key, 'save_post' );

@@ -114,6 +114,7 @@ class Tribe__Events__Assets {
 						'tribe-timepicker',
 						'tribe-attrchange',
 						'tribe-select2',
+						'ecp-plugins',
 					),
 				),
 				array(
@@ -151,7 +152,7 @@ class Tribe__Events__Assets {
 			$plugin,
 			'tribe-events-settings',
 			'tribe-settings.js',
-			array( 'tribe-select2', 'thickbox' ),
+			array( 'dashicons', 'tribe-select2', 'thickbox' ),
 			'admin_enqueue_scripts',
 			array(
 				'conditionals' => array( $admin_helpers, 'is_screen' ),
@@ -732,7 +733,7 @@ class Tribe__Events__Assets {
 				__( 'Nov' ),
 				__( 'Dec' ),
 			),
-			'msgs' => json_encode( array(
+			'msgs'              => json_encode( array(
 				__( 'This event is from %%starttime%% to %%endtime%% on %%startdatewithyear%%.', 'the-events-calendar' ),
 				__( 'This event is at %%starttime%% on %%startdatewithyear%%.', 'the-events-calendar' ),
 				__( 'This event is all day on %%startdatewithyear%%.', 'the-events-calendar' ),
