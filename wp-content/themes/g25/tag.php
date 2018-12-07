@@ -29,11 +29,13 @@ Template Name: Tag Page
 			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 	    				<div class="card card-nota">
 	    				    <div class="imagen">
+	    				    	<a href="<?php the_permalink();?>">
 	    				    	 <?php if ( has_post_thumbnail() ) {
 	                						the_post_thumbnail('medium');
 	           						  } else { ?>
 	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
 	            				 <?php } ?>
+	            				 </a>
 	    				    </div>
 	    				    <div class="contenedor-box">
 	                				<?php $post_categories = get_the_category($post->ID); 

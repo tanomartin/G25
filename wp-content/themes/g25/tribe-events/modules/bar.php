@@ -45,8 +45,8 @@ $current_url = tribe_events_get_current_filter_url();
 							<input  class="tribe-events-button tribe-no-param"
 									type="submit"
 									name="submit-bar"
-									aria-label=" <?php printf( esc_attr__( 'Submit %s search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>
-									value="<?php printf( esc_attr__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?> />
+									aria-label="<?php printf( esc_attr__( 'Submit %s search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
+									value="<?php printf( esc_attr__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>" />
 						</div>
 					</div>
 				</div>
