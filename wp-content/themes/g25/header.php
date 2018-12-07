@@ -17,8 +17,10 @@
 <?php wp_head(); ?>
 </head>
 
-<nav class="navbar navbar-expand-md navbar-light" role="navigation">
-	<a class="navbar-brand" href="<?php echo SITE_URL;?>"> 
+<!--Navbar-->
+<nav class="navbar navbar-light light-blue lighten-4">
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="<?php echo SITE_URL;?>"> 
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 176.1 79.6" style="enable-background: new 0 0 176.1 79.6; width: 100px;" xml:space="preserve">
 			<g>
 				<path style="fill:#F5B11A;"
@@ -39,17 +41,44 @@
 			</g>
 		</svg>
 	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<?php	wp_nav_menu(array(
+	
+	<?php echo do_shortcode('[ivory-search id="28" title="nota"]') ?>	
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fa fa-bars fa-1x"></i></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo SITE_URL;?>">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo SITE_URL."/quienes-somos";?>">Quienes Somos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo SITE_URL."/comunidad-g25";?>">Comunidad</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo SITE_URL."/agenda";?>">Agenda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo SITE_URL."/red-federal";?>">Red Federal</a>
+      </li>
+    </ul>
+    <!-- Links -->
+	<?php	 wp_nav_menu(array(
 				'theme_location'    => 'primary',
 				'depth'             => 1,
 				'container'         => 'div',
-				'container_class'   => 'collapse navbar-collapse',
 				'container_id'      => 'bs-example-navbar-collapse-1',
 				'menu_class'        => 'navbar-nav ml-auto',
 				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
 				'walker'            => new WP_Bootstrap_Navwalker(),
-			)); ?>
+			));  ?>
+  </div>
+  <!-- Collapsible content -->
 </nav>

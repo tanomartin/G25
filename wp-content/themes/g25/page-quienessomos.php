@@ -6,9 +6,6 @@
 <header class="masthead-quienes-somos text-white text center">
    <div class="container">
       <?php get_header(); ?>
-
-
-
       <div class="contenedor-header quienes-somos">
          <div class="row">
             <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">

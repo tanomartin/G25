@@ -15,7 +15,7 @@ register_nav_menus( array(
 	'footer' => __( 'Footer', 'G25' ),
 ));
 
-add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
+/*add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
 function add_first_nav_item($items, $args) {
 	$nameMenu = $args->menu->name;
 	$pos = strpos($nameMenu, "Footer");
@@ -25,7 +25,7 @@ function add_first_nav_item($items, $args) {
 	} else {
 		return $items;
 	}
-}
+}*/
 
 
 function theme_get_the_title() {
