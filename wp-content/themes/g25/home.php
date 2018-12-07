@@ -119,7 +119,7 @@ function showModal(id) {
 										<?php $args = wp_parse_args( $args, $defaults );
 										      $categories = tribe_get_event_taxonomy( $evento->ID, $args );
 										      if ($categories) { ?>
-										      	<i class="fas fa-user" style="color: #fff"></i>
+										      	<i class="fas fa-map-marker-alt" style="color: #fff"></i>
                                 		     	<?php echo strip_tags($categories);
 										      } ?>
                                     </p>
@@ -145,7 +145,7 @@ function showModal(id) {
 								      	<?php	$args = wp_parse_args( $args, $defaults );
 										        $categories = tribe_get_event_taxonomy( $evento->ID, $args );
 										        if ($categories) { ?>
-										        	<i class="fas fa-user" style="color:#B46BD1;padding-right:5px;"></i> 
+										        	<i class="fas fa-map-marker-alt" style="color:#B46BD1;padding-right:5px;"></i> 
 										     		<?php echo strip_tags($categories)." - "; 
 										     	}
 										        $email = tribe_get_organizer_email($evento);
