@@ -466,6 +466,26 @@ article .card h5{
 
 /* AGENDA FEDERAL */
 
+.border-col{
+  border-left:1px solid #5D5D5D;
+  padding-right:20px;
+}
+
+.float-agenda{
+  float:right;
+}
+
+.tribe-bar-submit {
+
+    width: 100%!important;
+}
+
+.tribe-bar-date-filter,.tribe-bar-search-filter{
+    width: 100%!important;
+}
+
+
+
 .tribe-events-list-event-title{
 
   font-family: 'Gotham Rounded';
@@ -637,6 +657,12 @@ width:100%;
   .padding-footer{
   padding-bottom: 160px;
   }
+
+.border-col{
+  border-left:0px solid #fff;
+
+}
+
 }
 @media screen and (max-width:767px){
 
@@ -664,6 +690,10 @@ width:100%;
   width:80%;
   padding-top:35px;
   display:inline-block;
+}
+
+.float-agenda{
+  float:none;
 }
 
 .position-absolute-cero .dash{
@@ -706,4 +736,13 @@ width:100%;
 }
 
 
+}
+
+@media screen and (max-width: 768px){
+.tribe-events-loop .tribe-events-event-meta {
+    background: transparent!important;
+    border: 0px solid!important;
+    margin-top: 0px!important; 
+
+}
 }

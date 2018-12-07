@@ -31,15 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div><!-- .tribe-events-event-meta -->
 		</div>
 
-		<div class="col-lg-10" style="border-left:1px solid #5D5D5D;padding-right:20px;">
+		<div class="col-lg-10 border-col">
 		<!-- Event Title -->
-			<h3 class="tribe-events-list-event-title">
+		<div>
+			<h3 class="tribe-events-list-event-title" style="display:block">
 				<?php the_title() ?>
 			</h3>
-			<div style="float:right">
-				<button type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>">VER MAS</button>
-			</div>
-			<p class="tag">
+
+			<p class="tag" style="display:inline-block">
 		<?php	$args = wp_parse_args( $args, $defaults ); 
 				$categories = tribe_get_event_taxonomy( $post_id, $args );
 				if ($categories) { ?>
@@ -47,6 +46,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php		echo strip_tags($categories,'<a>');  
 				}	?>
 			</p>
+			<div class="float-agenda">
+				<button type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo get_the_ID() ?>" style="margin-top:0px;">VER MAS</button>
+			</div>
+		</div>
+			
 		</div>
 	</div>
 </div><!--FIN CONTAINER!-->
@@ -66,20 +70,40 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="modal-body">
      	 <?php the_content(); ?> 
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="display:block">
       	<?php	$args = wp_parse_args( $args, $defaults );
 		        $categories = tribe_get_event_taxonomy( $post_id, $args );
-		        echo strip_tags($categories)." - "; 
+
+		        if ($categories) { ?>
+
+		        	<i class="fas fa-user" style="color:#B46BD1;padding-right:5px;"></i> 
+		     		<?php echo strip_tags($categories)." - "; 
+
+		     	}
+
 		        
 		        $email = tribe_get_organizer_email();
+
+		        if ( ! empty( $email ) ) { ?>
+
+		        	<i class="fas fa-envelope" style="color:#B46BD1;padding-right:5px;"></i> 
+		     		<?php echo esc_html($email)." - "; 
+
+		     	}
+
+
+
 		        $website = tribe_get_event_website_link();
-		        if ( ! empty( $email ) ) {
-		        	echo esc_html($email)." - "; 
-		        }
-		        if ( ! empty( $website ) ) {
-		        	 echo strip_tags($website); 
-		        }
-		?>   
+
+		        if ( ! empty( $website ) ){ ?>
+
+		        	<i class="fas fa-globe-americas" style="color:#B46BD1;padding-right:5px;"></i> 
+		     		<?php echo strip_tags($website); 
+
+		     	}
+
+
+				?>   
 	  </div>
     </div>
   </div>
