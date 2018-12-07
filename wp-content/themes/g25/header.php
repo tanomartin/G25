@@ -41,9 +41,7 @@
 			</g>
 		</svg>
 	</a>
-	
-	<?php echo do_shortcode('[ivory-search id="28" title="nota"]') ?>	
-
+  <?php echo do_shortcode('[ivory-search id="28" title="nota"]') ?>	
   <!-- Collapse button -->
   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
     aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
@@ -54,31 +52,23 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo SITE_URL;?>">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo SITE_URL."/quienes-somos";?>">Quienes Somos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo SITE_URL."/comunidad-g25";?>">Comunidad</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo SITE_URL."/agenda";?>">Agenda</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo SITE_URL."/red-federal";?>">Red Federal</a>
+        <a href="<?php echo SITE_URL;?>">Inicio </a>
+        <a href="<?php echo SITE_URL."/quienes-somos";?>">Quienes Somos</a>
+        <a href="<?php echo SITE_URL."/comunidad-g25";?>">Comunidad</a>
+        <a href="<?php echo SITE_URL."/agenda";?>">Agenda</a>
+        <a href="<?php echo SITE_URL."/red-federal";?>">Red Federal</a>
+      <?php	$menu_name = 'primary';
+            $locations = get_nav_menu_locations();
+            $menu_id = $locations[ $menu_name ] ;
+            $obsMenu = wp_get_nav_menu_object($menu_id); 
+            $elementos = wp_get_nav_menu_items($obsMenu);
+            if (sizeof($elementos) > 0) {
+                foreach ($elementos as $elemtoDinamico) { ?>
+                    <a target="<?php echo $elemtoDinamico->target ?>" href="<?php echo $elemtoDinamico->url ?>"><?php echo $elemtoDinamico->title ?></a>
+	 <?php     }
+            } ?>
       </li>
     </ul>
-    <!-- Links -->
-	<?php	 wp_nav_menu(array(
-				'theme_location'    => 'primary',
-				'depth'             => 1,
-				'container'         => 'div',
-				'container_id'      => 'bs-example-navbar-collapse-1',
-				'menu_class'        => 'navbar-nav ml-auto',
-				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-				'walker'            => new WP_Bootstrap_Navwalker(),
-			));  ?>
   </div>
   <!-- Collapsible content -->
 </nav>

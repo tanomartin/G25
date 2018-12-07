@@ -19,7 +19,7 @@
 			$wp_query = tribe_get_global_query_object();
 			$cantEventos = $wp_query->post_count;
 	?>
-	<span style="text-transform:uppercase"><?php echo strip_tags(tribe_get_events_title())." - #".$cantEventos; ?></span>
+	<span style="text-transform:uppercase"><?php echo strip_tags(tribe_get_events_title()).": ".$cantEventos; ?></span>
 	<?php //do_action( 'tribe_events_after_the_title' ); ?>
 
 </div>
