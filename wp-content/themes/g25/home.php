@@ -92,6 +92,7 @@ $events = tribe_get_events( array(
 						<div style="color: #fff; text-align: left">
 							<div>
            				<?php foreach ($events as $evento) { ?>
+            					
             					<div style="background-color: #fff; color: #5D5D5D; padding: 10px; margin-bottom: 10px;">
             						<?php  echo ucwords(tribe_get_start_date( $evento, false, 'l' ))." ".tribe_get_start_date( $evento, false, 'j' );
             						       if (!tribe_event_is_all_day($evento)) {
@@ -103,10 +104,10 @@ $events = tribe_get_events( array(
             					</div>
 								<div>
 									<?php echo $evento->post_title;?>
+									<button style="float: right; margin-top: 0px;" type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo $evento->ID ?>" style="margin-top:0px;">VER MAS</button>
 								</div>
 								<div style="text-align: left; color: #fff">
 									<p class="tag" style="padding: 0px!important;padding-top: 10px!important;padding-bottom: 20px!important;">
-										
 										<?php $args = wp_parse_args( $args, $defaults );
 										      $categories = tribe_get_event_taxonomy( $evento->ID, $args );
 										      if ($categories) { ?>
@@ -115,6 +116,45 @@ $events = tribe_get_events( array(
 										      } ?>
                                     </p>
                                 </div>
+                                <div class="modal fade" id="myModal<?php echo $evento->ID ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="color: black">
+								  <div class="modal-dialog" id="<?php echo $evento->ID ?>" >
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title" id="<?php echo $evento->ID ?>Label"><?php echo $evento->post_title ?></h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">
+								     	 <?php 
+								     	 	$content = $evento->post_content; 
+								     	 	$content = apply_filters('the_content', $content);
+								     	 	$content = str_replace(']]>', ']]&gt;', $content);
+								     	 	echo $content;
+								     	 ?> 
+								      </div>
+								      <div class="modal-footer" style="display:block">
+								      	<?php	$args = wp_parse_args( $args, $defaults );
+										        $categories = tribe_get_event_taxonomy( $evento->ID, $args );
+										        if ($categories) { ?>
+										        	<i class="fas fa-user" style="color:#B46BD1;padding-right:5px;"></i> 
+										     		<?php echo strip_tags($categories)." - "; 
+										     	}
+										        $email = tribe_get_organizer_email($evento);
+										        if ( ! empty( $email ) ) { ?>
+										        	<i class="fas fa-envelope" style="color:#B46BD1;padding-right:5px;"></i> 
+										     		<?php echo esc_html($email)." - "; 
+										     	}
+										        $website = tribe_get_event_website_link($evento);
+										        if ( ! empty( $website ) ){ ?>
+										      	 	<i class="fas fa-globe-americas" style="color:#B46BD1;padding-right:5px;"></i> 
+										     		<?php echo strip_tags($website); 
+										     	} ?>   
+									  </div>
+								    </div>
+								  </div>
+								</div>
+                                
 					  <?php   } ?>
 							</div>
 						</div>

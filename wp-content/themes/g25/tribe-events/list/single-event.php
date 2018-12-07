@@ -2,16 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
-
-//COSAS INTERESENTAES
-/****************
- * if (tribe_event_is_all_day(null)) { echo "DIA COMPLETO"; } else { echo "HORARIO"; }
- * echo tribe_get_start_date( null, false, 'H:i' )
- * echo tribe_get_end_date( null, false, 'M' )
- * echo tribe_get_end_date( null, false, 'j' )
- * echo tribe_get_end_date( null, false, 'H:i' )
- */
-
 ?>
 <section style="background-color: #fff;padding:20px;">
 <div class="container">
@@ -73,37 +63,20 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="modal-footer" style="display:block">
       	<?php	$args = wp_parse_args( $args, $defaults );
 		        $categories = tribe_get_event_taxonomy( $post_id, $args );
-
 		        if ($categories) { ?>
-
 		        	<i class="fas fa-user" style="color:#B46BD1;padding-right:5px;"></i> 
 		     		<?php echo strip_tags($categories)." - "; 
-
 		     	}
-
-		        
 		        $email = tribe_get_organizer_email();
-
 		        if ( ! empty( $email ) ) { ?>
-
 		        	<i class="fas fa-envelope" style="color:#B46BD1;padding-right:5px;"></i> 
 		     		<?php echo esc_html($email)." - "; 
-
 		     	}
-
-
-
 		        $website = tribe_get_event_website_link();
-
 		        if ( ! empty( $website ) ){ ?>
-
-		        	<i class="fas fa-globe-americas" style="color:#B46BD1;padding-right:5px;"></i> 
+		      	 	<i class="fas fa-globe-americas" style="color:#B46BD1;padding-right:5px;"></i> 
 		     		<?php echo strip_tags($website); 
-
-		     	}
-
-
-				?>   
+		     	} ?>   
 	  </div>
     </div>
   </div>
