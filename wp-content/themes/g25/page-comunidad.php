@@ -57,7 +57,15 @@ $wp_query->query($args); ?>
 		<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
         <div class="caption">
           <h2 class="description"><?php the_title(); // El título ?></h2>
-          <p class="cargo"><?php echo get_post_meta($post->ID, 'cargo', true) ; ?></p> 
+          <p class="cargo">
+          		<?php 
+          		    $cargo = get_post_meta($post->ID, 'cargo', true) ;
+          		    if (strlen($cargo) <= 33) {
+          		        $cargo .= "<br><br>";
+          		    }
+          		    echo $cargo;
+          		?>
+          </p> 
           <div class="rrss-comunidad collapse" id="social<?php echo $post->ID ?>" >
             <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "")) { ?>
                     <hr style="padding-top:0px;margin-top:0px;">
