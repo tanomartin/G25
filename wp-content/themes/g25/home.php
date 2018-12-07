@@ -10,6 +10,15 @@ $events = tribe_get_events( array(
 ));
 ?>
 
+<script type="text/javascript">
+
+function showModal(id) {
+	var nombre = "#myModal"+id;
+	$(nombre).modal('show');
+}
+
+</script>
+
 <body>
 	<header class="masthead text-center" style="min-height: 100vh; position: relative;">
 		<!-- aca chequear el height por el gris !-->
@@ -93,7 +102,7 @@ $events = tribe_get_events( array(
 							<div>
            				<?php foreach ($events as $evento) { ?>
             					
-            					<div style="background-color: #fff; color: #5D5D5D; padding: 10px; margin-bottom: 10px;">
+            					<div onclick="showModal(<?php echo $evento->ID ?>)" style="background-color: #fff; color: #5D5D5D; padding: 10px; margin-bottom: 10px;cursor: pointer;">
             						<?php  echo ucwords(tribe_get_start_date( $evento, false, 'l' ))." ".tribe_get_start_date( $evento, false, 'j' );
             						       if (!tribe_event_is_all_day($evento)) {
             						          echo " - ".tribe_get_start_date( $evento, false, 'H:i' ); 
@@ -104,7 +113,6 @@ $events = tribe_get_events( array(
             					</div>
 								<div>
 									<?php echo $evento->post_title;?>
-									<button style="float: right; margin-top: 0px;" type="button" class="btn btn-primary boton-agenda"  data-toggle="modal" data-target="#myModal<?php echo $evento->ID ?>" style="margin-top:0px;">VER MAS</button>
 								</div>
 								<div style="text-align: left; color: #fff">
 									<p class="tag" style="padding: 0px!important;padding-top: 10px!important;padding-bottom: 20px!important;">
