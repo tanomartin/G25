@@ -44,19 +44,20 @@
   <?php echo do_shortcode('[ivory-search id="28" title="nota"]') ?>	
   <!-- Collapse button -->
   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><span style="padding-right:10px;">Menú</span><i
         class="fa fa-bars fa-1x"></i></span></button>
 
   <!-- Collapsible content -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent1">
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a href="<?php echo SITE_URL;?>">Inicio </a>
         <a href="<?php echo SITE_URL."/quienes-somos";?>">Quienes Somos</a>
         <a href="<?php echo SITE_URL."/comunidad-g25";?>">Comunidad</a>
-        <a href="<?php echo SITE_URL."/agenda";?>">Agenda</a>
         <a href="<?php echo SITE_URL."/red-federal";?>">Red Federal</a>
+        <a href="<?php echo SITE_URL."/agenda";?>">Agenda</a>
+
       <?php	$menu_name = 'primary';
             $locations = get_nav_menu_locations();
             $menu_id = $locations[ $menu_name ] ;

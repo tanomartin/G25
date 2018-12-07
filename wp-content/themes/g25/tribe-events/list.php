@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 }
                 if (isset($_POST['tribe-bar-date'])) {
                 if ($_POST['tribe-bar-date'] != "") { ?>
-                  <p>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></p>
+                  <h5>Fecha de Busqueda - <?php echo $_POST['tribe-bar-date'] ?></h5>
             <?php   }
                 } ?>
           </div>

@@ -19,7 +19,7 @@ $current_url = tribe_events_get_current_filter_url();
 			<div class="tribe-bar-filters" style="background-color:#fff">
 				<div class="tribe-bar-filters-inner tribe-clearfix">
 					<div class="row" style="margin: 0px">
-						<div class="tribe-bar-date-filter col-md-4">
+						<div class="tribe-bar-date-filter col-md-3">
 							<label class="label-tribe-bar-search" for="tribe-bar-search">EVENTOS ZONA</label>
 							<?php $cateEventos = get_event_category(); 
 								  $url = $_SERVER['REQUEST_URI'];?>
@@ -41,12 +41,12 @@ $current_url = tribe_events_get_current_filter_url();
 									<?php echo $filter['html'] ?>
 								</div>
 						<?php endforeach; ?>
-						<div class="tribe-bar-submit col-md-4" style="margin-left: 0px;"">
+						<div class="tribe-bar-submit col-md-3" style="margin-left: 0px;">
 							<input  class="tribe-events-button tribe-no-param"
 									type="submit"
 									name="submit-bar"
-									aria-label="<?php printf( esc_attr__( 'Submit %s search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>
-									value="<?php printf( esc_attr__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>" />
+									aria-label=" <?php printf( esc_attr__( 'Submit %s search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>
+									value="<?php printf( esc_attr__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?> />
 						</div>
 					</div>
 				</div>

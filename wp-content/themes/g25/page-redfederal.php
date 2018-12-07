@@ -73,7 +73,7 @@ Template Name: Red Federal
         	  <?php $args = array('post__not_in' => $arrayDestacados, 'paged' => $paged);
         	        $wp_query->query($args);
         	       	while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-        	    			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
+        	    			<div class="col-lg-6 " style="position:relative;margin-bottom:20px;">
         	    				<div class="card card-nota">
         	    				    <div class="imagen">
         	    				    	 <?php if ( has_post_thumbnail() ) {
