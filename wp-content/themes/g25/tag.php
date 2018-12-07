@@ -54,8 +54,10 @@ Template Name: Tag Page
 		 <?php endwhile; endif;?> 
 		</div>
 		<div class="row">	
-			<?php previous_posts_link('&laquo; Anterior') ?>
-			<?php next_posts_link('Siguiente &raquo;') ?>
+			<div class="col-lg-12 text-center">
+		        <span style="padding: 10px"><?php previous_posts_link('&laquo; Anterior') ?></span>
+		        <span style="padding: 10px"><?php next_posts_link('Siguiente &raquo;') ?></span>
+	        </div>
 		</div>
 	</div>
 	<?php get_footer(); ?>
