@@ -86,7 +86,7 @@ Template Name: Red Federal
         	    				    	          $url = wp_get_attachment_url( $thumbID ); ?>
     	                			              <img width="246" height="191" title="Feature image" src="<?php echo $url ?>" class="img-responsive responsive--full wp-post-image" >
         	           					<?php } else { ?>
-        	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
+        	           						  	  <img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
         	            				<?php } ?>
         	            				 </a>
         	    				    </div>
