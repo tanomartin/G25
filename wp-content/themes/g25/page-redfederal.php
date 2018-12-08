@@ -43,8 +43,10 @@ Template Name: Red Federal
     	                		<div class="imagen">
     	                			<a href="<?php the_permalink();?>">
     	                			<?php if ( has_post_thumbnail() ) {
-    	                						the_post_thumbnail('medium');
-    	           						  } else { ?>
+    	                			            $thumbID = get_post_thumbnail_id( $post->ID );
+    	                			            $url = wp_get_attachment_url( $thumbID ); ?>
+    	                			            <img width="246" height="191" title="Feature image" src="<?php echo $url ?>" class="img-responsive responsive--full wp-post-image" >
+    	           					<?php } else { ?>
     	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
     	            				<?php }	?>
     	            				</a>
@@ -79,11 +81,13 @@ Template Name: Red Federal
         	    				<div class="card card-nota">
         	    				    <div class="imagen">
         	    				    	<a href="<?php the_permalink();?>">
-        	    				    	 <?php if ( has_post_thumbnail() ) {
-        	                						the_post_thumbnail('medium');
-        	           						  } else { ?>
+        	    				    	<?php if ( has_post_thumbnail() ) {
+        	    				    	          $thumbID = get_post_thumbnail_id( $post->ID );
+        	    				    	          $url = wp_get_attachment_url( $thumbID ); ?>
+    	                			              <img width="246" height="191" title="Feature image" src="<?php echo $url ?>" class="img-responsive responsive--full wp-post-image" >
+        	           					<?php } else { ?>
         	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
-        	            				 <?php } ?>
+        	            				<?php } ?>
         	            				 </a>
         	    				    </div>
         	    				    <div class="contenedor-box">

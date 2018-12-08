@@ -51,8 +51,8 @@ $wp_query->query($args); ?>
                 </a>
               </div>
       <?php }
-    		$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
-			list($url, $width, $height, $is_intermediate) = $thumbnail; ?>
+          $thumbID = get_post_thumbnail_id( $post->ID );
+          $url = wp_get_attachment_url( $thumbID );?>
 
 		<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
         <div class="caption">
