@@ -770,6 +770,15 @@ box-shadow: 0 3px 6px -6px #737373;
 }
 
 }
+
+@media screen and (max-width:768px){
+  #tribe-events-pg-template {
+      padding: 0px 0px 0px!important;
+  }
+
+}
+
+
 @media screen and (max-width:767px){
 
   .quienes-somos-card{
