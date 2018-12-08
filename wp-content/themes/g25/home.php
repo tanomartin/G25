@@ -64,8 +64,7 @@ function showModal(id) {
 							talentos del país para darles un lugar de desarollo</p>
 						<div style="width: 100%; text-align: left;">
 							<a href="comunidad-g25"><button
-									class="btn btn-home btn-acompananos"
-									style="position: absolute; bottom: 0px;">ACOMPAÑANOS</button></a>
+									class="btn btn-home btn-acompananos" style="position:absolute; bottom:0px;">ACOMPAÑANOS</button></a>
 						</div>
 					</div>
 				</div>
