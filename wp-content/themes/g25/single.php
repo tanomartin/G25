@@ -26,10 +26,15 @@ if( have_posts() ){
 		<div class="container" style="padding-bottom:40px;">
   			<div class="row">
     			<div class="col-md-8 offset-md-2 text-center header-nota" style="background-color:#fff;padding-top:40px!important;padding:80px;padding-bottom:20px;">
-     			<?php $child_category = post_child_category(get_the_ID()); ?>
-     			<?php if ( $child_category ) {         
-    		  			echo "<a href='".get_category_link($child_category->term_id)."'>".$child_category->cat_name."</a>"; 
-    	  		 	  } ?>
+     			<?php $post_categories = get_the_category($post->ID); 
+        	    	      if ( $post_categories ) {
+        	    		     foreach($post_categories as $cate) { ?>
+        	    				<p class="tag tag-provincia">
+        	    					<i class="fas fa-map-marker-alt" style="font-size: 10px;padding-right: 8px;"></i>
+        	    					<a href='<?php echo get_category_link($cate->term_id) ?>'><?php echo $cate->cat_name ?></a> 
+        	    				</p>
+        	    	<?php	} 
+        	    		  } ?>	
 		      		<span style="float:right"><?php echo get_the_date('M d, Y'); ?></span>
 		      		<hr style="margin-top:40px;">
 		      		
@@ -83,7 +88,7 @@ if( have_posts() ){
 			if ($posttags) { ?>
   			<div class="row">
     			<div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
-      				<hr style="margin-top:40px;">
+      				<hr style="padding-top:20px">
       				<div class="row">
 	
 				<?php  foreach($posttags as $tag) { ?>
@@ -97,7 +102,7 @@ if( have_posts() ){
 	<?php	} ?>
 	  		<div class="row">
 		    	<div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
-		      		<hr>
+		      		<hr style="padding-top:20px">
 		      		<p><a href="<?php echo SITE_URL."/red-federal";?>">Volver a las Noticias  </a>  </p>  
 		    	</div>
 		  	</div>
