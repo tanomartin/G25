@@ -9,16 +9,6 @@ $events = tribe_get_events( array(
 	'tag'        	 => 'home'
 ));
 ?>
-<style>
-a { text-decoration: none;
-    color: #7a7a7a;}
-a:visited {text-decoration: none;
-    color: #7a7a7a;} 
-a:active {text-decoration: none;
-    color: #7a7a7a;} 
-a:hover {text-decoration: none;
-    color: #7a7a7a;} 
-</style>
 
 <script type="text/javascript">
 function showModal(id) {
@@ -58,10 +48,9 @@ function showModal(id) {
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
 						<h2 class="title-home"><a href="comunidad-g25">Comunidad G25</a></h2>
-
-						<i class="fas fa-angle-right"
-							style="float: right; font-size: 30px; line-height: 100px; color: #00B8F1; padding-right: 15px;"></i>
-
+						<a href="comunidad-g25">
+						<i class="fas fa-angle-right" style="float: right; font-size: 30px; line-height: 100px; color: #00B8F1; padding-right: 15px;"></i>
+						</a>
 
 						<div class="position-absolute-cero">
 							<div class="dash" style="background-color: #00B8F1"></div>

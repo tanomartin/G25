@@ -25,13 +25,13 @@ if( have_posts() ){
 	<section style="background-color:#f0f0f0;padding-top:80px;position:relative">
 		<div class="container" style="padding-bottom:40px;">
   			<div class="row">
-    			<div class="col-md-8 offset-md-2 text-center header-nota" style="background-color:#fff;padding-top:40px!important;padding:80px;padding-bottom:20px;">
+    			<div class="col-md-8 offset-md-2 text-center header-nota estilo-nota">
      			<?php $post_categories = get_the_category($post->ID); 
         	    	      if ( $post_categories ) {
         	    		     foreach($post_categories as $cate) { ?>
-        	    				<p class="tag tag-provincia">
-        	    					<i class="fas fa-map-marker-alt" style="font-size: 10px;padding-right: 8px;"></i>
-        	    					<a href='<?php echo get_category_link($cate->term_id) ?>'><?php echo $cate->cat_name ?></a> 
+        	    				<p class="tag tag-provincia" style="float:left;margin-top:0px;">
+        	    					<i class="fas fa-map-marker-alt" style="font-size: 10px;padding-right: 5px;"></i>
+        	    					<a href='<?php echo get_category_link($cate->term_id) ?>' style="float:none"><?php echo $cate->cat_name ?></a> 
         	    				</p>
         	    	<?php	} 
         	    		  } ?>	

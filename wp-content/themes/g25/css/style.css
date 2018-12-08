@@ -648,6 +648,13 @@ width:100%;
 
 }
 
+.estilo-nota{
+   background-color:#fff;
+   padding-top:40px!important;
+   padding:80px;
+   padding-bottom:20px;
+}
+
 .titulo-nota-destacada a{
   font-family: 'Gotham Rounded';
   font-weight:bold;
@@ -819,6 +826,13 @@ box-shadow: 0 3px 6px -6px #737373;
   width:80%!important;
 }
 
+  .estilo-nota{
+
+     padding:40px;
+
+  }
+}
+
 }
 
 @media screen and (min-width:540px){
@@ -830,7 +844,7 @@ box-shadow: 0 3px 6px -6px #737373;
     display:none;
   }
 
-}
+
 
 
 @media screen and (max-width:467px){
