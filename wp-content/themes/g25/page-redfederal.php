@@ -107,6 +107,7 @@ Template Name: Red Federal
         	    			</div>
         	  	<?php endwhile; ?> 
 			</div>
+			
 			<div class="row">	
 				<div class="col-lg-12 text-center">
 		        	<span style="padding: 10px"><?php previous_posts_link('&laquo; Anterior') ?></span>
