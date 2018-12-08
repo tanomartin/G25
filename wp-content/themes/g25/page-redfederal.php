@@ -45,7 +45,7 @@ Template Name: Red Federal
     	                			<?php if ( has_post_thumbnail() ) {
     	                			            $thumbID = get_post_thumbnail_id( $post->ID );
     	                			            $url = wp_get_attachment_url( $thumbID ); ?>
-    	                			            <img width="246" height="191" title="Feature image" src="<?php echo $url ?>" class="img-responsive responsive--full wp-post-image" >
+    	                			            <img  title="" class="img-responsive responsive--full wp-post-image" style="height:200px;width:220px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" >
     	           					<?php } else { ?>
     	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
     	            				<?php }	?>
@@ -71,7 +71,7 @@ Template Name: Red Federal
     	  <?php endwhile; ?>
 	  		</div>
 	  <?php if ($paged == 1 && $count != 0) { ?>
-	  			<hr>
+	  			<hr style="margin-top:0px;">
 	  <?php } ?>
 	  		<div class="row">	
         	  <?php $args = array('post__not_in' => $arrayDestacados, 'paged' => $paged);
@@ -84,9 +84,12 @@ Template Name: Red Federal
         	    				    	<?php if ( has_post_thumbnail() ) {
         	    				    	          $thumbID = get_post_thumbnail_id( $post->ID );
         	    				    	          $url = wp_get_attachment_url( $thumbID ); ?>
-    	                			              <img width="246" height="191" title="Feature image" src="<?php echo $url ?>" class="img-responsive responsive--full wp-post-image" >
+    	                			              <img  title="" class="img-responsive responsive--full wp-post-image" style="height:200px;width:220px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" >
         	           					<?php } else { ?>
-        	           						  	  <img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
+
+                                        <img  title="" class="img-responsive responsive--full wp-post-image" style="height:200px;width:220px;background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" >
+
+        	           						  	
         	            				<?php } ?>
         	            				 </a>
         	    				    </div>
