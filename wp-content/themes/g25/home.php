@@ -9,14 +9,22 @@ $events = tribe_get_events( array(
 	'tag'        	 => 'home'
 ));
 ?>
+<style>
+a { text-decoration: none;
+    color: #7a7a7a;}
+a:visited {text-decoration: none;
+    color: #7a7a7a;} 
+a:active {text-decoration: none;
+    color: #7a7a7a;} 
+a:hover {text-decoration: none;
+    color: #7a7a7a;} 
+</style>
 
 <script type="text/javascript">
-
 function showModal(id) {
 	var nombre = "#myModal"+id;
 	$(nombre).modal('show');
 }
-
 </script>
 
 <body>
@@ -27,8 +35,8 @@ function showModal(id) {
        		<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
-						<h2 class="title-home">Somos un puente entre lo privado y lo
-							público</h2>
+						<h2 class="title-home"><a href="quienes-somos">Somos un puente entre lo privado y lo
+							público </a></h2>
 						<a href="quienes-somos"><i class="fas fa-angle-right"
 							style="float: right; font-size: 30px; line-height: 100px; color: #F5B11A; padding-right: 15px;"></i></a>
 
@@ -49,7 +57,7 @@ function showModal(id) {
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
-						<h2 class="title-home">Comunidad G25</h2>
+						<h2 class="title-home"><a href="comunidad-g25">Comunidad G25</a></h2>
 
 						<i class="fas fa-angle-right"
 							style="float: right; font-size: 30px; line-height: 100px; color: #00B8F1; padding-right: 15px;"></i>
@@ -74,7 +82,7 @@ function showModal(id) {
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
-						<h2 class="title-home">Red Federal</h2>
+						<h2 class="title-home"><a href="red-federal">Red Federal</a></h2>
 						<a href="comunidad-g25"><i class="fas fa-angle-right" 
 							style="float: right; font-size: 30px; line-height: 100px; color: #EE4A6D; padding-right: 15px;"></i></a>
 						<div class="position-absolute-cero">
@@ -97,12 +105,12 @@ function showModal(id) {
  		<?php if (sizeof($events) > 0) { ?>
         <div class="col-lg-3 col-md-6" style="background-color: #B46BD1;">
 					<div style="min-height: 250px; position: relative;">
-						<h2 class="title-home" style="color: #fff;width:100%;">Agenda Federal</h2>
+						<h2 class="title-home" style="width:100%;"><a href="agenda" style="color: #fff">Agenda Federal</a></h2>
 						<div style="color: #fff; text-align: left">
-							<div>
+							
            				<?php foreach ($events as $evento) { ?>
-            					
-            					<div onclick="showModal(<?php echo $evento->ID ?>)" style="background-color: #fff; color: #5D5D5D; padding: 10px; margin-bottom: 10px;cursor: pointer;">
+            				<div onclick="showModal(<?php echo $evento->ID ?>)" style="cursor: pointer;">
+            					<div style="background-color: #fff; color: #5D5D5D; padding: 10px; margin-bottom: 10px;">
             						<?php  echo ucwords(tribe_get_start_date( $evento, false, 'l' ))." ".tribe_get_start_date( $evento, false, 'j' );
             						       if (!tribe_event_is_all_day($evento)) {
             						          echo " - ".tribe_get_start_date( $evento, false, 'H:i' ); 
@@ -162,13 +170,10 @@ function showModal(id) {
 								    </div>
 								  </div>
 								</div>
-                                
+                              </div>  
 					  <?php   } ?>
-							</div>
 						</div>
-
 					</div>
-
             <div style="position: absolute; bottom:15px;">
               <div style="width: 100%; text-align: left;">
                 <a href="agenda">
@@ -181,7 +186,7 @@ function showModal(id) {
    		<?php } else { ?>
    				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
-						<h2 class="title-home">Agenda Federal</h2>
+						<h2 class="title-home"><a href="agenda">Agenda Federal</a></h2>
 						<a href="agenda">
 							<i class="fas fa-angle-right"style="float: right; font-size: 30px; line-height: 100px; color: #B46BD1; padding-right: 15px;"></i>
 						</a>

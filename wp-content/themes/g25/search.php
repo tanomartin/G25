@@ -29,14 +29,16 @@ Template Name: Search Page
 	    			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 	    				<div class="card card-nota">
 	    				    <div class="imagen">
-	    				    	<a href="<?php the_permalink();?>">
-	    				    	 <?php if ( has_post_thumbnail() ) {
-	                						the_post_thumbnail('medium');
-	           						  } else { ?>
-	           						  		<img width="246" height="191" title="Feature image" src="<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png" class="img-responsive responsive--full wp-post-image" >
-	            				 <?php } ?>
-	            				 </a>
-	    				    </div>
+        	    				<a href="<?php the_permalink();?>">
+        	    				<?php if ( has_post_thumbnail() ) {
+        	    				    	 $thumbID = get_post_thumbnail_id( $post->ID );
+        	    				    	 $url = wp_get_attachment_url( $thumbID ); ?>
+    	                			      <div style="height:200px;width:220px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>
+        	           			<?php } else { ?>
+                                          <div style="height:200px;width:220px;background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>			  																	  
+        	            		<?php } ?>
+        	            		 </a>
+        	    			</div>
 	    				    <div class="contenedor-box">
 	                				<?php $post_categories = get_the_category($post->ID); 
 	    								  if ( $post_categories ) {
@@ -47,9 +49,24 @@ Template Name: Search Page
 	    										</p>
 	    							<?php	} 
 	    								  } ?>
-	    						
-	    				      	<p class="titulo-nota"><b><a href="<?php the_permalink();?>"><?php the_title();?></a></b></p>
-	    				      	<p class="descripcion-nota"><a href="<?php the_permalink();?>"><?php echo get_post_meta($post->ID, 'bajada', true); ?></a></p>
+	    						<p class="titulo-nota"><b>
+        	    				     <a href="<?php the_permalink();?>">
+        	    				      <?php $puntos = "";
+        	    				      		$limite = 55;
+    	                					$title = get_the_title($post->ID);
+    	                					if (strlen($title) > $limite ) { $puntos = "(...)"; }
+    	                					echo substr($title , 0, $limite ).$puntos; ?>
+        	    				     </a>
+        	    				</b></p>
+	    				      	<p class="descripcion-nota">
+        	    				     <a href="<?php the_permalink();?>">
+        	    				      <?php $puntos = "";
+        	    				      	    $limite = 70;
+    	                					$bajada = get_post_meta($post->ID, 'bajada', true);
+    	                					if (strlen($bajada) > $limite ) { $puntos = "(...)"; }
+    	                					echo substr( $bajada, 0, $limite ).$puntos; ?>
+        	    				     </a>
+        	    				</p>
 	    				   	</div>
 	    				 </div>
 	    			</div>
