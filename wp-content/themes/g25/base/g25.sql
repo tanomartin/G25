@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-12-2018 a las 00:58:07
+-- Tiempo de generación: 09-12-2018 a las 01:06:47
 -- Versión del servidor: 5.6.15-log
 -- Versión de PHP: 5.5.8
 
@@ -1171,8 +1171,8 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (1988, 348, 'destacado', '0'),
 (1989, 348, '_destacado', 'field_5c07dc69ea8bb'),
 (1991, 349, '_edit_last', '1'),
-(1992, 349, '_wp_page_template', 'default'),
-(1993, 349, '_edit_lock', '1544313265:1');
+(1992, 349, '_wp_page_template', 'contactoenvio.php'),
+(1993, 349, '_edit_lock', '1544313976:1');
 
 -- --------------------------------------------------------
 
@@ -1330,7 +1330,7 @@ INSERT INTO `g25_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (346, 1, '2018-12-06 22:09:43', '2018-12-07 01:09:43', 'Compartimos un desayuno de actualidad política con la invalorable visión de Emilio Monzó, Marcos Peña y Pablo Walter', 'Desayuno de Actualidad Política', '', 'inherit', 'closed', 'closed', '', '332-revision-v1', '', '', '2018-12-06 22:09:43', '2018-12-07 01:09:43', '', 332, 'http://localhost/G25/332-revision-v1/', 0, 'revision', '', 0),
 (347, 1, '2018-12-06 22:18:31', '2018-12-07 01:18:31', 'no se que poner', 'Nota 7', '', 'inherit', 'closed', 'closed', '', '42-revision-v1', '', '', '2018-12-06 22:18:31', '2018-12-07 01:18:31', '', 42, 'http://localhost/G25/42-revision-v1/', 0, 'revision', '', 0),
 (348, 1, '2018-12-06 22:19:32', '2018-12-07 01:19:32', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in viverra elit, nec convallis diam. Duis vel ex laoreet, varius nisi vitae, rutrum ligula. Praesent a maximus lacus. Aenean efficitur nunc dui, at pharetra ante pellentesque ut. Praesent porttitor dignissim nisl, a eleifend eros tincidunt nec. Aenean in urna ut velit tempor bibendum quis id elit. Phasellus vitae purus a est rhoncus accumsan eu in ex. Proin tincidunt, quam id maximus tristique, neque sapien sodales sem, quis vulputate orci metus nec dolor. Vivamus ut maximus sapien. Quisque non augue arcu. Ut consequat metus vel mauris pellentesque mollis non non turpis.\r\n\r\nAliquam et urna ut erat fermentum ornare non eu lacus. Morbi scelerisque, libero non semper malesuada, mauris sapien sollicitudin est, in cursus erat turpis ac sapien. Praesent est purus, posuere a ullamcorper semper, aliquet id erat. In hac habitasse platea dictumst. Fusce fringilla nunc id elit consequat, et molestie augue ornare. Nam turpis leo, mollis ac ligula ut, maximus convallis lacus. Sed aliquam libero ut elit convallis convallis. In consectetur at est id dapibus. Sed nunc nisl, tincidunt eget dolor vitae, viverra imperdiet eros.\r\n\r\nNunc quam mi, placerat id turpis sed, gravida pulvinar nulla. Vivamus et eros vel augue varius tincidunt eu scelerisque est. Curabitur suscipit placerat magna, quis bibendum dolor sodales eu. Sed nec gravida ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sit amet pellentesque nulla, vitae gravida massa. Nullam ac nisi in nunc dictum luctus et at purus. Phasellus blandit nunc odio, a porttitor elit egestas sit amet. Nulla convallis scelerisque fringilla. Vestibulum pharetra nulla non ipsum tincidunt imperdiet. Morbi fermentum sit amet elit at faucibus. Morbi elit turpis, elementum et sapien quis, viverra blandit lorem. Ut vulputate quis leo a dignissim. Maecenas interdum semper justo, sit amet mattis libero imperdiet sed. Mauris congue fermentum risus ut fermentum.', 'Si vivis en el exterior tambien podes ser parte del cambio', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2018-12-06 22:19:32', '2018-12-07 01:19:32', '', 16, 'http://localhost/G25/16-revision-v1/', 0, 'revision', '', 0),
-(349, 1, '2018-12-08 20:50:03', '2018-12-08 23:50:03', '', 'ContactoEnvio', '', 'publish', 'closed', 'closed', '', 'contactoenvio', '', '', '2018-12-08 20:54:25', '2018-12-08 23:54:25', '', 0, 'http://localhost/G25/?page_id=349', 0, 'page', '', 0),
+(349, 1, '2018-12-08 20:50:03', '2018-12-08 23:50:03', '', 'ContactoEnvio', '', 'publish', 'closed', 'closed', '', 'contactoenvio', '', '', '2018-12-08 21:04:16', '2018-12-09 00:04:16', '', 0, 'http://localhost/G25/?page_id=349', 0, 'page', '', 0),
 (350, 1, '2018-12-08 20:50:03', '2018-12-08 23:50:03', '', 'envio', '', 'inherit', 'closed', 'closed', '', '349-revision-v1', '', '', '2018-12-08 20:50:03', '2018-12-08 23:50:03', '', 349, 'http://localhost/G25/349-revision-v1/', 0, 'revision', '', 0),
 (351, 1, '2018-12-08 20:52:41', '2018-12-08 23:52:41', '', 'ContactoEnvio', '', 'inherit', 'closed', 'closed', '', '349-revision-v1', '', '', '2018-12-08 20:52:41', '2018-12-08 23:52:41', '', 349, 'http://localhost/G25/349-revision-v1/', 0, 'revision', '', 0),
 (352, 1, '2018-12-08 20:53:11', '2018-12-08 23:53:11', '', 'Comunidad', '', 'inherit', 'closed', 'closed', '', '103-revision-v1', '', '', '2018-12-08 20:53:11', '2018-12-08 23:53:11', '', 103, 'http://localhost/G25/103-revision-v1/', 0, 'revision', '', 0);
