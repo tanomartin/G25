@@ -47,7 +47,7 @@ function showModal(id) {
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
-						<h2 class="title-home"><a href="comunidad">Comunidad G25</a></h2>
+						<h2 class="title-home"><a href="comunidad-g25">Comunidad G25</a></h2>
 						<a href="comunidad">
 						<i class="fas fa-angle-right" style="float: right; font-size: 30px; line-height: 100px; color: #00B8F1; padding-right: 15px;"></i>
 						</a>
