@@ -26,7 +26,7 @@
 				<div class="card" style="padding: 30px;">
 					<h3>FORMULARIO</h3>
 					<div class="dash" style="background-color: #ef7024; margin-top: 20px;"></div>
-					<form role="form" id="Formulario" action="contacto2.php" method="POST">
+					<form role="form" id="formulario" name="formulario" action="contactoenvio.php" method="POST">
 						<div class="row">
 							<div class="col-lg-6">
 								<input id="nombre" type="text" placeholder="Nombre y Apellido *" required="required"> 
@@ -51,12 +51,20 @@
 
 <script>
 $(document).ready(function(){
-    $("#Formulario").submit(function( event ){
-		event.preventDefault();
+    $("#formulario").submit(function(  ){
+    	var nombre = $("input#nombre").val();
+        var numero = $("input#numero").val();
+        var email = $("input#email").val();
+        var mensaje = $("textarea#mensaje").val();
 		$.ajax({
 			type: 'POST',
 			url: '../contactoenvio',
-			data: $(this).serialize(),
+			data: {
+				nombre: nombre,
+				numero: numero,
+                email: email,
+                mensaje: mensaje
+            },
 			success: function(data){
 				$("#respuesta").slideDown();
 				$("#respuesta").html(data);
