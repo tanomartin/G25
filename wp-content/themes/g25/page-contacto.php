@@ -45,6 +45,38 @@
 			</div>
 		</div>
 		<div id="respuesta" style="display: none;"></div>
+  <?php $args = array('showposts' => -1, 'post_type' => 'contacto');
+		$wp_query->query($args); 
+		if ( have_posts() ) : // Si existen resultados ?>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="card" style="padding: 30px;">
+					<h3>CONTACTO POR PROVINCIA</h3>
+					<div class="dash" style="background-color: #ef7024; margin-top: 20px;"></div>
+					<table class="table" style="margin-top: 20px">
+						 <thead>
+						    <tr>
+						      <th scope="col">Nombre y Apellido</th>
+						      <th scope="col">Provincia</th>
+						      <th scope="col">Email</th>
+						    </tr>
+			 			 </thead>
+		 				<tbody>
+		   	<?php  	while (have_posts()) : the_post(); // Mientra haya resultados, repite lo siguiente: 
+		    	 		 $provincia = get_post_meta($post->ID, 'provincia', true);
+		           		 $email = get_post_meta($post->ID, 'email', true); ?>
+			           		<tr>
+						      <td><?php the_title(); ?></td>
+						      <td><?php echo $provincia?></td>
+						      <td><?php echo $email?></td>
+						    </tr>
+		    <?php 	endwhile;
+		    	 endif; ?>
+		    	 		</tbody>
+		    	 	</table>
+	    	 	</div>
+	    	 </div>
+	    </div>
 	</div>
     <?php get_footer(); ?>
 </section>

@@ -118,7 +118,7 @@ function cpt_comunidad() {
 
 add_filter('enter_title_here', 'my_title_place_holder' , 20 , 2 );
 function my_title_place_holder($title , $post) {
-	if( $post->post_type == 'comunidad' ){
+	if($post->post_type == 'comunidad' || $post->post_type == 'contacto'){
 		$my_title = "Ingrese Nombre y Apellido";
 		return $my_title;
 	}
@@ -127,7 +127,7 @@ function my_title_place_holder($title , $post) {
 
 add_filter( 'the_title', 'max_title_length', 0, 2);
 function max_title_length($title, $post) {
-	if( $post->post_type == 'comunidad' ) {
+	if($post->post_type == 'comunidad' || $post->post_type == 'contacto') {
 		$max = 20;
 		if( strlen( $title ) > $max ) {
 			return substr( $title, 0, $max ). " &hellip;";
@@ -179,5 +179,31 @@ function destacado_columns_content($column_name, $post_ID) {
 	if ($destacado) { echo "DESTACADO"; }
 }
 
+add_action('init', 'cpt_contacto', 1);
+function cpt_contacto() {
+	$labels = array(
+			'name' => _x('Contacto', 'post type general name'),
+			'singular_name' => _x('Contacto', 'post type singular name'),
+			'add_new' => _x('A&ntilde;adir Nuevo', 'Comunidad'),
+			'add_new_item' => __('A&ntilde;adir Nuevo'),
+			'edit_item' => __('Editar'),
+			'new_item' => __('Nuevo'),
+			'view_item' => __('Ver'),
+			'search_items' => __('Buscar'),
+			'not_found' => __('No se han encontrado ningun resultado'),
+			'not_found_in_trash' => __('No se han encontrado ningun resultado en la papelera')
+	);
+	$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'hierarchical' => false,
+			'menu_position' => 5,
+			'has_archive' => false,
+			'query_var' => true,
+			'supports' => array('title'),
+			'rewrite' => array('slug' => 'contacto'),
+	);
+	register_post_type( 'contacto', $args );
+}
 
 ?>
