@@ -37,12 +37,9 @@ $wp_query->query($args); ?>
             $linkedin = get_post_meta($post->ID, 'linkedin', true);
             $video = get_post_meta($post->ID, 'video', true);
             $web = get_post_meta($post->ID, 'web', true);  ?>
-
   <div class="col-lg-3 col-md-4 col-xs-12" style="margin-top:20px;"> <!-- agregar  d-flex align-items-stretch para que las columnas tengan el mismo alto del mas largo !-->
-
     <div class="image-caption featured card">
-
-      <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "") || ($video != "")){ ?>
+      <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "")){ ?>
               <div style="position:absolute;right:5;top:170px;font-size:35px;">
                 <a data-toggle="collapse" href="#social<?php echo $post->ID ?>" role="button" aria-expanded="false" aria-controls="add">
                  <div class="icoCollapse max">
@@ -51,23 +48,28 @@ $wp_query->query($args); ?>
                   </div>
                 </a>
               </div>
-      <?php }
+      <?php } 
+      		if ($video != "") { 
+      			$videourl = wp_get_attachment_url( $video );?>
+      			<div style="position:absolute;right:50;top:180px;font-size:10px;">
+	      			<a href="<?php echo  $videourl ?>" target="_blank" class="btn btn-info btn-lg">Play</a>
+        		</div>
+      <?php	}
           $thumbID = get_post_thumbnail_id( $post->ID );
           $url = wp_get_attachment_url( $thumbID );?>
-
-		<div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
-        <div class="caption">
-          <h2 class="description"><?php the_title(); // El título ?></h2>
-          <p class="cargo">
-          		<?php 
-          		    $cargo = get_post_meta($post->ID, 'cargo', true) ;
-          		    if (strlen($cargo) <= 33) {
-          		        $cargo .= "<br><br>";
-          		    }
-          		    echo $cargo;
-          		?>
-          </p> 
-          <div class="rrss-comunidad collapse" id="social<?php echo $post->ID ?>" >
+		  <div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
+          	<div class="caption">
+	          <h2 class="description"><?php the_title(); // El título ?></h2>
+	          <p class="cargo">
+	          		<?php 
+	          		    $cargo = get_post_meta($post->ID, 'cargo', true) ;
+	          		    if (strlen($cargo) <= 33) {
+	          		        $cargo .= "<br><br>";
+	          		    }
+	          		    echo $cargo;
+	          		?>
+	          </p> 
+	          <div class="rrss-comunidad collapse" id="social<?php echo $post->ID ?>" >
             <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "")) { ?>
                     <hr style="padding-top:0px;margin-top:0px;">
             <?php } ?>
@@ -90,32 +92,25 @@ $wp_query->query($args); ?>
                     <hr style="padding-top:0px;margin-top:15px;">
                     <a href="<?php echo $web['url']?>" target="_blank"><p style="text-decoration:underline">Sitio Web</p></a> 
             <?php } ?>
-            <?php if ($video != "") {  
-            		$videourl = wp_get_attachment_url( $video );?>
-            		<hr style="padding-top:0px;margin-top:15px;">
-                    <a href="<?php echo  $videourl ?>" target="_blank"><p style="text-decoration:underline">Video</p></a> 
-            <?php } ?>
-        </div>
-      </div>
-
-    </div>  
+        		</div>
+      		</div>
+   	</div>  
   </div> <!-- fin col !-->
   <?php endwhile; ?>
 <?php endif; ?>
-
   </div>
 </div>
 <?php get_footer(); ?>
 </section>
 
 <script type="text/javascript">
-$(".icoCollapse").on("click", function(){
-  if($(this).hasClass("max")){
-    $(this).removeClass("max").addClass("min");
-  }else{
-    $(this).removeClass("min").addClass("max");
-  }
-})
+	$(".icoCollapse").on("click", function(){
+	  if($(this).hasClass("max")){
+	    $(this).removeClass("max").addClass("min");
+	  }else{
+	    $(this).removeClass("min").addClass("max");
+	  }
+	})
 </script>
 
 </body>
