@@ -5,7 +5,7 @@ Tags: search, search menu, woocommerce search, search plugin, search shortcode, 
 Requires at least: 3.9
 Tested up to: 5.0
 Requires PHP: 5.2.4
-Stable tag: 4.1.4
+Stable tag: 4.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,7 @@ Feel free to ask it using [Contact Form](https://ivorysearch.com/contact/).
 <li> Search in category or taxonomy terms description.</li>
 <li> Search posts having specific custom fields or metadata.</li>
 <li> Search WooCommerce products SKU. [Premium]</li>
+<li> Search WooCommerce products variation. [Premium]</li>
 <li> Search posts created by specific authors. [Premium]</li>
 <li> Search in author Display name and display the posts created by that author.</li>
 <li> Search posts having specific statuses. [Premium]</li>
@@ -177,9 +178,12 @@ Yes we do. We try our best to help free users with customisation requests and we
 
 == Changelog ==
 
+= 4.1.5 =
+* Fixed - Firefox browser right mouse click closing search form issue.
+
 = 4.1.4 =
 * Searches in WooCommerce products variation.
-* Fixed - Firefox browser dropdown select issue
+* Fixed - Firefox browser dropdown select issue.
 * Optimized plugin admin options.
 
 = 4.1.3 =

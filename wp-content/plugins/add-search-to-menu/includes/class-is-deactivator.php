@@ -19,11 +19,12 @@ class IS_Deactivator {
 	 */
 	public static function deactivate() {
 
-		$opt = Ivory_Search::load_options();
+		$is = Ivory_Search::getInstance();
 
-		if ( isset( $opt['dismiss_admin_notices'] ) ) {
-			unset( $opt['dismiss_admin_notices'] );
-			update_option( 'is_settings', $opt );
+		if ( isset( $is->opt['is_notices']['config'] ) ) {
+			$is_notices = get_option( 'is_notices', array() );
+			unset( $is_notices['is_notices']['config'] );
+			update_option( 'is_notices', $is_notices );
 		}
 	}
 }

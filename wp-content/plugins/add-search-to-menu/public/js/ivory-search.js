@@ -45,18 +45,20 @@
 		return false;
 	} );
 
-	$( window ).click( function() {
-		if ( $( '.is-menu' ).hasClass( 'open' ) ) {
-			$( '.is-menu form' ).animate(
-				{ width: '0' },
-				400,
-				function() {
-					$( '.is-menu' ).removeClass( 'active-search' );
-					$( '.is-menu' ).removeClass( 'open' );
-				}
-			);
-		} else if ( $( '.is-menu' ).hasClass( 'dropdown' ) ) {
-			$( '.is-menu form' ).fadeOut();
+	$( window ).click( function( e ) {
+		if ( 0 === e.button ) {
+			if ( $( '.is-menu' ).hasClass( 'open' ) ) {
+				$( '.is-menu form' ).animate(
+					{ width: '0' },
+					400,
+					function() {
+						$( '.is-menu' ).removeClass( 'active-search' );
+						$( '.is-menu' ).removeClass( 'open' );
+					}
+				);
+			} else if ( $( '.is-menu' ).hasClass( 'dropdown' ) ) {
+				$( '.is-menu form' ).fadeOut();
+			}
 		}
 	});
 } )( jQuery );

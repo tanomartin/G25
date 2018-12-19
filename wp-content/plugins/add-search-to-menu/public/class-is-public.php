@@ -28,7 +28,8 @@ class IS_Public
     {
         $is = Ivory_Search::getInstance();
         $new_opt = get_option( 'ivory_search' );
-        if ( !empty($new_opt) ) {
+        $new_opt2 = get_option( 'is_menu_search' );
+        if ( !empty($new_opt) || !empty($new_opt2) ) {
             $this->ivory_search = true;
         }
         

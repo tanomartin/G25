@@ -104,36 +104,55 @@ class IS_Admin
      */
     function all_admin_notices()
     {
-        $strpos = strpos( get_current_screen()->id, 'ivory-search' );
-        if ( 0 === $strpos || 0 < $strpos ) {
-            return;
-        }
         $hascaps = ( $this->networkactive ? is_network_admin() && current_user_can( 'manage_network_plugins' ) : current_user_can( 'manage_options' ) );
         
         if ( $hascaps ) {
-            $url = ( is_network_admin() ? network_site_url() : site_url( '/' ) );
-            echo  '<div class="notice notice-info is-dismissible ivory-search"><p>' . sprintf(
-                __( 'To configure <em>Ivory Search plugin</em> please visit its <a href="%1$s">configuration page</a> and to get plugin support contact us on <a href="%2$s" target="_blank">plugin support forum</a> or <a href="%3$s" target="_blank">contact us page</a>.', 'ivory-search' ),
-                $url . 'wp-admin/admin.php?page=ivory-search',
-                'https://ivorysearch.com/support/',
-                'https://ivorysearch.com/contact/'
-            ) . '</p></div>' ;
+            $screen = get_current_screen();
+            $is_ivory = strpos( $screen->id, 'ivory-search' );
+            if ( 0 !== $is_ivory && FALSE === $is_ivory && (!isset( $_GET['is_dismiss'] ) || 'notice_config' !== $_GET['is_dismiss']) ) {
+                
+                if ( !isset( $this->opt['is_notices']['config'] ) || !$this->opt['is_notices']['config'] ) {
+                    $url = ( is_network_admin() ? network_site_url() : site_url( '/' ) );
+                    echo  '<div class="notice ivory-search"><p>' . sprintf(
+                        __( 'To configure <em>Ivory Search plugin</em> please visit its <a href="%1$s">configuration page</a> and to get plugin support contact us on <a href="%2$s" target="_blank">plugin support forum</a> or <a href="%3$s" target="_blank">contact us page</a>.', 'ivory-search' ),
+                        $url . 'wp-admin/admin.php?page=ivory-search',
+                        'https://ivorysearch.com/support/',
+                        'https://ivorysearch.com/contact/'
+                    ) ;
+                    echo  '<a class="is-notice-dismiss" href="' . add_query_arg( 'is_dismiss', 'notice_config' ) . '">' . __( 'Dismiss', 'iovry-search' ) . '</a></p></div>' ;
+                }
+            
+            }
+            $display_review = true;
+            //Don't display if dismissed
+            if ( isset( $this->opt['is_notices']['review'] ) && $this->opt['is_notices']['review'] ) {
+                $display_review = false;
+            }
+            //Don't display on seoncary screens, don't be too nagging
+            if ( isset( $_GET['action'] ) && $_GET['action'] == 'edit' || $screen->action == 'add' || $screen->base == 'plugins' || $screen->base == 'widgets' ) {
+                $display_review = false;
+            }
+            $date = get_option( 'is_install', false );
+            
+            if ( $date && $display_review ) {
+                $diff = time() - strtotime( $date );
+                
+                if ( $diff > 900000 ) {
+                    echo  '<div class="is-notice notice"><div class="is-notice-image"></div><div class="is-notice-body">' ;
+                    echo  '<a class="is-notice-dismiss" href="' . add_query_arg( 'is_dismiss', 'notice_review' ) . '">' . esc_html__( 'Dismiss', 'iovry-search' ) . '</a>' ;
+                    echo  '<div class="is-notice-title">' . esc_html__( 'Have you found Ivory Search plugin useful?', 'iovry-search' ) . '</div>' ;
+                    echo  '<div class="is-notice-content">' . esc_html__( 'We poured a lot of hours into creating it, and we\'d love it if you could give us a nice rating on the official plugin directory.', 'iovry-search' ) . '</div>' ;
+                    echo  '<div class="is-notice-links">' ;
+                    echo  '<a href="' . esc_url( 'https://wordpress.org/support/plugin/add-search-to-menu/reviews/?filter=5#new-post' ) . '" class="button button-primary" target="_blank" >' . esc_html__( 'Rate Ivory Search and Help Us Out', 'iovry-search' ) . '</a>' ;
+                    echo  '<a href="' . esc_url( 'https://ivorysearch.com/support/' ) . '" class="button button-primary" target="_blank">' . esc_html__( 'Get Support', 'iovry-search' ) . '</a>' ;
+                    echo  '<a href="' . esc_url( 'https://ivorysearch.com/contact/' ) . '" class="button button-primary" target="_blank">' . esc_html__( 'Say Hi', 'iovry-search' ) . '</a>' ;
+                    echo  '</div></div></div>' ;
+                }
+            
+            }
+        
         }
     
-    }
-    
-    /**
-     * Handles plugin notice dismiss functionality using AJAX.
-     */
-    function dismiss_notice()
-    {
-        
-        if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
-            $this->opt['dismiss_admin_notices'] = 1;
-            update_option( 'is_settings', $this->opt );
-        }
-        
-        die;
     }
     
     /**
@@ -187,29 +206,19 @@ class IS_Admin
      */
     function admin_footer()
     {
-        $strpos = strpos( get_current_screen()->id, 'ivory-search' );
-        if ( 0 === $strpos || 0 < $strpos ) {
-            return;
-        }
         ?>
-	<script>
-		// Dismisses plugin notices.
-		 ( function( $ ) {
-			'use strict';
-			$( window ).load( function() {
-				$( '.notice.is-dismissible.ivory-search .notice-dismiss' ).on( 'click', function() {
-					$.ajax( {
-						url: "<?php 
-        echo  admin_url( 'admin-ajax.php' ) ;
-        ?>",
-						data: {
-							action: 'dismiss_notice'
-						}
-					} );
-				} );
-			} );
-		} )( jQuery );
-	</script>
+		<style type="text/css">
+		/* ADMIN NOTICES */
+		.is-notice { margin:20px 0; border:none; padding:0; overflow:hidden; background:#e6e9ec; max-width:900px; }
+		.is-notice-dismiss { display:block; float:right; color:#999; line-height:1; margin:0 0 0 15px; text-decoration:none; }
+		.is-notice-image { float:left; margin:10px; width:90px; height:90px; background:url(<?php 
+        echo  esc_url( plugins_url( 'assets/logo.jpg', __FILE__ ) ) ;
+        ?>) no-repeat center; background-size:cover; }
+		.is-notice-body { margin:0 0 0 110px; padding:15px; background:#fff; }
+		.is-notice-title { font-size:16px; font-weight:bold; margin:0 0 5px; }
+		.is-notice-content { margin:0 0 10px; padding:0; }
+		.is-notice-links a.button { margin-right: 10px;text-decoration: none;}
+		</style>
 	<?php 
     }
     
@@ -218,6 +227,25 @@ class IS_Admin
      */
     function admin_init()
     {
+        
+        if ( isset( $_GET['is_dismiss'] ) && '' !== $_GET['is_dismiss'] ) {
+            $is_notices = get_option( 'is_notices', array() );
+            
+            if ( 'notice_config' === $_GET['is_dismiss'] ) {
+                $is_notices['is_notices']['config'] = 1;
+            } else {
+                if ( 'notice_review' === $_GET['is_dismiss'] ) {
+                    $is_notices['is_notices']['review'] = 1;
+                }
+            }
+            
+            update_option( 'is_notices', $is_notices );
+            wp_redirect( remove_query_arg( 'is_dismiss' ) );
+        }
+        
+        if ( !get_option( 'is_install', false ) ) {
+            update_option( 'is_install', date( 'Y-m-d' ) );
+        }
         
         if ( !empty($GLOBALS['pagenow']) && ('admin.php' === $GLOBALS['pagenow'] || 'options.php' === $GLOBALS['pagenow']) ) {
             $settings_fields = new IS_Settings_Fields( $this->opt );

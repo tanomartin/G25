@@ -31,17 +31,18 @@ $wp_query->query($args); ?>
 
 <?php if ( have_posts() ) : // Si existen resultados ?>
     <?php while (have_posts()) : the_post(); // Mientra haya resultados, repite lo siguiente: 
-            $facebook = get_post_meta($post->ID, 'facebook', true) ;
-            $twitter = get_post_meta($post->ID, 'twitter', true) ;
-            $instagram = get_post_meta($post->ID, 'instagram', true) ;
-            $linkedin = get_post_meta($post->ID, 'linkedin', true) ;
-            $web = get_post_meta($post->ID, 'web', true) ; ?>
+            $facebook = get_post_meta($post->ID, 'facebook', true);
+            $twitter = get_post_meta($post->ID, 'twitter', true);
+            $instagram = get_post_meta($post->ID, 'instagram', true);
+            $linkedin = get_post_meta($post->ID, 'linkedin', true);
+            $video = get_post_meta($post->ID, 'video', true);
+            $web = get_post_meta($post->ID, 'web', true);  ?>
 
   <div class="col-lg-3 col-md-4 col-xs-12" style="margin-top:20px;"> <!-- agregar  d-flex align-items-stretch para que las columnas tengan el mismo alto del mas largo !-->
 
     <div class="image-caption featured card">
 
-      <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "")){ ?>
+      <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "") || ($video != "")){ ?>
               <div style="position:absolute;right:5;top:170px;font-size:35px;">
                 <a data-toggle="collapse" href="#social<?php echo $post->ID ?>" role="button" aria-expanded="false" aria-controls="add">
                  <div class="icoCollapse max">
@@ -85,10 +86,14 @@ $wp_query->query($args); ?>
             <?php if ($linkedin != "") { ?>
                     <a href="<?php echo $linkedin['url']?>" target="_blank"><i class="fab fa-linkedin-in fa-2x fa-fw"></i></a> 
             <?php } ?>
-
             <?php if ($web != "") { ?>
                     <hr style="padding-top:0px;margin-top:15px;">
                     <a href="<?php echo $web['url']?>" target="_blank"><p style="text-decoration:underline">Sitio Web</p></a> 
+            <?php } ?>
+            <?php if ($video != "") {  
+            		$videourl = wp_get_attachment_url( $video );?>
+            		<hr style="padding-top:0px;margin-top:15px;">
+                    <a href="<?php echo  $videourl ?>" target="_blank"><p style="text-decoration:underline">Video</p></a> 
             <?php } ?>
         </div>
       </div>

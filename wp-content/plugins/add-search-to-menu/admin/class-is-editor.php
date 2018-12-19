@@ -327,7 +327,7 @@ class IS_Search_Editor
                 echo  '<span class="ind-status ' . $id . '-tax_query"></span>' ;
             }
         } else {
-            _e( 'No taxonomies registered for slected post types.', 'ivory-search' );
+            _e( 'No taxonomies registered for selected post types.', 'ivory-search' );
         }
         
         ?>
@@ -826,7 +826,7 @@ class IS_Search_Editor
             foreach ( $post_types as $post_type ) {
                 $posts = get_posts( array(
                     'post_type'      => $post_type,
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 100,
                     'orderby'        => 'title',
                     'order'          => 'ASC',
                 ) );
@@ -850,7 +850,7 @@ class IS_Search_Editor
                     $html .= $col_title . '<input class="list-search" placeholder="' . __( "Search..", 'ivory-search' ) . '" type="text"></div>';
                     $html .= '<select class="_is_excludes-post__not_in" name="' . $id . '[post__not_in][]" multiple size="8" >';
                     $html .= $temp . '</select>';
-                    if ( count( $posts ) >= 3 ) {
+                    if ( count( $posts ) >= 100 ) {
                         $html .= '<div id="' . $post_type . '" class="load-all">' . __( 'Load All', 'ivory-search' ) . '</div>';
                     }
                     $html .= '</div>';
@@ -918,7 +918,7 @@ class IS_Search_Editor
                 echo  '<span class="ind-status ' . $id . '-tax_query"></span>' ;
             }
         } else {
-            _e( 'No taxonomies registered for slected post types.', 'ivory-search' );
+            _e( 'No taxonomies registered for selected post types.', 'ivory-search' );
         }
         
         ?>
@@ -1036,7 +1036,7 @@ class IS_Search_Editor
         ?></a></span></h3>
 			<div>
 				<?php 
-        $content = __( 'Exclude posts from the search created by slected authors.', 'ivory-search' );
+        $content = __( 'Exclude posts from the search created by selected authors.', 'ivory-search' );
         IS_Help::help_info( $content );
         echo  '<div>' ;
         

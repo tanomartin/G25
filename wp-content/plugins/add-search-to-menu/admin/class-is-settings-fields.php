@@ -34,7 +34,8 @@ class IS_Settings_Fields
     public function __construct( $is = null )
     {
         $new_opt = get_option( 'ivory_search' );
-        if ( !empty($new_opt) ) {
+        $new_opt2 = get_option( 'is_menu_search' );
+        if ( !empty($new_opt) || !empty($new_opt2) ) {
             $this->ivory_search = true;
         }
         
@@ -367,12 +368,9 @@ class IS_Settings_Fields
             'popup'           => __( 'Popup', 'ivory-search' ),
         );
         $popup_disable = ( is_fs()->is_plan_or_trial( 'pro' ) && $this->is_premium_plugin ? false : true );
-        
         if ( empty($this->opt) || !isset( $this->opt['add_search_to_menu_style'] ) && !isset( $this->opt['menu_style'] ) ) {
             $this->opt['menu_style'] = 'default';
-            update_option( 'ivory_search', $this->opt );
         }
-        
         $html = '';
         $check_value = ( isset( $this->opt['add_search_to_menu_style'] ) ? $this->opt['add_search_to_menu_style'] : 'default' );
         $check_value = ( isset( $this->opt['menu_style'] ) ? $this->opt['menu_style'] : $check_value );
