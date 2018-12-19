@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-12-2018 a las 18:12:46
+-- Tiempo de generación: 19-12-2018 a las 18:21:24
 -- Versión del servidor: 5.6.15-log
 -- Versión de PHP: 5.4.24
 
@@ -294,7 +294,7 @@ INSERT INTO `g25_options` (`option_id`, `option_name`, `option_value`, `autoload
 (1143, 'wp-optimize-dismiss_season', '1575600818', 'yes'),
 (1190, 'radio_button_for_taxonomies_options', 'a:2:{s:10:"taxonomies";a:2:{i:0;s:8:"category";i:1;s:16:"tribe_events_cat";}s:6:"delete";i:0;}', 'yes'),
 (1400, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1545234781;s:7:"checked";a:2:{s:3:"g25";s:0:"";s:14:"twentynineteen";s:3:"1.0";}s:8:"response";a:0:{}s:12:"translations";a:1:{i:0;a:7:{s:4:"type";s:5:"theme";s:4:"slug";s:14:"twentynineteen";s:8:"language";s:5:"es_AR";s:7:"version";s:3:"1.0";s:7:"updated";s:19:"2018-12-05 22:19:41";s:7:"package";s:78:"https://downloads.wordpress.org/translation/theme/twentynineteen/1.0/es_AR.zip";s:10:"autoupdate";b:1;}}}', 'no'),
-(1417, '_transient_timeout_plugin_slugs', '1545325850', 'no'),
+(1417, '_transient_timeout_plugin_slugs', '1545326090', 'no'),
 (1418, '_transient_plugin_slugs', 'a:9:{i:0;s:30:"advanced-custom-fields/acf.php";i:1;s:41:"add-search-to-menu/add-search-to-menu.php";i:2;s:39:"limit-post-titles/limit-post-titles.php";i:3;s:37:"post-types-order/post-types-order.php";i:4;s:61:"radio-buttons-for-taxonomies/radio-buttons-for-taxonomies.php";i:5;s:43:"the-events-calendar/the-events-calendar.php";i:6;s:41:"wordpress-importer/wordpress-importer.php";i:7;s:27:"wp-optimize/wp-optimize.php";i:8;s:53:"wpfront-user-role-editor/wpfront-user-role-editor.php";}', 'no'),
 (1420, '_transient_tribe_plugin_upgrade_notice-dc6ff9f8', '', 'no'),
 (1416, 'is_install', '2018-12-19', 'yes'),
@@ -327,7 +327,7 @@ CREATE TABLE IF NOT EXISTS `g25_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1998 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=2000 ;
 
 --
 -- Volcado de datos para la tabla `g25_postmeta`
@@ -416,7 +416,7 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (259, 10, '_whatsapp', 'field_5bbcc5fca4c13'),
 (888, 194, '_EventAllDay', 'yes'),
 (309, 101, '_edit_last', '1'),
-(310, 101, '_edit_lock', '1545234642:1'),
+(310, 101, '_edit_lock', '1545240029:1'),
 (311, 101, 'facebook', 'a:3:{s:5:"title";s:0:"";s:3:"url";s:42:"https://www.facebook.com/guillermodietrich";s:6:"target";s:0:"";}'),
 (312, 101, '_facebook', 'field_5bbcc8afa1163'),
 (313, 101, 'twitter', 'a:3:{s:5:"title";s:0:"";s:3:"url";s:34:"https://twitter.com/Guillodietrich";s:6:"target";s:0:"";}'),
@@ -698,7 +698,7 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (1412, 101, '_nombre_y_apellido', 'field_5c06c1e564c53'),
 (1411, 101, 'nombre_y_apellido', 'Guillermo Dietrich'),
 (1997, 101, '_video', 'field_5c1a654534691'),
-(1996, 101, 'video', '354'),
+(1996, 101, 'video', '356'),
 (1465, 10, 'destacado', '0'),
 (1466, 10, '_destacado', 'field_5c07dc69ea8bb'),
 (1467, 293, 'bajada', 'Pequeña descripción de la noticia en una o dos lineas'),
@@ -952,8 +952,6 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (1757, 322, '_EventURL', ''),
 (1758, 322, '_EventTimezone', 'UTC-3'),
 (1759, 322, '_EventTimezoneAbbr', 'UTC-3'),
-(1995, 354, '_wp_attachment_metadata', 'a:10:{s:8:"filesize";i:3045150;s:9:"mime_type";s:9:"video/mp4";s:6:"length";i:15;s:16:"length_formatted";s:4:"0:15";s:5:"width";i:848;s:6:"height";i:480;s:10:"fileformat";s:3:"mp4";s:10:"dataformat";s:9:"quicktime";s:5:"audio";a:7:{s:10:"dataformat";s:3:"mp4";s:5:"codec";s:19:"ISO/IEC 14496-3 AAC";s:11:"sample_rate";d:44100;s:8:"channels";i:2;s:15:"bits_per_sample";i:16;s:8:"lossless";b:0;s:11:"channelmode";s:6:"stereo";}s:17:"created_timestamp";i:1543093664;}'),
-(1994, 354, '_wp_attached_file', '2018/10/VID-20181124-WA0008.mp4'),
 (1767, 32, '_wp_old_date', '2018-10-08'),
 (1770, 326, '_edit_lock', '1544120593:1'),
 (1769, 29, '_wp_old_date', '2018-10-08'),
@@ -1135,8 +1133,7 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (1961, 346, '_facebook', 'field_5bbcc5dda4c11'),
 (1962, 346, 'twitter', '0'),
 (1963, 346, '_twitter', 'field_5bbcc5efa4c12'),
-(1964, 346, 'whatsapp', '0');
-INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1964, 346, 'whatsapp', '0'),
 (1965, 346, '_whatsapp', 'field_5bbcc5fca4c13'),
 (1966, 346, 'destacado', '0'),
 (1967, 346, '_destacado', 'field_5c07dc69ea8bb'),
@@ -1150,7 +1147,8 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (1976, 347, '_whatsapp', 'field_5bbcc5fca4c13'),
 (1977, 347, 'destacado', '0'),
 (1978, 347, '_destacado', 'field_5c07dc69ea8bb'),
-(1980, 348, 'bajada', 'Pequeña descripcion de la noticia en una o dos lineas'),
+(1980, 348, 'bajada', 'Pequeña descripcion de la noticia en una o dos lineas');
+INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (1981, 348, '_bajada', 'field_5bbcc58ba4c0f'),
 (1982, 348, 'facebook', '0'),
 (1983, 348, '_facebook', 'field_5bbcc5dda4c11'),
@@ -1162,7 +1160,9 @@ INSERT INTO `g25_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (1989, 348, '_destacado', 'field_5c07dc69ea8bb'),
 (1991, 349, '_edit_last', '1'),
 (1992, 349, '_wp_page_template', 'contactoenvio.php'),
-(1993, 349, '_edit_lock', '1544314105:1');
+(1993, 349, '_edit_lock', '1544314105:1'),
+(1998, 356, '_wp_attached_file', '2018/10/videoplayback.mp4'),
+(1999, 356, '_wp_attachment_metadata', 'a:10:{s:8:"filesize";i:2910699;s:9:"mime_type";s:9:"video/mp4";s:6:"length";i:50;s:16:"length_formatted";s:4:"0:50";s:5:"width";i:640;s:6:"height";i:352;s:10:"fileformat";s:3:"mp4";s:10:"dataformat";s:9:"quicktime";s:5:"audio";a:7:{s:10:"dataformat";s:3:"mp4";s:5:"codec";s:19:"ISO/IEC 14496-3 AAC";s:11:"sample_rate";d:44100;s:8:"channels";i:2;s:15:"bits_per_sample";i:16;s:8:"lossless";b:0;s:11:"channelmode";s:6:"stereo";}s:17:"created_timestamp";i:1457255461;}');
 
 -- --------------------------------------------------------
 
@@ -1199,7 +1199,7 @@ CREATE TABLE IF NOT EXISTS `g25_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=356 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=357 ;
 
 --
 -- Volcado de datos para la tabla `g25_posts`
@@ -1242,7 +1242,7 @@ INSERT INTO `g25_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (221, 1, '2018-10-29 11:08:42', '2018-10-29 14:08:42', ' ', '', '', 'publish', 'closed', 'closed', '', '221', '', '', '2018-12-04 10:46:48', '2018-12-04 13:46:48', '', 0, 'http://localhost/G25/?p=221', 1, 'nav_menu_item', '', 0),
 (183, 1, '2018-10-23 12:09:53', '2018-10-23 15:09:53', 'sdfadfas\r\n\r\nasdf\r\n\r\n<img class="alignnone size-full wp-image-12" src="http://localhost/G25/wp-content/uploads/2018/10/thumb1.png" alt="" width="246" height="191" />\r\n\r\nasdfsdfasdfsdfadfsa', 'Evento 1', '', 'publish', 'closed', 'closed', '', 'evento-hoy', '', '', '2018-12-06 20:22:34', '2018-12-06 23:22:34', '', 0, 'http://localhost/G25/?post_type=tribe_events&#038;p=183', 0, 'tribe_events', '', 0),
 (185, 1, '2018-10-23 12:11:06', '2018-10-23 15:11:06', 'nose', 'Evento 2', '', 'publish', 'closed', 'closed', '', 'evento-manana', '', '', '2018-10-24 12:33:01', '2018-10-24 15:33:01', '', 0, 'http://localhost/G25/?post_type=tribe_events&#038;p=185', 0, 'tribe_events', '', 0),
-(101, 1, '2018-10-11 14:47:53', '2018-10-11 17:47:53', 'No se que poner', 'Guillermo Dietrich', '', 'publish', 'closed', 'closed', '', 'diego-armando-maradona', '', '', '2018-12-19 12:45:54', '2018-12-19 15:45:54', '', 0, 'http://localhost/G25/?post_type=comunidad&#038;p=101', 0, 'comunidad', '', 0),
+(101, 1, '2018-10-11 14:47:53', '2018-10-11 17:47:53', 'No se que poner', 'Guillermo Dietrich', '', 'publish', 'closed', 'closed', '', 'diego-armando-maradona', '', '', '2018-12-19 14:20:24', '2018-12-19 17:20:24', '', 0, 'http://localhost/G25/?post_type=comunidad&#038;p=101', 0, 'comunidad', '', 0),
 (103, 1, '2018-10-16 11:03:13', '2018-10-16 14:03:13', '', 'Comunidad', '', 'publish', 'closed', 'closed', '', 'comunidad-g25', '', '', '2018-12-08 21:15:03', '2018-12-09 00:15:03', '', 0, 'http://localhost/G25/?page_id=103', 0, 'page', '', 0),
 (153, 4, '2018-10-19 11:24:27', '2018-10-19 14:24:27', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis ullamcorper orci, quis euismod felis. In vitae velit sagittis, gravida nisl vel, auctor ligula. Integer aliquam sollicitudin metus vitae lacinia. Proin pellentesque bibendum congue. Ut in viverra enim. Pellentesque bibendum elementum aliquam. Proin fermentum tincidunt tortor quis varius. Integer in quam malesuada, sodales magna in, dapibus purus.\r\n\r\nDonec nec magna at arcu molestie porttitor vitae nec nibh. Maecenas hendrerit egestas risus, eget volutpat massa lacinia nec. Nullam rutrum ac sem ut vehicula. Nullam ut turpis dictum, hendrerit erat tincidunt, feugiat lacus. Praesent pellentesque dolor id pulvinar vestibulum. Maecenas porttitor sodales lacus, a molestie dui egestas placerat. Quisque sollicitudin urna mi, quis aliquet dolor laoreet vel. Curabitur aliquet tincidunt justo. Etiam maximus, urna sit amet convallis congue, augue neque accumsan risus, eget consequat lectus dolor ac nunc. Etiam ac orci lorem. Ut sed velit sit amet mi iaculis facilisis vitae nec felis. Praesent sit amet neque massa. Nulla nec purus at urna pretium suscipit. In velit quam, faucibus sit amet nisi eget, molestie vulputate diam. Sed scelerisque velit vitae diam suscipit pellentesque.\r\n\r\nMauris id mauris quis mi hendrerit hendrerit. In pharetra risus mauris, in tempus lorem suscipit a. Nunc lacinia ex quis vestibulum malesuada. Fusce volutpat nisi ac purus pellentesque, vel sagittis magna aliquam. Sed tristique et lacus ut faucibus. Curabitur erat turpis, iaculis sit amet metus vel, suscipit gravida mauris. Pellentesque fringilla orci rutrum risus accumsan venenatis. Sed pharetra, lorem a faucibus porta, elit ex tristique quam, vitae sodales enim quam ut risus. Donec dolor lectus, facilisis et ornare id, mollis sed nisl. Ut nec dui at mauris iaculis lobortis eget eget dui.\r\n\r\nQuisque egestas aliquam fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sed enim lacinia, rutrum felis quis, molestie lorem. Duis sollicitudin venenatis odio, in mollis eros ullamcorper et. Nunc in sapien ipsum. Etiam at eleifend elit. Aenean sodales hendrerit justo, sed venenatis ipsum consectetur in. Etiam fringilla scelerisque felis a lobortis. Ut tincidunt semper varius. Aenean volutpat congue faucibus.', 'Como nos Financiamos', '', 'publish', 'closed', 'closed', '', 'como-nos-financiamos', '', '', '2018-10-26 11:15:28', '2018-10-26 14:15:28', '', 0, 'http://localhost/G25/?page_id=153', 0, 'page', '', 0),
 (131, 1, '2018-10-16 11:29:17', '2018-10-16 14:29:17', '', 'Red Federal', '', 'publish', 'closed', 'closed', '', 'red-federal', '', '', '2018-10-19 12:57:48', '2018-10-19 15:57:48', '', 0, 'http://localhost/G25/?page_id=131', 0, 'page', '', 0),
@@ -1263,6 +1263,7 @@ INSERT INTO `g25_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (247, 1, '2018-11-06 12:06:12', '2018-11-06 15:06:12', '', 'Juan-Curutchet', '', 'inherit', 'closed', 'closed', '', 'juan-curutchet', '', '', '2018-11-06 12:06:12', '2018-11-06 15:06:12', '', 246, 'http://localhost/G25/wp-content/uploads/2018/11/Juan-Curutchet.jpg', 0, 'attachment', 'image/jpeg', 0),
 (248, 1, '2018-11-06 12:09:34', '2018-11-06 15:09:34', '', 'Juan José Méndez', '', 'publish', 'closed', 'closed', '', 'ramon-lanus', '', '', '2018-12-07 12:02:22', '2018-12-07 15:02:22', '', 0, 'http://localhost/G25/?post_type=comunidad&#038;p=248', 3, 'comunidad', '', 0),
 (254, 1, '2018-11-06 12:12:42', '2018-11-06 15:12:42', '', 'Juanjo-Mendez2017', '', 'inherit', 'closed', 'closed', '', 'juanjo-mendez2017', '', '', '2018-11-06 12:12:42', '2018-11-06 15:12:42', '', 248, 'http://localhost/G25/wp-content/uploads/2018/11/Juanjo-Mendez2017.jpg', 0, 'attachment', 'image/jpeg', 0),
+(356, 1, '2018-12-19 14:20:11', '2018-12-19 17:20:11', '', 'videoplayback', '', 'inherit', 'closed', 'closed', '', 'videoplayback', '', '', '2018-12-19 14:20:11', '2018-12-19 17:20:11', '', 101, 'http://localhost/G25/wp-content/uploads/2018/10/videoplayback.mp4', 0, 'attachment', 'video/mp4', 0),
 (292, 1, '2018-12-05 11:11:09', '2018-12-05 14:11:09', 'a:10:{s:4:"type";s:10:"true_false";s:12:"instructions";s:0:"";s:8:"required";i:0;s:17:"conditional_logic";i:0;s:7:"wrapper";a:3:{s:5:"width";s:0:"";s:5:"class";s:0:"";s:2:"id";s:0:"";}s:7:"message";s:0:"";s:13:"default_value";i:0;s:2:"ui";i:0;s:10:"ui_on_text";s:0:"";s:11:"ui_off_text";s:0:"";}', 'Destacado', 'destacado', 'publish', 'closed', 'closed', '', 'field_5c07dc69ea8bb', '', '', '2018-12-05 11:11:09', '2018-12-05 14:11:09', '', 73, 'http://localhost/G25/?post_type=acf-field&p=292', 4, 'acf-field', '', 0),
 (293, 1, '2018-12-05 11:11:52', '2018-12-05 14:11:52', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in viverra elit, nec convallis diam. Duis vel ex laoreet, varius nisi vitae, rutrum ligula. Praesent a maximus lacus. Aenean efficitur nunc dui, at pharetra ante pellentesque ut. Praesent porttitor dignissim nisl, a eleifend eros tincidunt nec. Aenean in urna ut velit tempor bibendum quis id elit. Phasellus vitae purus a est rhoncus accumsan eu in ex. Proin tincidunt, quam id maximus tristique, neque sapien sodales sem, quis vulputate orci metus nec dolor. Vivamus ut maximus sapien. Quisque non augue arcu. Ut consequat metus vel mauris pellentesque mollis non non turpis.\r\n\r\n&nbsp;\r\n\r\n<img class="wp-image-12 aligncenter" src="http://localhost/G25/wp-content/uploads/2018/10/thumb1.png" alt="" width="394" height="306" />\r\n\r\nAliquam et urna ut erat fermentum ornare non eu lacus. Morbi scelerisque, libero non semper malesuada, mauris sapien sollicitudin est, in cursus erat turpis ac sapien. Praesent est purus, posuere a ullamcorper semper, aliquet id erat. In hac habitasse platea dictumst. Fusce fringilla nunc id elit consequat, et molestie augue ornare. Nam turpis leo, mollis ac ligula ut, maximus convallis lacus. Sed aliquam libero ut elit convallis convallis. In consectetur at est id dapibus. Sed nunc nisl, tincidunt eget dolor vitae, viverra imperdiet eros.\r\n\r\nNunc quam mi, placerat id turpis sed, gravida pulvinar nulla. Vivamus et eros vel augue varius tincidunt eu scelerisque est. Curabitur suscipit placerat magna, quis bibendum dolor sodales eu. Sed nec gravida ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sit amet pellentesque nulla, vitae gravida massa. Nullam ac nisi in nunc dictum luctus et at purus. Phasellus blandit nunc odio, a porttitor elit egestas sit amet. Nulla convallis scelerisque fringilla. Vestibulum pharetra nulla non ipsum tincidunt imperdiet. Morbi fermentum sit amet elit at faucibus. Morbi elit turpis, elementum et sapien quis, viverra blandit lorem. Ut vulputate quis leo a dignissim. Maecenas interdum semper justo, sit amet mattis libero imperdiet sed. Mauris congue fermentum risus ut fermentum.', 'Si vivis en el exterior tambien podes ser parte del cambio', '', 'inherit', 'closed', 'closed', '', '10-revision-v1', '', '', '2018-12-05 11:11:52', '2018-12-05 14:11:52', '', 10, 'http://localhost/G25/10-revision-v1/', 0, 'revision', '', 0),
 (294, 1, '2018-12-05 11:12:25', '2018-12-05 14:12:25', 'no se que poner', 'Nota 7', '', 'inherit', 'closed', 'closed', '', '42-revision-v1', '', '', '2018-12-05 11:12:25', '2018-12-05 14:12:25', '', 42, 'http://localhost/G25/42-revision-v1/', 0, 'revision', '', 0),
@@ -1287,7 +1288,6 @@ INSERT INTO `g25_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (315, 1, '2018-12-05 15:47:04', '2018-12-05 18:47:04', 'Parrafo de nota 4\r\n\r\nParrafo segundo de nota 4', 'Nota 4', '', 'inherit', 'closed', 'closed', '', '32-revision-v1', '', '', '2018-12-05 15:47:04', '2018-12-05 18:47:04', '', 32, 'http://localhost/G25/32-revision-v1/', 0, 'revision', '', 0),
 (316, 1, '2018-12-05 15:47:59', '2018-12-05 18:47:59', 'no se que poner', 'Nota 7', '', 'inherit', 'closed', 'closed', '', '42-revision-v1', '', '', '2018-12-05 15:47:59', '2018-12-05 18:47:59', '', 42, 'http://localhost/G25/42-revision-v1/', 0, 'revision', '', 0),
 (317, 1, '2018-12-05 15:48:37', '2018-12-05 18:48:37', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in viverra elit, nec convallis diam. Duis vel ex laoreet, varius nisi vitae, rutrum ligula. Praesent a maximus lacus. Aenean efficitur nunc dui, at pharetra ante pellentesque ut. Praesent porttitor dignissim nisl, a eleifend eros tincidunt nec. Aenean in urna ut velit tempor bibendum quis id elit. Phasellus vitae purus a est rhoncus accumsan eu in ex. Proin tincidunt, quam id maximus tristique, neque sapien sodales sem, quis vulputate orci metus nec dolor. Vivamus ut maximus sapien. Quisque non augue arcu. Ut consequat metus vel mauris pellentesque mollis non non turpis.\r\n\r\nAliquam et urna ut erat fermentum ornare non eu lacus. Morbi scelerisque, libero non semper malesuada, mauris sapien sollicitudin est, in cursus erat turpis ac sapien. Praesent est purus, posuere a ullamcorper semper, aliquet id erat. In hac habitasse platea dictumst. Fusce fringilla nunc id elit consequat, et molestie augue ornare. Nam turpis leo, mollis ac ligula ut, maximus convallis lacus. Sed aliquam libero ut elit convallis convallis. In consectetur at est id dapibus. Sed nunc nisl, tincidunt eget dolor vitae, viverra imperdiet eros.\r\n\r\nNunc quam mi, placerat id turpis sed, gravida pulvinar nulla. Vivamus et eros vel augue varius tincidunt eu scelerisque est. Curabitur suscipit placerat magna, quis bibendum dolor sodales eu. Sed nec gravida ante. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam sit amet pellentesque nulla, vitae gravida massa. Nullam ac nisi in nunc dictum luctus et at purus. Phasellus blandit nunc odio, a porttitor elit egestas sit amet. Nulla convallis scelerisque fringilla. Vestibulum pharetra nulla non ipsum tincidunt imperdiet. Morbi fermentum sit amet elit at faucibus. Morbi elit turpis, elementum et sapien quis, viverra blandit lorem. Ut vulputate quis leo a dignissim. Maecenas interdum semper justo, sit amet mattis libero imperdiet sed. Mauris congue fermentum risus ut fermentum.', 'Si vivis en el exterior tambien podes ser parte del cambio', '', 'inherit', 'closed', 'closed', '', '16-revision-v1', '', '', '2018-12-05 15:48:37', '2018-12-05 18:48:37', '', 16, 'http://localhost/G25/16-revision-v1/', 0, 'revision', '', 0),
-(354, 1, '2018-12-19 12:42:39', '2018-12-19 15:42:39', '', 'VID-20181124-WA0008', '', 'inherit', 'closed', 'closed', '', 'vid-20181124-wa0008', '', '', '2018-12-19 12:42:39', '2018-12-19 15:42:39', '', 101, 'http://localhost/G25/wp-content/uploads/2018/10/VID-20181124-WA0008.mp4', 0, 'attachment', 'video/mp4', 0),
 (319, 1, '2018-12-05 16:00:25', '2018-12-05 19:00:25', '', 'Evento 3', '', 'inherit', 'closed', 'closed', '', '194-revision-v1', '', '', '2018-12-05 16:00:25', '2018-12-05 19:00:25', '', 194, 'http://localhost/G25/194-revision-v1/', 0, 'revision', '', 0),
 (320, 1, '2018-12-05 16:02:32', '2018-12-05 19:02:32', 'sdfadfas\r\n\r\nasdf\r\n\r\n<img class="alignnone size-full wp-image-12" src="http://localhost/G25/wp-content/uploads/2018/10/thumb1.png" alt="" width="246" height="191" />\r\n\r\nasdfsdfasdfsdfadfsa', 'Evento 1', '', 'inherit', 'closed', 'closed', '', '183-revision-v1', '', '', '2018-12-05 16:02:32', '2018-12-05 19:02:32', '', 183, 'http://localhost/G25/183-revision-v1/', 0, 'revision', '', 0),
 (322, 1, '2018-12-05 16:08:10', '2018-12-05 19:08:10', '', 'Evento 4', '', 'inherit', 'closed', 'closed', '', '196-revision-v1', '', '', '2018-12-05 16:08:10', '2018-12-05 19:08:10', '', 196, 'http://localhost/G25/196-revision-v1/', 0, 'revision', '', 0),
