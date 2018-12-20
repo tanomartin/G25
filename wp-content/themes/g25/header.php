@@ -56,7 +56,7 @@
         <a href="<?php echo SITE_URL;?>">Inicio </a>
         <a href="<?php echo SITE_URL."/quienes-somos";?>">Quienes Somos</a>
         <a href="<?php echo SITE_URL."/comunidad-g25";?>">Comunidad</a>
-        <a href="<?php echo SITE_URL."/red-federal";?>">Red Federal</a>
+        <a href="<?php echo SITE_URL."/novedades";?>">Novedades</a>
 
       <?php	$menu_name = 'primary';
             $locations = get_nav_menu_locations();

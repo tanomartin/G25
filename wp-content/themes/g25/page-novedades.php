@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Red Federal
+Template Name: Novedades
 */
 ?>
 

@@ -56,8 +56,8 @@ Template Name: Home
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="contenedor-titulo">
-						<h2 class="title-home"><a href="red-federal">Novedades</a></h2>
-						<a href="comunidad-g25"><i class="fas fa-angle-right" 
+						<h2 class="title-home"><a href="novedades">Novedades</a></h2>
+						<a href="novedades"><i class="fas fa-angle-right" 
 							style="float: right; font-size: 30px; line-height: 100px; color: #EE4A6D; padding-right: 15px;"></i></a>
 						<div class="position-absolute-cero">
 							<div class="dash" style="background-color: #EE4A6D"></div>
@@ -70,7 +70,7 @@ Template Name: Home
 						<p class="text-home">Conocé a las personas que trabajaron junto a
 							nosotros y cómo se desarrollaron</p>
 						<div style="width: 100%; text-align: left;">
-							<a href="red-federal"><button
+							<a href="novedades"><button
 									class="btn btn-home btn-descubrilos"
 									style="position: absolute; bottom: 0px;">DESCUBRILOS</button></a>
 						</div>

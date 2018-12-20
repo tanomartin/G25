@@ -53,70 +53,26 @@
 				<div class="card" style="padding: 30px;">
 					<h3>CONTACTO POR PROVINCIA</h3>
 					<div class="dash" style="background-color: #ef7024; margin:20px 0px;"></div>
-
-
-					<div class="row">
-
-						<div class="col-lg-4 col-md-4 col-xs-12">
-							<p class="text-quienes-somos">Nombre y Apellido</p>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-xs-12">
-							<p class="text-quienes-somos">Provincia</p>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-xs-12">
-							<p class="text-quienes-somos">Mail</p>
-						</div>
-
-						
-					</div>
-
-					<hr style="display:block;margin:20px 0px;">
-					
-					<div class="row">
-
-						<div class="col-lg-4 col-md-4 col-xs-12">
-							<p class="text-quienes-somos">Nombre y Apellido</p>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-xs-12">
-							<p class="text-quienes-somos">Provincia</p>
-						</div>
-
-						<div class="col-lg-4 col-md-4 col-xs-12">
-							<p class="text-quienes-somos">Mail</p>
-						</div>
-
-						<hr>
-					</div>
-
-<!--
-					<table class="table" style="margin-top: 20px">
-						 <thead>
-						    <tr>
-						      <th scope="col">Nombre y Apellido</th>
-						      <th scope="col">Provincia</th>
-						      <th scope="col">Email</th>
-						    </tr>
-			 			 </thead>
-		 				<tbody>
-		   	<?php  	while (have_posts()) : the_post(); // Mientra haya resultados, repite lo siguiente: 
+ 			<?php  	while (have_posts()) : the_post(); // Mientra haya resultados, repite lo siguiente: 
 		    	 		 $provincia = get_post_meta($post->ID, 'provincia', true);
 		           		 $email = get_post_meta($post->ID, 'email', true); ?>
-			           		<tr>
-						      <td><?php the_title(); ?></td>
-						      <td><?php echo $provincia?></td>
-						      <td><?php echo $email?></td>
-						    </tr>
+						 <div class="row">
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<p class="text-quienes-somos"><?php the_title(); ?></p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<p class="text-quienes-somos"><?php echo $provincia?></p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-xs-12">
+								<p class="text-quienes-somos"><?php echo $email?></p>
+							</div>
+						</div>
+						<hr style="display:block;margin:20px 0px;">
 		    <?php 	endwhile;
 		    	 endif; ?>
-		    	 		</tbody>
-		    	 	</table>
-!-->
 	    	 	</div>
-	    	 </div>
-	    </div>
+	    	</div>
+	 	</div>
 	</div>
     <?php get_footer(); ?>
 </section>
