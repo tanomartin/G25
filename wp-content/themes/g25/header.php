@@ -14,6 +14,7 @@
 <link href="<?php echo THEME_URL ?>/css/style.css" rel="stylesheet">
 <script src="<?php echo THEME_URL ?>/resourse/jquery/jquery.min.js"></script>
 <script src="<?php echo THEME_URL ?>/resourse/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo THEME_URL ?>/resourse/jquery/afterglow.min.js"></script>
 <?php wp_head(); ?>
 </head>
 

@@ -12,7 +12,7 @@ Template Name: Tag Page
       <div class="contenedor-header redfederal">
         <div class="row">
           <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
-            <h1 class="mb-5">Red Federal</h1>
+            <h1 class="mb-5">Novedades</h1>
             <h3><?php echo $wp_query->found_posts; ?> <?php _e( 'Resultado encontrado para Etiqueta', 'locale' ); ?>: "<?php single_tag_title(); ?>" </h3>
             <div class="dash" style="background-color:#EE4A6D"></div>
             <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÍS</h4>

@@ -48,11 +48,50 @@
   <?php $args = array('showposts' => -1, 'post_type' => 'contacto');
 		$wp_query->query($args); 
 		if ( have_posts() ) : // Si existen resultados ?>
-		<div class="row">
+		<div class="row" style="margin-top:50px;">
 			<div class="col-lg-12">
 				<div class="card" style="padding: 30px;">
 					<h3>CONTACTO POR PROVINCIA</h3>
-					<div class="dash" style="background-color: #ef7024; margin-top: 20px;"></div>
+					<div class="dash" style="background-color: #ef7024; margin:20px 0px;"></div>
+
+
+					<div class="row">
+
+						<div class="col-lg-4 col-md-4 col-xs-12">
+							<p class="text-quienes-somos">Nombre y Apellido</p>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-xs-12">
+							<p class="text-quienes-somos">Provincia</p>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-xs-12">
+							<p class="text-quienes-somos">Mail</p>
+						</div>
+
+						
+					</div>
+
+					<hr style="display:block;margin:20px 0px;">
+					
+					<div class="row">
+
+						<div class="col-lg-4 col-md-4 col-xs-12">
+							<p class="text-quienes-somos">Nombre y Apellido</p>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-xs-12">
+							<p class="text-quienes-somos">Provincia</p>
+						</div>
+
+						<div class="col-lg-4 col-md-4 col-xs-12">
+							<p class="text-quienes-somos">Mail</p>
+						</div>
+
+						<hr>
+					</div>
+
+<!--
 					<table class="table" style="margin-top: 20px">
 						 <thead>
 						    <tr>
@@ -74,6 +113,7 @@
 		    	 endif; ?>
 		    	 		</tbody>
 		    	 	</table>
+!-->
 	    	 	</div>
 	    	 </div>
 	    </div>

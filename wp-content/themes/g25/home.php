@@ -9,7 +9,7 @@ Template Name: Home
 		<div class="container padding-footer" style="background-color: #fff;">
       	<?php get_header(); ?>
        		<div class="row" style="margin-top: 40px;">
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-4 col-md-4">
 					<div class="contenedor-titulo">
 						<h2 class="title-home"><a href="quienes-somos">Somos un puente entre lo privado y lo
 							público </a></h2>
@@ -31,7 +31,7 @@ Template Name: Home
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-4 col-md-4">
 					<div class="contenedor-titulo">
 						<h2 class="title-home"><a href="comunidad-g25">Comunidad G25</a></h2>
 						<a href="comunidad">
@@ -54,9 +54,9 @@ Template Name: Home
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-4 col-md-4">
 					<div class="contenedor-titulo">
-						<h2 class="title-home"><a href="red-federal">Red Federal</a></h2>
+						<h2 class="title-home"><a href="red-federal">Novedades</a></h2>
 						<a href="comunidad-g25"><i class="fas fa-angle-right" 
 							style="float: right; font-size: 30px; line-height: 100px; color: #EE4A6D; padding-right: 15px;"></i></a>
 						<div class="position-absolute-cero">

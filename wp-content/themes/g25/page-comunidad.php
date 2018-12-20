@@ -51,8 +51,21 @@ $wp_query->query($args); ?>
       <?php } 
       		if ($video != "") { 
       			$videourl = wp_get_attachment_url( $video );?>
-      			<div style="position:absolute;right:50;top:180px;font-size:10px;">
-	      			<a href="<?php echo  $videourl ?>" target="_blank" class="btn btn-info btn-lg">Play</a>
+      			<div style="position:absolute;right:50;top:180px;font-size:10px;background-color:#00B8F1;width:35px;height:35px;border-radius:50%;text-align:center">
+
+            <a href="#idvideo" class="afterglow">  
+              <i class="fas fa-video" style="color:#fff;font-size:16px;line-height:35px;"></i>
+            </a>
+
+
+                <video class="afterglow" id="idvideo" width="1280" height="720"> 
+                  <source  type="video/mp4" src="<?php echo  $videourl ?>"/>  
+                </video >
+
+<!--
+	      			<a href="<?php echo  $videourl ?>" target="_blank"><i class="fas fa-video" style="color:#fff;font-size:16px;line-height:35px;"></i></a>
+!-->
+
         		</div>
       <?php	}
           $thumbID = get_post_thumbnail_id( $post->ID );
