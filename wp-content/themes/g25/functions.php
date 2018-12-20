@@ -125,20 +125,6 @@ function my_title_place_holder($title , $post) {
 	return $title;
 }
 
-add_filter( 'the_title', 'max_title_length', 0, 2);
-function max_title_length($title, $post) {
-	if($post->post_type == 'comunidad' || $post->post_type == 'contacto') {
-		$max = 20;
-		if( strlen( $title ) > $max ) {
-			return substr( $title, 0, $max ). " &hellip;";
-		} else {
-			return $title;
-		}
-	} else {
-		return $title;
-	}
-}
-
 add_action( 'wp_head', 'c25_javascript_detection', 0 );
 function c25_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
