@@ -50,13 +50,13 @@ $wp_query->query($args); ?>
               </div>
       <?php } 
       		if ($video != "") { 
-      			$videourl = wp_get_attachment_url( $video );?>
+      			$videourl = wp_get_attachment_url( $video ); ?>
       			<div style="position:absolute;right:50;top:180px;font-size:10px;background-color:#00B8F1;width:35px;height:35px;border-radius:50%;text-align:center">
-		            <a href="#<?php echo $video?>" class="afterglow">
+		            <a href="#video-<?php echo $video?>" class="afterglow">
 		            	<i class="fas fa-video" style="color:#fff;font-size:16px;line-height:35px;"></i>
 		            </a>
-                	<video class="afterglow" id="<?php echo $video?>" width="1280" height="720"> 
-                  		<source type="video/mp4" src="<?php echo  $videourl ?>"/>  
+                	<video class="afterglow" id="video-<?php echo $video?>" width="1280" height="720"> 
+                  		<source type="video/mp4" src="<?php echo $videourl ?>"/>  
                 	</video>
         		</div>
       <?php	}
