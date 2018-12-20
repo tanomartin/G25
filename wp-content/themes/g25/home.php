@@ -8,7 +8,7 @@ Template Name: Home
 		<!-- aca chequear el height por el gris !-->
 		<div class="container padding-footer" style="background-color: #fff;">
       	<?php get_header(); ?>
-       		<div class="row">
+       		<div class="row" style="margin-top: 40px;">
 				<div class="col-lg-3 col-md-6">
 					<div class="contenedor-titulo">
 						<h2 class="title-home"><a href="quienes-somos">Somos un puente entre lo privado y lo

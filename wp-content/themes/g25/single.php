@@ -53,12 +53,12 @@ if( have_posts() ){
  	  <?php if ($facebook || $twitter || $whatsapp) { ?>  			
 	  			<div class="row">
 	    			<div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
-	     	 			<hr style="padding-top:20px">
+	     	 			<hr style="padding-top:10px">
 	      				<div class="row">
 	      			  <?php if ($facebook) {
 	               				$facebookURL = 'https://www.facebook.com/sharer.php?u='.$shortURL.'&t=Compartir urls en Face';?>
 		        				<div class="col-lg-4" onclick="window.open('<?php echo $facebookURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;'>
-		          					<div style="background-color:#629ae6;padding:10px;">
+		          					<div style="background-color:#629ae6;padding:10px;margin-bottom:10px;margin-top:10px;">
 		            					<p style="margin-bottom:0px;color:#fff"><i class="fab fa-facebook-f fa-2x fa-fw" style="color:#fff;font-size:14px;"></i> Compartir en Facebook</p>
 		          					</div>
 		        				</div>
@@ -66,7 +66,7 @@ if( have_posts() ){
 	      					if ($twitter) {
 	         					$twitterURL = 'https://twitter.com/intent/tweet?text='.$shortTitle.'&amp;url='.$shortURL;?>
 	        					<div class="col-lg-4" onclick="window.open('<?php echo $twitterURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;' >
-	          						<div style="background-color:#55acee;padding:10px;">
+	          						<div style="background-color:#55acee;padding:10px;margin-bottom:10px;margin-top:10px;">
 	            						<p style="margin-bottom:0px;color:#fff"><i class="fab fa-twitter fa-2x fa-fw" style="color:#fff;font-size:14px;"></i> Compartir en Twitter</p>
 	          						</div>
 	        					</div>
@@ -74,7 +74,7 @@ if( have_posts() ){
 	       				    if ($whatsapp) { 
 	            				$whatsappURL = 'https://api.whatsapp.com/send?text='.$shortURL;?>
 	        					<div class="col-lg-4" onclick="window.open('<?php echo $whatsappURL ?>','','width=600,height=400,left=50,top=50,toolbar=yes')" style='cursor:pointer;' >
-	          						<div style="background-color:#25d366;padding:10px;">
+	          						<div style="background-color:#25d366;padding:10px;margin-bottom:10px;margin-top:10px;">
 	            						<p style="margin-bottom:0px;color:#fff"><i class="fab fa-whatsapp fa-2x fa-fw" style="color:#fff;font-size:14px;"></i> Compartir en Whatsapp</p>
 	          						</div>
 	        					</div>
@@ -88,7 +88,7 @@ if( have_posts() ){
 			if ($posttags) { ?>
   			<div class="row">
     			<div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
-      				<hr style="padding-top:20px">
+      				<hr style="padding-top:10px;margin-top:30px;">
       				<div class="row">
 	
 				<?php  foreach($posttags as $tag) { ?>
@@ -102,8 +102,8 @@ if( have_posts() ){
 	<?php	} ?>
 	  		<div class="row">
 		    	<div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
-		      		<hr style="padding-top:20px">
-		      		<p><a href="<?php echo SITE_URL."/red-federal";?>">Volver a las Noticias  </a>  </p>  
+		      		<hr style="padding-top:20px;margin-top:20px;">
+		      		<p style="padding-bottom:20px;"><a href="<?php echo SITE_URL."/red-federal";?>">Volver a las Noticias  </a>  </p>  
 		    	</div>
 		  	</div>
 		</div>
