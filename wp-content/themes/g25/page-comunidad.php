@@ -39,7 +39,7 @@ $wp_query->query($args); ?>
             $web = get_post_meta($post->ID, 'web', true);  ?>
   <div class="col-lg-3 col-md-4 col-xs-12" style="margin-top:20px;"> <!-- agregar  d-flex align-items-stretch para que las columnas tengan el mismo alto del mas largo !-->
     <div class="image-caption featured card">
-      <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "")){ ?>
+   <?php if (($facebook != "") || ($twitter != "") || ($instagram != "") || ($linkedin != "") || ($web != "")){ ?>
               <div style="position:absolute;right:5;top:170px;font-size:35px;">
                 <a data-toggle="collapse" href="#social<?php echo $post->ID ?>" role="button" aria-expanded="false" aria-controls="add">
                  <div class="icoCollapse max">
@@ -48,18 +48,18 @@ $wp_query->query($args); ?>
                   </div>
                 </a>
               </div>
-      <?php } 
-      		if ($video != "") { 
+    <?php } 
+          if ($video != "") { 
       			$videourl = wp_get_attachment_url( $video ); ?>
       			<div style="position:absolute;right:50;top:180px;font-size:10px;background-color:#00B8F1;width:35px;height:35px;border-radius:50%;text-align:center">
 		            <a href="#video-<?php echo $video?>" class="afterglow">
 		            	<i class="fas fa-video" style="color:#fff;font-size:16px;line-height:35px;"></i>
 		            </a>
-                	<video class="afterglow" id="video-<?php echo $video?>" width="1280" height="720"> 
+                	<video id="video-<?php echo $video?>" width="1280" height="720"> 
                   		<source type="video/mp4" src="<?php echo $videourl ?>"/>  
                 	</video>
         		</div>
-      <?php	}
+    <?php }
           $thumbID = get_post_thumbnail_id( $post->ID );
           $url = wp_get_attachment_url( $thumbID );?>
 		  <div class="large" style="height:200px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;"></div>
