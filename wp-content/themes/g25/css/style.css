@@ -315,13 +315,6 @@ footer .col-lg-6 a{
 
 }
 
-.afterglow-lightbox-wrapper .afterglow-lightbox {
-    display: block!important;
-    position: absolute;
-    top: 50px!important;
-    left: 0;
-}
-
 
 h2 a{
   text-decoration:none;
@@ -488,6 +481,16 @@ article .card h5{
     font-size: 22px;
     padding-right: 50px;
 }
+
+/* video */
+
+.afterglow-lightbox-wrapper .afterglow-lightbox {
+    display: block!important;
+    position: absolute;
+    top: 50px!important;
+    left: 0;
+}
+
 
 .add-comunidad{
   color:#00B8F1;
