@@ -20,7 +20,7 @@
           	</div>
 
             <div class="col-lg-4  text-center text-lg-right my-auto">
-              <span style="color:#929292">Desarrollado por <a href="http://www.odoestudio.com.ar" target="_blank" style="color:#de5964">ODOESTUDIO</a></span>
+              <span style="color:#929292">Desarrollado por <a href="http://www.odoestudio.com.ar" target="_blank" style="color:#de5964"></span>ODO.<span style="color:#59595b">Estudio</span></a>
             </div>
 
         </div>
