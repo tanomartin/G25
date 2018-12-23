@@ -5,7 +5,7 @@
           		<?php wp_nav_menu(array('theme_location' => 'footer', 'depth'   => 1, 'menu_id' => 'footer', 'item_spacing'   => 'discard')); ?>
             	<p class="text-muted small mb-4 mb-lg-0">&copy; G25. Todos los derechos reservados</p>
           	</div>
-          	<div class="col-lg-4  text-center my-auto">
+          	<div class="col-lg-4 text-center my-auto">
             	<ul class="list-inline mb-0">
               		<li class="list-inline-item mr-3">
                 		<a href="https://www.facebook.com/G25Argentina/?ref=br_rs" target="_blank"><i class="fab fa-facebook-f fa-2x fa-fw" style="color:#F5B11A"></i></a>
@@ -19,7 +19,7 @@
            	 	</ul>
           	</div>
 
-            <div class="col-lg-4  text-center text-lg-right my-auto">
+            <div class="col-lg-4 text-center text-lg-right my-auto odoestudio">
               <span style="color:#929292">Desarrollado por <a href="http://www.odoestudio.com.ar" target="_blank" style="color:#de5964"></span>ODO.<span style="color:#59595b">Estudio</span></a>
             </div>
 

@@ -240,6 +240,9 @@ footer .col-lg-6 a{
   color:#d2d2d2;
 }
 
+.odoestudio{
+  padding-top:0px;
+}
 
 .contenedor-header h1 {
   font-family:'Gotham Rounded';
@@ -769,18 +772,24 @@ box-shadow: 0 3px 6px -6px #737373;
   padding-bottom: 160px;
   }
 
-.border-col{
+  .border-col{
   border-left:0px solid #fff;
 
-}
+  }
 
-.btn-contacto{
+  .btn-contacto{
 
   width: 100%;
 
-}
+  }
+
+  .odoestudio {
+    padding-top:20px!important;
+  }
 
 }
+
+
 
 @media screen and (max-width:768px){
   #tribe-events-pg-template {
@@ -853,6 +862,8 @@ box-shadow: 0 3px 6px -6px #737373;
   }
 
 
+
+
 }
 
 @media screen and (min-width:540px){
@@ -864,7 +875,11 @@ box-shadow: 0 3px 6px -6px #737373;
     display:none;
   }
 
+
+
+
  }
+
 
 
 @media screen and (max-width:467px){
@@ -884,6 +899,15 @@ box-shadow: 0 3px 6px -6px #737373;
 
 .form-inline{
   width:45%;
+}
+.navbar li a {
+    color: #404040;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
 }
 
 
