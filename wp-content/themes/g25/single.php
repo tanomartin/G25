@@ -103,7 +103,7 @@ if( have_posts() ){
 	  		<div class="row">
 		    	<div class="col-md-8 offset-md-2 text-center" style="background-color:#fff;">
 		      		<hr style="padding-top:20px;margin-top:20px;">
-		      		<p style="padding-bottom:20px;"><a href="<?php echo SITE_URL."/red-federal";?>">Volver a las Noticias  </a>  </p>  
+		      		<p style="padding-bottom:20px;"><a href="<?php echo SITE_URL."/novedades";?>">Volver a las Noticias  </a>  </p>  
 		    	</div>
 		  	</div>
 		</div>
