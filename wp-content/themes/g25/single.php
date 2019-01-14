@@ -1,20 +1,13 @@
-<body style="position:relative;">
+<body style="position:relative;background-color:#f0f0f0">
     <!-- Masthead -->
 
-<header class="masthead-redfederal text-white text center">
-    <div class="container">
+
+
+    <div class="container" >
 	<?php get_header(); ?>
-      <div class="contenedor-header redfederal">
-        <div class="row">
-          <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
-            <h1 class="mb-5">Novedades</h1>
-            <div class="dash" style="background-color:#EE4A6D"></div>
-            <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÍS</h4>
-          </div>
-        </div>
-      </div>
+
    </div>
-</header>
+
 
 <!-- seccion noticias -->
 <?php  
@@ -22,7 +15,7 @@ if( have_posts() ){
 	the_post();
 	$category_post = get_the_category();
 	$parent_id = get_the_ID(); ?>
-	<section style="background-color:#f0f0f0;padding-top:80px;position:relative">
+	<section style="background-color:#f0f0f0;padding-top:30px;position:relative">
 		<div class="container" style="padding-bottom:40px;">
   			<div class="row">
     			<div class="col-md-8 offset-md-2 text-center header-nota estilo-nota">
@@ -92,7 +85,7 @@ if( have_posts() ){
       				<div class="row">
 	
 				<?php  foreach($posttags as $tag) { ?>
-			   			<div class="col-lg-3">
+			   			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 	           				<p class="tag-nota"><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo ($tag->name) ?></a></p>
 	           			</div>
 			     <?php } ?>

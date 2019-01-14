@@ -24,7 +24,9 @@ Template Name: Search Page
 
 <section style="background-color:#f0f0f0;padding-top:80px">
 	<div class="container" style="padding-bottom:100px;">
-		<div class="row">	
+		<div class="row">
+
+        	
 		<?php if (have_posts()) : while (have_posts()) : the_post();?> 
 	    			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 	    				<div class="card card-nota">

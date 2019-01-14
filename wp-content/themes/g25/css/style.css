@@ -246,7 +246,7 @@ footer .col-lg-6 a{
 
 .contenedor-header h1 {
   font-family:'Gotham Rounded';
-  font-size:30px;
+  font-size:25px;
   width:380px;
 }
 
@@ -326,8 +326,21 @@ h2 a{
 
 h2 a:hover, h2 a:visited, h2 a:focus{
   text-decoration:none;
-  color:#7a7a7a;
 }
+
+.titulo-conocenos a:hover {
+  color:#FCB813;
+}
+
+.titulo-comunidad a:hover {
+  color:#00B8F1;
+}
+
+.titulo-novedades a:hover {
+  color:#EE4A6D;
+}
+
+
 
 .title-home{
   font-family: 'Gotham Rounded';
@@ -392,6 +405,7 @@ h2 a:hover, h2 a:visited, h2 a:focus{
   background-color:#FCB813!important;
   color:#fff;
 }
+
 
 .btn-acompananos{
   border: 1px solid #00B8F1 !important;
@@ -638,6 +652,18 @@ width:100%;
   float:right;
 }
 
+.redfederal .row .col-lg-12 h3{
+  font-size:1rem;
+} 
+
+.tag-geografico{
+  font-size:0.8rem;
+  font-family: 'Gotham Rounded';
+  color:#808080;
+  font-weight:100;
+  margin-bottom:30px;
+
+}
 .tag-provincia{
   background-color:#F0F0F0;
   padding:5px!important;
@@ -649,12 +675,14 @@ width:100%;
   font-size:10px;
 }
 
-.tag-nota{
-  background-color:#F0F0F0;
-  padding:10px!important;
-  font-family: 'Gotham Rounded';
-  display:inline-block;
-  border-radius:5px;
+.tag-nota {
+    background-color: #F0F0F0;
+    font-family: 'Gotham Rounded';
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 100;
+    padding: 10px 20px 10px 20px;
 }
 
 .tag-nota a{
@@ -753,7 +781,7 @@ box-shadow: 0 3px 6px -6px #737373;
 @media screen and (max-width:1199px){
   .col-lg-3 .image-caption .fab {
 
-    padding-right: 30px;
+    padding-right: 0px;
   }
 }
 
@@ -767,7 +795,11 @@ box-shadow: 0 3px 6px -6px #737373;
 
 }
 
+
+
 @media screen and (max-width:991px){
+
+
   .padding-footer{
   padding-bottom: 160px;
   }
@@ -786,6 +818,7 @@ box-shadow: 0 3px 6px -6px #737373;
   .odoestudio {
     padding-top:20px!important;
   }
+
 
 }
 
@@ -904,10 +937,10 @@ box-shadow: 0 3px 6px -6px #737373;
     color: #404040;
     font-size: 20px;
     text-align: center;
-    line-height: 50px;
+    line-height: 55px;
     width: 100%;
     display: block;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 

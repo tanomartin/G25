@@ -13,7 +13,7 @@ Template Name: Category Page
         <div class="row">
           <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Novedades</h1>
-            <h3><?php echo $wp_query->found_posts; ?> <?php _e( 'Resultados para Tag Geografico', 'locale' ); ?>: "<?php single_cat_title(); ?>" </h3>
+
             <div class="dash" style="background-color:#EE4A6D"></div>
             <h4 style="padding-top:40px;">ENTERATE LO QUE PASA EN TODO EL PAÍS</h4>
           </div>
@@ -22,9 +22,18 @@ Template Name: Category Page
    </div>
 </header>
     
-<section style="background-color:#f0f0f0;padding-top:80px">
+<section style="background-color:#f0f0f0;padding-top:40px">
+
+
+
 	<div class="container" style="padding-bottom:100px;">
-		<div class="row">	
+		<div class="row">
+            <div class="col-lg-12">
+                <h3 class="tag-geografico"><?php echo $wp_query->found_posts; ?> <?php _e( 'Resultados para Tag Geografico', 'locale' ); ?>: "<?php single_cat_title(); ?>"
+                </h3>
+            </div>
+
+
 		<?php  if (have_posts()) : while (have_posts()) : the_post(); ?> 
 			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
 	    				<div class="card card-nota">

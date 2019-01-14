@@ -13,7 +13,7 @@ Template Name: Comunidad
           <div class="col-lg-12 text-left" style="position:absolute;bottom:0px;padding:40px;">
             <h1 class="mb-5">Comunidad G25</h1>
             <div class="dash" style="background-color:#00B9F2"></div>
-            <h4 style="padding-top:40px;">FUNDADORES - CONSEJO DE ADMINISTRACION</h4>
+            <h4 style="padding-top:40px;">FUNDADORES - CONSEJO DE ADMINISTRACI&Oacute;N</h4>
           </div>
         </div>
       </div>

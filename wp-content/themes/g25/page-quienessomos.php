@@ -36,7 +36,7 @@
             <div class="card" style="padding:30px;margin-top:30px;">
                <h3>MISIÓN</h3>
                <div class="dash" style="background-color:#FCB813;margin-top:20px;"></div>
-               <p class="text-quienes-somos">Somos una red, cuya misión es identificar, atraer y retener, fomentando la vocación por el servicio publico,  a personas destacadas en todo el país, que sean capaces de generar un impacto positivo en la sociedad en la que viven.
+               <p class="text-quienes-somos">Somos una red, cuya misión es identificar, atraer y retener, fomentando la vocación por el servicio público,  a personas destacadas en todo el país, que sean capaces de generar un impacto positivo en la sociedad en la que viven.
                </p>
             </div>
          </article>
@@ -110,7 +110,7 @@
                      </div>
                      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                         <div class="card-body">
-                           Entendiendo por éste , la voluntad llevada a la acción, manteniendo nuestros valores y vocación de servicio a lo largo del tiempo.
+                           Entendiendo por éste, la voluntad llevada a la acción, manteniendo nuestros valores y vocación de servicio a lo largo del tiempo.
                         </div>
                      </div>
                   </div>
