@@ -15,6 +15,18 @@
 <script src="<?php echo THEME_URL ?>/resourse/jquery/jquery.min.js"></script>
 <script src="<?php echo THEME_URL ?>/resourse/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?php echo THEME_URL ?>/resourse/jquery/afterglow.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62428626-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62428626-4');
+</script>
+
+
 <?php wp_head(); ?>
 </head>
 
