@@ -290,6 +290,12 @@ footer .col-lg-6 a{
    align-content: stretch;
 }
 
+
+.width-img-card{
+  height:200px;
+  width:220px;
+}
+
 .quienes-somos-card{
   width:50%;
 }
@@ -921,9 +927,19 @@ box-shadow: 0 3px 6px -6px #737373;
     width:100%;
   }
 
+/*
   .imagen{
     display:none;
   }
+*/
+
+.card-nota{
+  flex-direction: column!important;
+}
+
+.width-img-card{
+  width:100%;
+}
 
   .contenedor-box{
   width:95%;

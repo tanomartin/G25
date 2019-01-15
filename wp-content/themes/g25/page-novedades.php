@@ -45,9 +45,9 @@ Template Name: Novedades
         	    				    	<?php if ( has_post_thumbnail() ) {
         	    				    	          $thumbID = get_post_thumbnail_id( $post->ID );
         	    				    	          $url = wp_get_attachment_url( $thumbID ); ?>
-    	                			              <div style="height:200px;width:220px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>
+    	                			              <div class="width-img-card" style="background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>
         	           					<?php } else { ?>
-                                        		  <div style="height:200px;width:220px;background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>			  																	  
+                                        		  <div class="width-img-card" style="background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>			  																	  
         	            				<?php } ?>
         	            				 </a>
         	    				 </div>
@@ -93,14 +93,14 @@ Template Name: Novedades
         	  <?php $args = array('post__not_in' => $arrayDestacados, 'paged' => $paged);
         	        $wp_query->query($args);
         	       	while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-        	    			<div class="col-lg-6 " style="position:relative;margin-bottom:20px;">
+        	    			<div class="col-lg-6" style="position:relative;margin-bottom:20px;">
         	    				<div class="card card-nota">
         	    				    <div class="imagen">
         	    				    	<a href="<?php the_permalink();?>">
         	    				    	<?php if ( has_post_thumbnail() ) {
         	    				    	          $thumbID = get_post_thumbnail_id( $post->ID );
         	    				    	          $url = wp_get_attachment_url( $thumbID ); ?>
-    	                			              <div style="height:200px;width:220px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>
+    	                			              <div class="width-img-card" style="background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>
         	           					<?php } else { ?>
                                         		  <div style="height:200px;width:220px;background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>			  																	  
         	            				<?php } ?>
