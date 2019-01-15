@@ -102,7 +102,7 @@ Template Name: Novedades
         	    				    	          $url = wp_get_attachment_url( $thumbID ); ?>
     	                			              <div class="width-img-card" style="background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>
         	           					<?php } else { ?>
-                                        		  <div style="height:200px;width:220px;background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>			  																	  
+                                        		  <div class="width-img-card" style="background-image:url(<?php bloginfo('url'); ?>/wp-content/themes/g25/screenshot.png);background-repeat:no-repeat;background-position:center center;background-size:cover;" ></div>			  																	  
         	            				<?php } ?>
         	            				 </a>
         	    				    </div>
