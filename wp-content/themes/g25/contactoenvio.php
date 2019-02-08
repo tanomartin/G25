@@ -16,7 +16,7 @@ $Mensaje = htmlspecialchars($_POST['mensaje']);
 $cabeceras = "From: $Correo\n" //La persona que envia el correo
 . "Reply-To: $Correo\n";
 $asunto = "From: CONTACTO PAGINA G25\n"; //asunto aparecera en la bandeja del servidor de correo
-$email_to = "martinmzucchiatti@gmail.com"; //cambiar por tu email
+$email_to = "formulariog25@gmail.com"; //cambiar por tu email
 $contenido = "$Nombre ha enviado un mensaje desde el sitio web www.g-25.org\n"
 . "\n"
 . "Nombre: $Nombre\n"
