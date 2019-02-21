@@ -11,8 +11,7 @@ Template Name: Home
        		<div class="row" style="margin-top: 20px;">
 				<div class="col-lg-4 col-md-4">
 					<div class="contenedor-titulo">
-						<h2 class="title-home titulo-conocenos"><a href="quienes-somos">Somos un puente entre lo privado y lo
-							público </a></h2>
+						<h2 class="title-home titulo-conocenos"><a href="quienes-somos">Somos un puente para el talento entre lo privado y lo público</a></h2>
 						<a href="quienes-somos"><i class="fas fa-angle-right"
 							style="float: right; font-size: 30px; line-height: 100px; color: #F5B11A; padding-right: 15px;"></i></a>
 
