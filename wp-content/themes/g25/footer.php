@@ -13,11 +13,11 @@
               		<li class="list-inline-item mr-3">
                 		<a href="https://twitter.com/g25argentina?lang=es"  target="_blank"><i class="fab fa-twitter fa-2x fa-fw" style="color:#F5B11A"></i></a>
               		</li>
-                  <!--
+                  
               		<li class="list-inline-item">
-                		<a href="#"  target="_blank"><i class="fab fa-instagram fa-2x fa-fw" style="color:#F5B11A"></i></a>
+                		<a href="https://www.instagram.com/G25Argentina/"  target="_blank"><i class="fab fa-instagram fa-2x fa-fw" style="color:#F5B11A"></i></a>
               		</li>
-                  !-->
+                  
            	 	</ul>
           	</div>
 
