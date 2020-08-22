@@ -16,7 +16,7 @@ Template Name: Home
 							style="float: right; font-size: 30px; line-height: 100px; color: #F5B11A; padding-right: 15px;"></i></a>
 
 						<div class="position-absolute-cero">
-							<div class="dash" style="background-color: #FCB813"></div>
+							<div class="dash" style="background-color: #FCB813 "></div>
 						</div>
 					</div>
 					<hr class="line-divider">
